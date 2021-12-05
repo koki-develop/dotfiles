@@ -1,0 +1,17 @@
+[color]
+	ui = true
+[user]
+	name  = koki-develop
+	email = kou.pg.0131@gmail.com
+[push]
+	default = simple
+[init]
+	defaultBranch = main
+[fetch]
+	prune = true
+[core]
+	editor = nvim
+	quotepath = false
+	ignorecase = false
+[pull]
+	rebase = false
