@@ -18,6 +18,8 @@ FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
 autoload -Uz compinit
 compinit
 
+zstyle ':completion:*:default' menu select=2
+
 # language
 export LANG=ja_JP.UTF-8
 
