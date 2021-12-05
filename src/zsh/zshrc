@@ -34,10 +34,12 @@ export SAVEHIST=1000
 # alias - git
 alias g='git'
 alias gad='git add'
-alias gcom='git commit -v'
+alias gcom='git commit -m'
+alias gcomv='git commit -v'
 alias gdi='git diff'
 alias glo='git log --pretty=oneline'
 alias gst='git status'
+alias gre='git reset'
 alias gdem="git branch --merged|egrep -v '\*|develop|master|main'|xargs git branch -d"
 
 # alias - grep
