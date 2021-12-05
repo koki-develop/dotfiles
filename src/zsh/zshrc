@@ -35,14 +35,21 @@ export SAVEHIST=1000
 eval "$(direnv hook zsh)"
 
 # alias
+alias cdd='cd ~/dotfiles'
+alias cde='cd ~/environment'
+alias d='docker'
+alias dc='docker compose'
 alias g='git'
 alias gad='git add'
 alias gcom='git commit -m'
 alias gcomv='git commit -v'
 alias gdi='git diff'
+alias gfe='git fetch'
 alias glo='git log --pretty=oneline'
 alias gst='git status'
+alias gsw='git switch'
 alias gre='git reset'
+alias grest='git restore'
 alias gdem="git branch --merged|egrep -v '\*|develop|master|main'|xargs git branch -d"
 alias grep='grep --color=auto'
 alias l='exa -1'
