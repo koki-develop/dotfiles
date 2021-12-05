@@ -1,0 +1,16 @@
+# !/bin/zsh -e
+
+# コマンドの実行後に改行を入れる
+precmd() { printf '\n' }
+
+# プロンプト変数内で変数参照
+setopt PROMPT_SUBST
+
+# プロンプト
+source ~/dotfiles/src/zsh/git-prompt.sh
+export PROMPT=$'%* [%n@%m: %F{green}%~%f]%F{yellow}$(__git_ps1 " (%s)")%f\n\$ '
+
+# zsh-completions
+FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+autoload -Uz compinit
+compinit
