@@ -7,6 +7,7 @@
 	default = simple
 [init]
 	defaultBranch = main
+	templateDir = ~/.git-templates/git-secrets
 [fetch]
 	prune = true
 [core]
