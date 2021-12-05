@@ -72,10 +72,6 @@ call plug#end()
 " colorscheme
 colorscheme molokai
 
-" lexima
-let g:lexima_no_default_rules = 1
-call lexima#set_default_rules()
-
 " vim-terraform
 let g:terraform_fmt_on_save = 1
 
