@@ -31,7 +31,10 @@ export SAVEHIST=1000
 # asdf
 . $(brew --prefix asdf)/libexec/asdf.sh
 
-# alias - git
+# direnv
+eval "$(direnv hook zsh)"
+
+# alias
 alias g='git'
 alias gad='git add'
 alias gcom='git commit -m'
@@ -41,25 +44,13 @@ alias glo='git log --pretty=oneline'
 alias gst='git status'
 alias gre='git reset'
 alias gdem="git branch --merged|egrep -v '\*|develop|master|main'|xargs git branch -d"
-
-# alias - grep
 alias grep='grep --color=auto'
-
-# ls
 alias l='exa -1'
 alias la='exa -1a'
 alias ll='exa -l'
 alias lla='exa -al'
-
-# mkdir
 alias mkdir='mkdir -p'
-
-# mv
 alias mv='mv -i'
-
-# rm
 alias rm='trash-put'
-
-# vi
 alias v='nvim'
 alias vi='nvim'
