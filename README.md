@@ -94,8 +94,8 @@ $ npm install --global yarn
 ```
 $ asdf plugin add python
 $ asdf list all python
-$ asdf install python <version>
-$ asdf global python <version>
+$ asdf install python 3.x.x 2.x.x
+$ asdf global python 3.x.x 2.x.x
 $ pip install --upgrade pip
 ```
 
