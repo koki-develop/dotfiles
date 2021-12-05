@@ -1,8 +1,15 @@
 # !/bin/zsh -e
 
+setopt autocd
+setopt magic_equal_subst
+setopt hist_ignore_dups
+setopt no_beep
+setopt no_histbeep
+setopt no_listbeep
+
 # prompt
 precmd() { printf '\n' }
-setopt PROMPT_SUBST
+setopt prompt_subst
 source ~/dotfiles/src/zsh/git-prompt.sh
 export PROMPT=$'%* [%n@%m: %F{green}%~%f]%F{yellow}$(__git_ps1 " (%s)")%f\n\$ '
 
