@@ -66,6 +66,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'jparise/vim-graphql'
 Plug 'hashivim/vim-terraform'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
