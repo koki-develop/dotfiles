@@ -54,6 +54,8 @@ set wildmenu
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
 Plug 'tomasr/molokai'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'cohama/lexima.vim'
