@@ -56,6 +56,8 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'tomasr/molokai'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'cohama/lexima.vim'
