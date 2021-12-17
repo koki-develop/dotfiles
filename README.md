@@ -87,6 +87,7 @@ $ asdf install nodejs <version>
 $ asdf global nodejs <version>
 $ npm install --global npm
 $ npm install --global yarn
+$ asdf reshim nodejs
 ```
 
 ## Python
