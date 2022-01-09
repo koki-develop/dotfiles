@@ -119,6 +119,13 @@ $ asdf install golang <version>
 $ asdf global golang <version>
 ```
 
+## Rust
+
+```
+$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+$ cargo install cargo-edit
+```
+
 ## Terraform
 
 ```
