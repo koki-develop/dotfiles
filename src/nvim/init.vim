@@ -89,3 +89,6 @@ let g:lsp_settings_filetype_typescriptreact = ['typescript-language-server', 'es
 " vim-prettier
 let g:prettier#autoformat = 1
 let g:prettier#autoformat_require_pragma = 0
+
+" nerdtree
+nnoremap <C-n> :NERDTreeToggle<CR>
