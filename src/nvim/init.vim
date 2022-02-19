@@ -93,3 +93,6 @@ let g:prettier#autoformat_require_pragma = 0
 
 " nerdtree
 nnoremap <C-n> :NERDTreeToggle<CR>
+
+" ctrlp.vim
+let g:ctrlp_custom_ignore = 'node_modules'
