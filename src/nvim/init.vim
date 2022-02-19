@@ -73,6 +73,7 @@ Plug 'hashivim/vim-terraform'
 Plug 'tpope/vim-fugitive'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 Plug 'preservim/nerdtree'
+Plug 'ctrlpvim/ctrlp.vim'
 
 call plug#end()
 
