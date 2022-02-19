@@ -65,3 +65,9 @@ alias mv='mv -i'
 alias rm='trash-put'
 alias v='nvim'
 alias vi='nvim'
+
+# imagemagick@6
+export PATH="$(brew --prefix imagemagick@6)/bin:$PATH"
+export LDFLAGS="-L$(brew --prefix imagemagick@6)/lib"
+export CPPFLAGS="-I$(brew --prefix imagemagick@6)/include"
+export PKG_CONFIG_PATH="$(brew --prefix imagemagick@6)/lib/pkgconfig"
