@@ -84,3 +84,7 @@ let g:terraform_fmt_on_save = 1
 " vim-lsp-settings
 let g:lsp_settings_filetype_typescript = ['typescript-language-server', 'eslint-language-server']
 let g:lsp_settings_filetype_typescriptreact = ['typescript-language-server', 'eslint-language-server']
+
+" vim-prettier
+let g:prettier#autoformat = 1
+let g:prettier#autoformat_require_pragma = 0
