@@ -8,10 +8,6 @@ dotfiles for myself.
 
 https://www.google.com/intl/ja/chrome/
 
-## iTerms2
-
-https://iterm2.com/downloads.html
-
 ## Slack
 
 https://slack.com/intl/ja-jp/downloads/mac
@@ -44,13 +40,19 @@ $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/
 $ brew install git
 ```
 
+## Hyper
+
+```
+$ brew install --cask hyper
+```
+
 ## dotfiles
 
 ```
 $ git clone git@github.com:koki-develop/dotfiles.git ~/dotfiles
 $ cd ~/dotfiles
 $ bin/setup.sh
-````
+```
 
 ## zsh-completions
 
