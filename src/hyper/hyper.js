@@ -2,7 +2,7 @@ module.exports = {
   config: {
     fontSize: 16,
     fontFamily: '"Ricty Diminished"',
-    cursorColor: "rgba(255, 255, 255, 0.5)",
+    cursorColor: "#ff0000",
     selectionColor: "rgba(255, 255, 255, 0.5)",
 
     summon: {
