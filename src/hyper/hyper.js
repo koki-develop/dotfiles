@@ -2,9 +2,11 @@ module.exports = {
   config: {
     fontSize: 16,
     fontFamily: '"Ricty Diminished"',
-    cursorColor: '#ffffff',
+    cursorColor: "#ffffff",
+
+    summon: {
+      hotkey: "Option+Space",
+    },
   },
-  plugins: [
-    'hyperpower',
-  ]
+  plugins: ["hyperpower", "hyperterm-summon"],
 };
