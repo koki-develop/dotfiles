@@ -10,7 +10,7 @@ set fileformats=unix,dos,mac
 syntax enable
 
 "
-" set
+" settings
 "
 
 set ambiwidth=double
@@ -47,6 +47,13 @@ set ruler
 set vb t_vb=
 set whichwrap=b,s,h,l,<,>,[,],~
 set wildmenu
+
+"
+" mappings
+"
+
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
 
 "
 " plugins
