@@ -54,6 +54,10 @@ $ cd ~/dotfiles
 $ bin/setup.sh
 ```
 
+## Hyper Statusbar
+
+https://github.com/koki-develop/hyper-statusbar
+
 ## zsh-completions
 
 ```
