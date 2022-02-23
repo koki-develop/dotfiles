@@ -17,7 +17,7 @@ module.exports = {
 
     // hyper-statusbar
     statusbar: {
-      panels: ["battery", "user", "cpu", "memory", "ip", "clock"],
+      panels: ["battery", "user", "ip", "cpu", "memory", "clock"],
     },
   },
 
