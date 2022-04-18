@@ -61,24 +61,33 @@ cnoremap <C-n> <Down>
 
 call plug#begin('~/.vim/plugged')
 
+" カラースキーム
+Plug 'tomasr/molokai'
+
+" lsp
 Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
+
+" 補完系
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
-Plug 'tomasr/molokai'
-Plug 'bronson/vim-trailing-whitespace'
-Plug 'cohama/lexima.vim'
-Plug 'mattn/emmet-vim'
-Plug 'AndrewRadev/switch.vim'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-endwise'
+
+" 便利系
+Plug 'bronson/vim-trailing-whitespace' " 末尾空白可視化
+Plug 'cohama/lexima.vim' " 括弧補完
+Plug 'mattn/emmet-vim' " emmet
+Plug 'AndrewRadev/switch.vim' " true <-> false のトグル
+Plug 'tpope/vim-commentary' " コメント
+Plug 'tpope/vim-endwise' " end 補完
+Plug 'tpope/vim-fugitive' " git コマンド
+Plug 'ctrlpvim/ctrlp.vim' " fzf
+Plug 'preservim/nerdtree' " ファイルツリー
+Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' } " prettier
+
+" 言語系
 Plug 'leafgarland/typescript-vim'
 Plug 'jparise/vim-graphql'
 Plug 'hashivim/vim-terraform'
-Plug 'tpope/vim-fugitive'
-Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
-Plug 'preservim/nerdtree'
-Plug 'ctrlpvim/ctrlp.vim'
 
 call plug#end()
 
@@ -98,6 +107,7 @@ let g:prettier#autoformat_require_pragma = 0
 
 " nerdtree
 nnoremap <C-n> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1 " 隠しファイル表示
 
 " ctrlp.vim
 let g:ctrlp_custom_ignore = 'node_modules'
