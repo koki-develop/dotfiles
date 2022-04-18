@@ -84,6 +84,9 @@ Plug 'ctrlpvim/ctrlp.vim' " fzf
 Plug 'preservim/nerdtree' " ファイルツリー
 Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' } " prettier
 
+" 見た目系
+Plug 'itchyny/lightline.vim' " ステータスライン
+
 " 言語系
 Plug 'leafgarland/typescript-vim'
 Plug 'jparise/vim-graphql'
