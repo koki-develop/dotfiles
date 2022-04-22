@@ -74,7 +74,7 @@ Plug 'prabirshrestha/asyncomplete-lsp.vim'
 
 " 便利系
 Plug 'bronson/vim-trailing-whitespace' " 末尾空白可視化
-Plug 'cohama/lexima.vim' " 括弧補完
+Plug 'jiangmiao/auto-pairs' " 括弧補完
 Plug 'mattn/emmet-vim' " emmet
 Plug 'AndrewRadev/switch.vim' " true <-> false のトグル
 Plug 'tpope/vim-commentary' " コメント
