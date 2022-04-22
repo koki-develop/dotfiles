@@ -88,6 +88,7 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --producti
 Plug 'itchyny/lightline.vim' " ステータスライン
 
 " 言語系
+Plug 'fatih/vim-go'
 Plug 'leafgarland/typescript-vim'
 Plug 'jparise/vim-graphql'
 Plug 'hashivim/vim-terraform'
