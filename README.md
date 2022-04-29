@@ -147,6 +147,13 @@ $ asdf global terraform <version>
 $ pip install trash-cli
 ```
 
+## gcloud CLI
+
+```
+$ curl https://sdk.cloud.google.com | bash
+$ gcloud init
+```
+
 ## AWS CLI
 
 ```
