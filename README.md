@@ -46,6 +46,12 @@ $ brew install git
 $ brew install --cask hyper
 ```
 
+## Hammerspoon
+
+```
+$ brew install hammerspoon --cask
+```
+
 ## dotfiles
 
 ```
