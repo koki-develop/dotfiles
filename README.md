@@ -20,6 +20,10 @@ https://www.deepl.com/ja/app/
 
 https://www.docker.com/products/docker-desktop
 
+## kubectl
+
+https://kubernetes.io/ja/docs/tasks/tools/install-kubectl/
+
 ## Notion
 
 https://www.notion.so/desktop
