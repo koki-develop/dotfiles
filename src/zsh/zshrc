@@ -39,6 +39,9 @@ export SAVEHIST=1000
 # direnv
 eval "$(direnv hook zsh)"
 
+# kubectl
+source <(kubectl completion zsh)
+
 # alias
 alias cdd='cd ~/dotfiles'
 alias cde='cd ~/environment'
