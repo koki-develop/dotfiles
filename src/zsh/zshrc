@@ -61,6 +61,7 @@ alias gre='git reset'
 alias grest='git restore'
 alias gdem="git branch --merged|egrep -v '\*|develop|master|main'|xargs git branch -d"
 alias grep='grep --color=auto'
+alias k='kubectl'
 alias l='exa -1'
 alias la='exa -1a'
 alias ll='exa -l'
