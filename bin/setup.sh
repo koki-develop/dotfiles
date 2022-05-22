@@ -11,3 +11,6 @@ ln -sf ~/dotfiles/src/hyper/hyper.js ~/.hyper.js
 
 mkdir -p ~/.hammerspoon
 ln -sf ~/dotfiles/src/hammerspoon/init.lua ~/.hammerspoon/init.lua
+
+mkdir -p ~/.zsh/completion/
+eksctl completion zsh > ~/.zsh/completion/_eksctl

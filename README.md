@@ -244,3 +244,7 @@ $ brew install tree
 ```
 $ brew install nkf
 ```
+
+## eksctl
+
+https://eksctl.io/introduction/#installation

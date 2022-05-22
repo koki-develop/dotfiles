@@ -18,6 +18,7 @@ export PROMPT=$'%* [%n@%m: %F{green}%~%f]%F{yellow}$(__git_ps1 " (%s)")%f\n\$ '
 
 # zsh-completions
 FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+FPATH=~/.zsh/completion:$FPATH
 autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
 
