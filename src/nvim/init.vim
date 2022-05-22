@@ -93,6 +93,7 @@ Plug 'fatih/vim-go'
 Plug 'leafgarland/typescript-vim'
 Plug 'jparise/vim-graphql'
 Plug 'hashivim/vim-terraform'
+Plug 'pantharshit00/vim-prisma'
 
 call plug#end()
 
