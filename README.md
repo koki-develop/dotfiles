@@ -24,6 +24,10 @@ https://www.docker.com/products/docker-desktop
 
 https://kubernetes.io/ja/docs/tasks/tools/install-kubectl/
 
+## krew
+
+https://krew.sigs.k8s.io/docs/user-guide/setup/install/
+
 ## Notion
 
 https://www.notion.so/desktop

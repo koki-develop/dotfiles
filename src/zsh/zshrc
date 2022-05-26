@@ -46,6 +46,9 @@ eval "$(direnv hook zsh)"
 # kubectl
 source <(kubectl completion zsh)
 
+# krew
+export PATH="$HOME/.krew/bin:$PATH"
+
 # alias
 alias cdd='cd ~/dotfiles'
 alias cde='cd ~/environment'
