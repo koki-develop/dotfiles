@@ -7,6 +7,9 @@ setopt no_beep
 setopt no_histbeep
 setopt no_listbeep
 
+# editor
+export EDITOR=nvim
+
 # path
 export PATH=$PATH:$HOME/.cargo/bin
 
