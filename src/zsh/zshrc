@@ -13,12 +13,6 @@ export EDITOR=nvim
 # path
 export PATH=$PATH:$HOME/.cargo/bin
 
-# prompt
-precmd() { printf '\n' }
-setopt prompt_subst
-source ~/dotfiles/src/zsh/git-prompt.sh
-export PROMPT=$'%* [%n@%m: %F{green}%~%f]%F{yellow}$(__git_ps1 " (%s)")%f\n\$ '
-
 # zsh-completions
 FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
 FPATH=~/.zsh/completion:$FPATH
@@ -48,6 +42,9 @@ source <(kubectl completion zsh)
 
 # krew
 export PATH="$HOME/.krew/bin:$PATH"
+
+# kube-ps1
+source "$(brew --prefix kube-ps1)/share/kube-ps1.sh"
 
 # alias
 alias cdd='cd ~/dotfiles'
@@ -89,3 +86,9 @@ if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/
 if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
 
 source <(kubectl completion zsh)
+
+# prompt
+precmd() { printf '\n' }
+setopt prompt_subst
+source ~/dotfiles/src/zsh/git-prompt.sh
+export PS1=$'%* [%n: %F{green}%~%f]%F{yellow}$(__git_ps1 " (%s)")%f $(kube_ps1)\n\$ '

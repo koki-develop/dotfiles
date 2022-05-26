@@ -28,6 +28,10 @@ https://kubernetes.io/ja/docs/tasks/tools/install-kubectl/
 
 https://krew.sigs.k8s.io/docs/user-guide/setup/install/
 
+## kube-ps1
+
+https://github.com/jonmosco/kube-ps1
+
 ## Notion
 
 https://www.notion.so/desktop
