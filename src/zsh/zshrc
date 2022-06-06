@@ -76,6 +76,7 @@ alias lla='exa -al'
 alias mkdir='mkdir -p'
 alias mv='mv -i'
 alias rm='trash-put'
+alias tf='terraform'
 alias v='nvim'
 alias vi='nvim'
 
