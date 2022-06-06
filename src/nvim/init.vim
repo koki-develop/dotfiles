@@ -82,7 +82,9 @@ Plug 'tpope/vim-endwise' " end 補完
 Plug 'tpope/vim-fugitive' " git コマンド
 Plug 'ctrlpvim/ctrlp.vim' " fzf
 Plug 'preservim/nerdtree' " ファイルツリー
-Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' } " prettier
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install --frozen-lockfile --production',
+  \ 'for': ['javascript', 'typescript'] }
 
 " 見た目系
 Plug 'itchyny/lightline.vim' " ステータスライン
