@@ -49,6 +49,9 @@ source "$(brew --prefix kube-ps1)/share/kube-ps1.sh"
 # alias
 alias cdd='cd ~/dotfiles'
 alias cde='cd ~/environment'
+alias '..2'='cd ../../'
+alias '..3'='cd ../../../'
+alias '..4'='cd ../../../../'
 alias d='docker'
 alias dc='docker compose'
 alias g='git'
