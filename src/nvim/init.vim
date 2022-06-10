@@ -84,10 +84,11 @@ Plug 'ctrlpvim/ctrlp.vim' " fzf
 Plug 'preservim/nerdtree' " ファイルツリー
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install --frozen-lockfile --production',
-  \ 'for': ['javascript', 'typescript'] }
+  \ 'for': ['javascript', 'typescript', 'typescriptreact'] }
 
 " 見た目系
 Plug 'itchyny/lightline.vim' " ステータスライン
+Plug 'Yggdroot/indentLine' " インデント
 
 " 言語系
 Plug 'jjo/vim-cue'
@@ -96,6 +97,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'jparise/vim-graphql'
 Plug 'hashivim/vim-terraform'
 Plug 'pantharshit00/vim-prisma'
+Plug 'elzr/vim-json'
 
 call plug#end()
 
@@ -119,3 +121,6 @@ let NERDTreeShowHidden=1 " 隠しファイル表示
 
 " ctrlp.vim
 let g:ctrlp_custom_ignore = 'node_modules'
+
+" vim-json
+let g:vim_json_syntax_conceal = 0
