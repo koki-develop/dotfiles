@@ -46,6 +46,9 @@ export PATH="$HOME/.krew/bin:$PATH"
 # kube-ps1
 source "$(brew --prefix kube-ps1)/share/kube-ps1.sh"
 
+# helm
+source <(helm completion zsh)
+
 # alias
 alias cdd='cd ~/dotfiles'
 alias cde='cd ~/environment'
