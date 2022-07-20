@@ -124,3 +124,20 @@ let g:ctrlp_custom_ignore = 'node_modules'
 
 " vim-json
 let g:vim_json_syntax_conceal = 0
+
+" lightline
+" https://github.com/itchyny/lightline.vim/issues/293#issuecomment-373710096
+let g:lightline = {
+      \ 'component_function': {
+      \   'filename': 'LightlineFilename',
+      \ }
+      \ }
+
+function! LightlineFilename()
+  let root = fnamemodify(get(b:, 'git_dir'), ':h')
+  let path = expand('%:p')
+  if path[:len(root)-1] ==# root
+    return path[len(root)+1:]
+  endif
+  return expand('%')
+endfunction
