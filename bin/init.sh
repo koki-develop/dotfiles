@@ -7,16 +7,22 @@ set -eu
 #
 
 # Check if ssh key is registered
+echo "Checking if ssh key is registered..."
 ssh -T git@github.com 2>&1 | grep "successfully authenticated" > /dev/null
+echo "Done."
 
 # Clone repository
+echo "Cloning dotfiles..."
 readonly DOTFILES_DIR="${HOME}/dotfiles"
 git clone git@github.com:koki-develop/dotfiles.git "${DOTFILES_DIR}"
+echo "Done."
 pushd "${DOTFILES_DIR}"
 
 #
 # Create symbolic links
 #
+
+echo "Creating symbolic links..."
 
 # zsh
 ln -sf "${DOTFILES_DIR}/src/zsh/.zshrc" "${HOME}/.zshrc"
@@ -38,16 +44,23 @@ ln -sf "${DOTFILES_DIR}/src/hammerspoon/init.lua" "${HOME}/.hammerspoon/init.lua
 mkdir -p "${HOME}/.config/wezterm"
 ln -sf "${DOTFILES_DIR}/src/wezterm/wezterm.lua" "${HOME}/.config/wezterm/wezterm.lua"
 
+echo "Done."
+
 #
 # Install Homebrew
 #
 
+echo "Installing Homebrew..."
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo "Done."
+
 brew bundle
 
 #
 # Install HackGen
 #
+
+echo "Installing HackGen..."
 
 # Get latest version
 HACK_GEN_REPO=yuru7/HackGen
@@ -59,25 +72,33 @@ wget -O /tmp/HackGen.zip "${HACK_GEN_DOWNLOAD_URL}"
 unzip -o /tmp/HackGen.zip -d /tmp
 cp /tmp/HackGen_NF_"${HACK_GEN_VERSION}"/HackGenConsoleNF-* "${HOME}"/Library/Fonts/
 
+echo "Done."
+
 #
 # Install zplug
 #
 
+echo "Installing zplug..."
 curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
+echo "Done."
 
 #
 # Install vim-plug
 #
 
+echo "Installing vim-plug..."
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 nvim +PlugInstall +UpdateRemotePlugins +qall
+echo "Done."
 
 #
 # Set up git-secrets
 #
 
+echo "Setting up git-secrets..."
 git secrets --register-aws --global
 git secrets --install ~/.git-templates/git-secrets
+echo "Done."
 
 #
 # Clean up
