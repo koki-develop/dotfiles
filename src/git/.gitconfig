@@ -1,0 +1,36 @@
+[color]
+	ui = true
+[user]
+	name = koki-develop
+	email = kou.pg.0131@gmail.com
+[push]
+	default = nothing
+[init]
+	defaultBranch = main
+	templateDir = ~/.git-templates/git-secrets
+[fetch]
+	prune = true
+[core]
+	editor = nvim
+	quotepath = false
+	ignorecase = false
+	pager = delta
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	light = false
+[diff]
+	algorithm = histogram
+	colorMoved = default
+[secrets]
+	providers = git secrets --aws-provider
+	patterns = (A3T[A-Z0-9]|AKIA|AGPA|AIDA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{16}
+	patterns = (\"|')?(AWS|aws|Aws)?_?(SECRET|secret|Secret)?_?(ACCESS|access|Access)?_?(KEY|key|Key)(\"|')?\\s*(:|=>|=)\\s*(\"|')?[A-Za-z0-9/\\+=]{40}(\"|')?
+	patterns = (\"|')?(AWS|aws|Aws)?_?(ACCOUNT|account|Account)_?(ID|id|Id)?(\"|')?\\s*(:|=>|=)\\s*(\"|')?[0-9]{4}\\-?[0-9]{4}\\-?[0-9]{4}(\"|')?
+	allowed = AKIAIOSFODNN7EXAMPLE
+	allowed = wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+[pull]
+	rebase = false
+[merge]
+	conflictstyle = diff3
