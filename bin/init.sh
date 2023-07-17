@@ -21,3 +21,9 @@ HACK_GEN_DOWNLOAD_URL=https://github.com/yuru7/HackGen/releases/download/${HACK_
 wget -O /tmp/HackGen.zip "${HACK_GEN_DOWNLOAD_URL}"
 unzip -o /tmp/HackGen.zip -d /tmp
 cp /tmp/HackGen_NF_"${HACK_GEN_VERSION}"/HackGenConsoleNF-* "${HOME}"/Library/Fonts/
+
+#
+# Install zplug
+#
+
+curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
