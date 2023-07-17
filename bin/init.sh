@@ -1,6 +1,18 @@
-#!/bin/bash
+#!/bin/zsh
 
-set -euo pipefail
+set -eu
+
+#
+# Clone dotfiles
+#
+
+# Check if ssh key is registered
+ssh -T git@github.com 2>&1 | grep "successfully authenticated" > /dev/null
+
+# Clone repository
+readonly DOTFILES_DIR="${HOME}/dotfiles"
+git clone git@github.com:koki-develop/dotfiles.git "${DOTFILES_DIR}"
+pushd "${DOTFILES_DIR}"
 
 #
 # Install Homebrew
