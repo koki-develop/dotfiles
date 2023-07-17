@@ -78,3 +78,9 @@ nvim +PlugInstall +UpdateRemotePlugins +qall
 
 git secrets --register-aws --global
 git secrets --install ~/.git-templates/git-secrets
+
+#
+# Clean up
+#
+
+popd
