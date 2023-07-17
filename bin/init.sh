@@ -19,6 +19,7 @@ pushd "${DOTFILES_DIR}"
 #
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew bundle
 
 #
 # Install HackGen
