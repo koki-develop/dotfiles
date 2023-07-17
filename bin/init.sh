@@ -15,6 +15,30 @@ git clone git@github.com:koki-develop/dotfiles.git "${DOTFILES_DIR}"
 pushd "${DOTFILES_DIR}"
 
 #
+# Create symbolic links
+#
+
+# zsh
+ln -sf "${DOTFILES_DIR}/src/zsh/.zshrc" "${HOME}/.zshrc"
+
+# git
+mkdir -p "${HOME}/.config/git"
+ln -sf "${DOTFILES_DIR}/src/git/.gitconfig" "${HOME}/.gitconfig"
+ln -sf "${DOTFILES_DIR}/src/git/ignore" "${HOME}/.config/git/ignore"
+
+# nvim
+mkdir -p "${HOME}/.config/nvim"
+ln -sf "${DOTFILES_DIR}/src/nvim/init.vim" "${HOME}/.config/nvim/init.vim"
+
+# hammerspoon
+mkdir -p "${HOME}/.hammerspoon"
+ln -sf "${DOTFILES_DIR}/src/hammerspoon/init.lua" "${HOME}/.hammerspoon/init.lua"
+
+# wezterm
+mkdir -p "${HOME}/.config/wezterm"
+ln -sf "${DOTFILES_DIR}/src/wezterm/wezterm.lua" "${HOME}/.config/wezterm/wezterm.lua"
+
+#
 # Install Homebrew
 #
 
