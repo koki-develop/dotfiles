@@ -21,3 +21,13 @@ fi
 
 # Load plugins
 zplug load --verbose
+
+#
+# Setup tools
+#
+
+# rtx
+eval "$(rtx activate zsh)"
+
+# direnv
+eval "$(direnv hook zsh)"
