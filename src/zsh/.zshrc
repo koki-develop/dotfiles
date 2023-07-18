@@ -1,5 +1,8 @@
 # !/bin/zsh -e
 
+autoload bashcompinit && bashcompinit
+autoload -Uz compinit && compinit
+
 #
 # Set up zplug
 #
@@ -31,3 +34,6 @@ eval "$(rtx activate zsh)"
 
 # direnv
 eval "$(direnv hook zsh)"
+
+# aws-cli
+complete -C "$(which aws_completer)" aws
