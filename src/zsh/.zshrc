@@ -59,3 +59,50 @@ eval "$(direnv hook zsh)"
 
 # aws-cli
 complete -C "$(which aws_completer)" aws
+
+#
+# Aliases
+#
+
+# aws
+alias av='aws-vault'
+# docker
+alias d='docker'
+alias dc='docker compose'
+# cat
+alias cat='gat'
+function gess() {
+  gat --force-color "$@" | less -R
+}
+# git
+alias g='git'
+alias gad='git add'
+alias gbr='git branch'
+alias gcom='git commit -m'
+alias gdi='git diff'
+alias gdem="git branch --merged | egrep -v '\*|develop|master|main' | xargs git branch --delete"
+alias gfe='git fetch'
+alias glo='git log --pretty=oneline'
+alias gre='git reset'
+alias grest='git restore'
+alias gst='git status'
+alias gsw='git switch'
+# grep
+alias grep='rg --ignore-case'
+# ls
+alias ls='exa -1'
+alias l='ls'
+alias la='ls -a'
+alias ll='ls -l'
+alias lla='ls -la'
+# mkdir
+alias mkdir='mkdir -p'
+# mv
+alias mv='mv -i'
+# rm
+alias rm='gotrash put'
+# terraform
+alias tf='terraform'
+# nvim
+alias v='nvim'
+alias vi='nvim'
