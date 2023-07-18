@@ -60,6 +60,9 @@ eval "$(direnv hook zsh)"
 # aws-cli
 complete -C "$(which aws_completer)" aws
 
+# starship
+eval "$(starship init zsh)"
+
 #
 # Aliases
 #
