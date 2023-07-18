@@ -96,7 +96,7 @@ echo "Done."
 
 echo "Setting up git-secrets..."
 git secrets --register-aws --global
-git secrets --install ~/.git-templates/git-secrets
+git secrets --install --force ~/.git-templates/git-secrets
 echo "Done."
 
 #
