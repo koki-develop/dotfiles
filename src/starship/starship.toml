@@ -43,4 +43,4 @@ symbol = ' '
 disabled = false
 time_format = "%T"
 style = "bg:#06969A"
-format = '[ 󰅐 $time ]($style)'
+format = '[ 󰅐 $time]($style)'
