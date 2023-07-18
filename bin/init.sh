@@ -53,8 +53,7 @@ echo "Done."
 echo "Installing Homebrew..."
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 echo "Done."
-
-brew bundle
+brew bundle --file "${DOTFILES_DIR}/src/brew/Brewfile"
 
 #
 # Install HackGen
