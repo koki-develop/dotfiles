@@ -93,11 +93,12 @@ alias gsw='git switch'
 # grep
 alias grep='rg --ignore-case'
 # ls
-alias ls='exa -1'
+alias ls='exa -1 --icons'
 alias l='ls'
 alias la='ls -a'
 alias ll='ls -l'
 alias lla='ls -la'
+alias tree='ls --tree --git-ignore'
 # mkdir
 alias mkdir='mkdir -p'
 # mv
