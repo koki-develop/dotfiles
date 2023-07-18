@@ -1,25 +1,6 @@
 # !/bin/zsh -e
 
 #
-# Completion
-#
-
-fpath=(${HOME}/.zsh/completion $fpath)
-autoload bashcompinit && bashcompinit
-autoload -Uz compinit && compinit
-
-#
-# Options
-#
-
-setopt auto_cd
-setopt magic_equal_subst
-setopt hist_ignore_dups
-setopt no_beep
-setopt no_hist_beep
-setopt no_list_beep
-
-#
 # Styles
 #
 
@@ -46,6 +27,25 @@ fi
 
 # Load plugins
 zplug load --verbose
+
+#
+# Completion
+#
+
+fpath=(${HOME}/.zsh/completion $fpath)
+autoload bashcompinit && bashcompinit
+autoload -Uz compinit && compinit
+
+#
+# Options
+#
+
+setopt auto_cd
+setopt magic_equal_subst
+setopt hist_ignore_dups
+setopt no_beep
+setopt no_hist_beep
+setopt no_list_beep
 
 #
 # Setup tools
