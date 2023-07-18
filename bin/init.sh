@@ -48,6 +48,9 @@ ln -sf "${DOTFILES_DIR}/src/wezterm/wezterm.lua" "${HOME}/.config/wezterm/wezter
 mkdir -p "${HOME}/.config"
 ln -sf "${DOTFILES_DIR}/src/starship/starship.toml" "${HOME}/.config/starship.toml"
 
+# homebrew
+ln -sf "${DOTFILES_DIR}/src/brew/.Brewfile" "${HOME}/.Brewfile"
+
 echo "Done."
 
 #
@@ -57,7 +60,7 @@ echo "Done."
 echo "Installing Homebrew..."
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 echo "Done."
-brew bundle --file "${DOTFILES_DIR}/src/brew/Brewfile"
+brew bundle --global
 
 #
 # Install HackGen
