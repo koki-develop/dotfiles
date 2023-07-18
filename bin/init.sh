@@ -44,6 +44,10 @@ ln -sf "${DOTFILES_DIR}/src/hammerspoon/init.lua" "${HOME}/.hammerspoon/init.lua
 mkdir -p "${HOME}/.config/wezterm"
 ln -sf "${DOTFILES_DIR}/src/wezterm/wezterm.lua" "${HOME}/.config/wezterm/wezterm.lua"
 
+# starship
+mkdir -p "${HOME}/.config"
+ln -sf "${DOTFILES_DIR}/src/starship/starship.toml" "${HOME}/.config/starship.toml"
+
 echo "Done."
 
 #
