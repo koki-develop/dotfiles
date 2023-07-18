@@ -1,6 +1,12 @@
 # !/bin/zsh -e
 
 #
+# Homebrew
+#
+
+export PATH="/opt/homebrew/bin:${PATH}"
+
+#
 # Styles
 #
 
