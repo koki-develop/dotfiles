@@ -1,0 +1,56 @@
+taps = %w[
+  go-task/tap
+  goreleaser/tap
+  jdxcode/tap
+  koki-develop/tap
+  wez/wezterm
+]
+
+casks = %w[
+  aws-vault
+  deepl
+  docker
+  google-japanese-ime
+  hammerspoon
+  obsidian
+  slack
+  todoist
+  visual-studio-code
+  wez/wezterm/wezterm
+]
+
+formulae = %w[
+  actionlint
+  awscli
+  bottom
+  colordiff
+  direnv
+  exa
+  fd
+  genact
+  gh
+  git
+  git-delta
+  git-secrets
+  go-task/tap/go-task
+  goreleaser/tap/goreleaser
+  hyperfine
+  jdxcode/tap/rtx
+  jq
+  koki-develop/tap/clive
+  koki-develop/tap/docker-tags
+  koki-develop/tap/gat
+  koki-develop/tap/gotrash
+  koki-develop/tap/typingo
+  neovim
+  procs
+  ripgrep
+  watch
+  watchexec
+  wget
+  xh
+]
+
+taps.each { |t| tap t }
+casks.each { |c| cask c }
+formulae.each { |f| brew f }
