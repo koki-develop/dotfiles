@@ -9,7 +9,7 @@ autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
 
 #
-# Set options
+# Options
 #
 
 setopt auto_cd
@@ -18,6 +18,12 @@ setopt hist_ignore_dups
 setopt no_beep
 setopt no_hist_beep
 setopt no_list_beep
+
+#
+# Styles
+#
+
+zstyle ':completion:*:default' menu select=2
 
 #
 # Set up zplug
