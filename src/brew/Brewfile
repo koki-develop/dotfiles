@@ -45,6 +45,7 @@ formulae = %w[
   neovim
   procs
   ripgrep
+  starship
   watch
   watchexec
   wget
