@@ -9,6 +9,17 @@ autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
 
 #
+# Set options
+#
+
+setopt auto_cd
+setopt magic_equal_subst
+setopt hist_ignore_dups
+setopt no_beep
+setopt no_hist_beep
+setopt no_list_beep
+
+#
 # Set up zplug
 #
 
