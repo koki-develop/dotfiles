@@ -1,5 +1,10 @@
 # !/bin/zsh -e
 
+#
+# Completion
+#
+
+fpath=(${HOME}/.zsh/completion $fpath)
 autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
 
