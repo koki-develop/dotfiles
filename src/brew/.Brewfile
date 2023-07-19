@@ -38,6 +38,7 @@ formulae = %w[
   jdxcode/tap/rtx
   jq
   koki-develop/tap/clive
+  koki-develop/tap/ego
   koki-develop/tap/docker-tags
   koki-develop/tap/gat
   koki-develop/tap/gotrash
