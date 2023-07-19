@@ -83,6 +83,8 @@ alias cat='gat'
 function gess() {
   gat --force-color "$@" | less -R
 }
+# echo
+alias echo='ego'
 # git
 alias g='git'
 alias gad='git add'
