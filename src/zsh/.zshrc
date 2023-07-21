@@ -1,5 +1,7 @@
 # !/bin/zsh -e
 
+export PATH="${HOME}/.local/bin:${PATH}"
+
 #
 # Homebrew
 #
