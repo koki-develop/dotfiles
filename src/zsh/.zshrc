@@ -118,6 +118,6 @@ alias mv='mv -i'
 alias rm='gotrash put'
 # terraform
 alias tf='terraform'
-# nvim
-alias v='nvim'
-alias vi='nvim'
+# vim
+alias v='lvim'
+alias vi='lvim'

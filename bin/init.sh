@@ -32,9 +32,8 @@ mkdir -p "${HOME}/.config/git"
 ln -sf "${DOTFILES_DIR}/src/git/.gitconfig" "${HOME}/.gitconfig"
 ln -sf "${DOTFILES_DIR}/src/git/ignore" "${HOME}/.config/git/ignore"
 
-# nvim
-mkdir -p "${HOME}/.config/nvim"
-ln -sf "${DOTFILES_DIR}/src/nvim/init.vim" "${HOME}/.config/nvim/init.vim"
+# LunarVim
+LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.sh)
 
 # hammerspoon
 mkdir -p "${HOME}/.hammerspoon"
@@ -86,15 +85,6 @@ echo "Done."
 
 echo "Installing zplug..."
 curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
-echo "Done."
-
-#
-# Install vim-plug
-#
-
-echo "Installing vim-plug..."
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-nvim +PlugInstall +UpdateRemotePlugins +qall
 echo "Done."
 
 #
