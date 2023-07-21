@@ -94,6 +94,7 @@ alias gdi='git diff'
 alias gdem="git branch --merged | egrep -v '\*|develop|master|main' | xargs git branch --delete"
 alias gfe='git fetch'
 alias glo='git log --pretty=oneline'
+alias gnow='git commit --all --message "commit"'
 alias gre='git reset'
 alias grest='git restore'
 alias gst='git status'
