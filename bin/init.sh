@@ -34,6 +34,8 @@ ln -sf "${DOTFILES_DIR}/src/git/ignore" "${HOME}/.config/git/ignore"
 
 # LunarVim
 LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.sh)
+mkdir -p "${HOME}/.config/lvim"
+ln -sf "${DOTFILES_DIR}/src/lvim/config.lua" "${HOME}/.config/lvim/config.lua"
 
 # hammerspoon
 mkdir -p "${HOME}/.hammerspoon"
