@@ -4,3 +4,6 @@
 -- Discord: https://discord.com/invite/Xb9B4Ny
 
 lvim.format_on_save.enabled = true
+
+-- https://www.lunarvim.org/docs/features/supported-frameworks/angular
+require("lvim.lsp.manager").setup("angularls")
