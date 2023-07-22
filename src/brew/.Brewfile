@@ -8,6 +8,7 @@ taps = %w[
 
 casks = %w[
   aws-vault
+  clipy
   deepl
   docker
   google-japanese-ime
