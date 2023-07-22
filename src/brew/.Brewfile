@@ -3,6 +3,7 @@ taps = %w[
   goreleaser/tap
   jdxcode/tap
   koki-develop/tap
+  jesseduffield/lazygit
   wez/wezterm
 ]
 
@@ -45,6 +46,7 @@ formulae = %w[
   koki-develop/tap/gofzf
   koki-develop/tap/gotrash
   koki-develop/tap/typingo
+  jesseduffield/lazygit/lazygit
   neovim
   procs
   ripgrep
