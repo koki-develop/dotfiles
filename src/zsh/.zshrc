@@ -85,6 +85,10 @@ alias cat='gat'
 function gess() {
   gat --force-color "$@" | less -R
 }
+# cd
+alias ..2='cd ../..'
+alias ..3='cd ../../..'
+alias ..4='cd ../../../..'
 # echo
 alias echo='ego'
 # git
