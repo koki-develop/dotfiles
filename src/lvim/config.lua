@@ -3,8 +3,17 @@
 -- Forum: https://www.reddit.com/r/lunarvim/
 -- Discord: https://discord.com/invite/Xb9B4Ny
 
-lvim.format_on_save.enabled = true
 vim.opt.clipboard = ""
+
+-- Formatters
+lvim.format_on_save.enabled = true
+local formatters = require "lvim.lsp.null-ls.formatters"
+formatters.setup {
+  {
+    command = "prettier",
+    filetypes = { "typescript", "typescriptreact" }
+  }
+}
 
 -- Angular
 -- https://www.lunarvim.org/docs/features/supported-frameworks/angular
