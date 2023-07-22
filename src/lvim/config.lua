@@ -4,6 +4,7 @@
 -- Discord: https://discord.com/invite/Xb9B4Ny
 
 lvim.format_on_save.enabled = true
+vim.opt.clipboard = ""
 
 -- Angular
 -- https://www.lunarvim.org/docs/features/supported-frameworks/angular
