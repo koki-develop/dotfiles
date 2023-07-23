@@ -23,6 +23,9 @@ formatters.setup {
 -- https://www.lunarvim.org/docs/features/supported-frameworks/angular
 require("lvim.lsp.manager").setup("angularls")
 
+-- Statusline
+lvim.builtin.lualine.sections.lualine_a = { "mode" }
+
 -- GitHub Copilot
 -- https://github.com/LunarVim/LunarVim/issues/1856#issuecomment-954224770
 lvim.plugins = {
