@@ -12,6 +12,10 @@ formatters.setup {
   {
     command = "prettier",
     filetypes = { "typescript", "typescriptreact" }
+  },
+  {
+    command = "goimports",
+    filetypes = { "go" }
   }
 }
 
