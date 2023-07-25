@@ -29,6 +29,7 @@ lvim.builtin.lualine.sections.lualine_a = { "mode" }
 lvim.plugins = {
   { "github/copilot.vim" },
   { "tpope/vim-fugitive" },
+  { "bronson/vim-trailing-whitespace" },
 }
 
 -- GitHub Copilot
