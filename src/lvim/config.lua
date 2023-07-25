@@ -26,11 +26,13 @@ require("lvim.lsp.manager").setup("angularls")
 -- Statusline
 lvim.builtin.lualine.sections.lualine_a = { "mode" }
 
+lvim.plugins = {
+  { "github/copilot.vim" },
+  { "tpope/vim-fugitive" },
+}
+
 -- GitHub Copilot
 -- https://github.com/LunarVim/LunarVim/issues/1856#issuecomment-954224770
-lvim.plugins = {
-  { "github/copilot.vim" }
-}
 vim.g.copilot_no_tab_map = true
 vim.g.copilot_assume_mapped = true
 vim.g.copilot_tab_fallback = ""
