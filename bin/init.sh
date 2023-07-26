@@ -33,7 +33,6 @@ ln -sf "${DOTFILES_DIR}/src/git/.gitconfig" "${HOME}/.gitconfig"
 ln -sf "${DOTFILES_DIR}/src/git/ignore" "${HOME}/.config/git/ignore"
 
 # LunarVim
-LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.sh)
 mkdir -p "${HOME}/.config/lvim"
 ln -sf "${DOTFILES_DIR}/src/lvim/config.lua" "${HOME}/.config/lvim/config.lua"
 
@@ -53,6 +52,12 @@ ln -sf "${DOTFILES_DIR}/src/starship/starship.toml" "${HOME}/.config/starship.to
 ln -sf "${DOTFILES_DIR}/src/brew/.Brewfile" "${HOME}/.Brewfile"
 
 echo "Done."
+
+#
+# Install LunarVim
+#
+
+LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.sh)
 
 #
 # Install Homebrew
