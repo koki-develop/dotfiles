@@ -11,7 +11,7 @@
 [fetch]
 	prune = true
 [core]
-	editor = nvim
+	editor = lvim
 	quotepath = false
 	ignorecase = false
 	pager = delta
