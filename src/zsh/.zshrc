@@ -1,6 +1,11 @@
 # !/bin/zsh -e
 
+#
+# Environment variables
+#
+
 export PATH="${HOME}/.local/bin:${PATH}"
+export EDITOR='lvim'
 
 #
 # Homebrew
