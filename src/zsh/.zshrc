@@ -94,6 +94,8 @@ function gess() {
 alias ..2='cd ../..'
 alias ..3='cd ../../..'
 alias ..4='cd ../../../..'
+alias cdd="cd ${HOME}/dotfiles"
+alias cdw="cd ${HOME}/work"
 # echo
 alias echo='ego'
 # git
