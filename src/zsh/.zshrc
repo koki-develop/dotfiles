@@ -12,6 +12,7 @@ export EDITOR='lvim'
 #
 
 export PATH="/opt/homebrew/bin:${PATH}"
+export PATH="$(brew --repo)/opt/mysql-client/bin:$PATH"
 
 #
 # Styles
