@@ -39,6 +39,7 @@ formulae = %w[
   hyperfine
   jdxcode/tap/rtx
   jq
+  mysql-client
   koki-develop/tap/clive
   koki-develop/tap/ego
   koki-develop/tap/docker-tags
