@@ -1,6 +1,7 @@
 version: '3'
 
 tasks:
-  brew:
+  default:
     cmds:
+      - git pull origin main
       - brew bundle --global
