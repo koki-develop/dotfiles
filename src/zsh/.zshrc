@@ -40,7 +40,7 @@ if ! zplug check --verbose; then
 fi
 
 # Load plugins
-zplug load --verbose
+zplug load
 
 #
 # Completion
