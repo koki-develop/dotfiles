@@ -16,6 +16,10 @@ formatters.setup {
   {
     command = "goimports",
     filetypes = { "go" }
+  },
+  {
+    command = "black",
+    filetypes = { "python" }
   }
 }
 
