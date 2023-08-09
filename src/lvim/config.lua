@@ -35,6 +35,10 @@ lvim.plugins = {
   { "github/copilot.vim" },
   { "tpope/vim-fugitive" },
   { "bronson/vim-trailing-whitespace" },
+  {
+    "klen/nvim-config-local",
+    config = true,
+  }
 }
 
 -- GitHub Copilot
