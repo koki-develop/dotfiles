@@ -23,6 +23,9 @@ formatters.setup {
   }
 }
 
+-- Treesitter
+lvim.builtin.treesitter.auto_install = true
+
 -- Angular
 -- https://www.lunarvim.org/docs/features/supported-frameworks/angular
 require("lvim.lsp.manager").setup("angularls")
