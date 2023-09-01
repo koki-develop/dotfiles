@@ -11,7 +11,7 @@ export EDITOR='lvim'
 # Homebrew
 #
 
-export PATH="/opt/homebrew/bin:${PATH}"
+eval "$(brew shellenv)"
 export PATH="$(brew --repo)/opt/mysql-client/bin:$PATH"
 
 #
