@@ -54,12 +54,6 @@ ln -sf "${DOTFILES_DIR}/src/brew/.Brewfile" "${HOME}/.Brewfile"
 echo "Done."
 
 #
-# Install LunarVim
-#
-
-LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.sh)
-
-#
 # Install Homebrew
 #
 
@@ -67,6 +61,12 @@ echo "Installing Homebrew..."
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 echo "Done."
 brew bundle --global
+
+#
+# Install LunarVim
+#
+
+LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.sh)
 
 #
 # Install HackGen
