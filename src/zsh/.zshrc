@@ -62,7 +62,7 @@ setopt no_hist_beep
 setopt no_list_beep
 
 #
-# Setup tools
+# Set up tools
 #
 
 # rtx
@@ -80,6 +80,9 @@ eval "$(starship init zsh)"
 # gcloud
 if [ -f "${HOME}/google-cloud-sdk/path.zsh.inc" ]; then . "${HOME}/google-cloud-sdk/path.zsh.inc"; fi
 if [ -f "${HOME}/google-cloud-sdk/completion.zsh.inc" ]; then . "${HOME}/google-cloud-sdk/completion.zsh.inc"; fi
+
+# libpq
+export PATH="$(brew --prefix)/opt/libpq/bin:$PATH"
 
 #
 # Aliases
