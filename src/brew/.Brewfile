@@ -39,6 +39,7 @@ formulae = %w[
   hyperfine
   jdxcode/tap/rtx
   jq
+  libpq
   mysql-client
   koki-develop/tap/clive
   koki-develop/tap/ego
