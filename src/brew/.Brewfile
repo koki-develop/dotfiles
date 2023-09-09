@@ -27,7 +27,7 @@ formulae = %w[
   bottom
   colordiff
   direnv
-  exa
+  eza
   fd
   genact
   gh
