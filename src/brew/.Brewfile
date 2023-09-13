@@ -34,6 +34,7 @@ formulae = %w[
   git
   git-delta
   git-secrets
+  glow
   go-task/tap/go-task
   goreleaser/tap/goreleaser
   hyperfine
