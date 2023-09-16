@@ -36,6 +36,7 @@ formulae = %w[
   git-secrets
   glow
   go-task/tap/go-task
+  golangci-lint
   goreleaser/tap/goreleaser
   hyperfine
   jdxcode/tap/rtx
