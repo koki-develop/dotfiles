@@ -43,6 +43,7 @@ formulae = %w[
   jq
   libpq
   mysql-client
+  koki-develop/tap/askai
   koki-develop/tap/clive
   koki-develop/tap/ego
   koki-develop/tap/docker-tags
