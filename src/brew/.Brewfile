@@ -38,6 +38,7 @@ formulae = %w[
   go-task/tap/go-task
   golangci-lint
   goreleaser/tap/goreleaser
+  gpg
   hyperfine
   jdxcode/tap/rtx
   jq
