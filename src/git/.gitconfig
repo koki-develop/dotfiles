@@ -3,6 +3,7 @@
 [user]
 	name = koki-develop
 	email = kou.pg.0131@gmail.com
+	signingkey = F11718FD5C011056
 [push]
 	default = nothing
 [init]
@@ -34,3 +35,5 @@
 	rebase = false
 [merge]
 	conflictstyle = diff3
+[commit]
+	gpgsign = true
