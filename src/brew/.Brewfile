@@ -40,6 +40,7 @@ formulae = %w[
   goreleaser/tap/goreleaser
   gpg
   hyperfine
+  imagemagick
   jdxcode/tap/rtx
   jq
   libpq
