@@ -1,4 +1,8 @@
 .DS_Store
-TODO
 .tool-versions
 .vscode
+
+TODO
+.memo
+
+.nvim.lua
