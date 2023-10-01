@@ -5,6 +5,13 @@
 
 vim.opt.clipboard = ""
 
+-- Linters
+local linters = require "lvim.lsp.null-ls.linters"
+linters.setup {
+  { exe = "eslint",        filetypes = { "typescript", "typescriptreact" } },
+  { exe = "golangci_lint", filetypes = { "go" } },
+}
+
 -- Formatters
 lvim.format_on_save.enabled = true
 local formatters = require "lvim.lsp.null-ls.formatters"
