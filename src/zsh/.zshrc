@@ -5,6 +5,7 @@
 #
 
 export PATH="${HOME}/.local/bin:${PATH}"
+export PATH="${HOME}/.config/v-analyzer/bin:${PATH}"
 export GPG_TTY=$(tty)
 export EDITOR='lvim'
 
@@ -139,5 +140,4 @@ alias rm='gotrash put'
 # terraform
 alias tf='terraform'
 # vim
-alias v='lvim'
 alias vi='lvim'
