@@ -125,7 +125,7 @@ alias gsw='git switch'
 # grep
 alias grep='rg --ignore-case'
 # ls
-alias ls='eza -1 --icons'
+alias ls='eza -1 --icons always'
 alias l='ls'
 alias la='ls -a'
 alias ll='ls -l'
