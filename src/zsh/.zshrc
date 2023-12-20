@@ -6,7 +6,6 @@
 
 export PATH="${HOME}/.local/bin:${PATH}"
 export PATH="${HOME}/.config/v-analyzer/bin:${PATH}"
-export PATH="$(aqua root-dir)/bin:${PATH}"
 export GPG_TTY=$(tty)
 export EDITOR='lvim'
 
@@ -67,6 +66,10 @@ setopt no_list_beep
 #
 # Set up tools
 #
+
+# aqua
+export PATH="$(aqua root-dir)/bin:${PATH}"
+export AQUA_GLOBAL_CONFIG="${HOME}/dotfiles/src/aqua/aqua.yaml"
 
 # direnv
 eval "$(direnv hook zsh)"
