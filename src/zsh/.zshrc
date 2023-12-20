@@ -67,6 +67,10 @@ setopt no_list_beep
 # Set up tools
 #
 
+# asdf
+
+. $(brew --prefix asdf)/libexec/asdf.sh
+
 # aqua
 export PATH="$(aqua root-dir)/bin:${PATH}"
 export AQUA_GLOBAL_CONFIG="${HOME}/dotfiles/src/aqua/aqua.yaml"
