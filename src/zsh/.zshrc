@@ -68,9 +68,6 @@ setopt no_list_beep
 # Set up tools
 #
 
-# rtx
-eval "$(rtx activate zsh)"
-
 # direnv
 eval "$(direnv hook zsh)"
 
