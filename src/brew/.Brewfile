@@ -1,4 +1,5 @@
 taps = %w[
+  aquaproj/aqua
   go-task/tap
   goreleaser/tap
   jdxcode/tap
@@ -23,6 +24,7 @@ casks = %w[
 
 formulae = %w[
   actionlint
+  aquaproj/aqua/aqua
   awscli
   bottom
   colordiff

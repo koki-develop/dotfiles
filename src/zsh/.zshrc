@@ -6,6 +6,7 @@
 
 export PATH="${HOME}/.local/bin:${PATH}"
 export PATH="${HOME}/.config/v-analyzer/bin:${PATH}"
+export PATH="$(aqua root-dir)/bin:${PATH}"
 export GPG_TTY=$(tty)
 export EDITOR='lvim'
 
