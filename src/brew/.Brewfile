@@ -25,7 +25,6 @@ casks = %w[
 formulae = %w[
   actionlint
   aquaproj/aqua/aqua
-  asdf
   awscli
   bottom
   colordiff
