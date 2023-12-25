@@ -42,6 +42,7 @@ formulae = %w[
   gpg
   hyperfine
   imagemagick
+  jdxcode/tap/rtx
   jq
   libpq
   mysql-client

@@ -71,6 +71,9 @@ setopt no_list_beep
 export PATH="$(aqua root-dir)/bin:${PATH}"
 export AQUA_GLOBAL_CONFIG="${HOME}/dotfiles/src/aqua/aqua.yaml"
 
+# rtx
+eval "$(rtx activate zsh)"
+
 # direnv
 eval "$(direnv hook zsh)"
 
