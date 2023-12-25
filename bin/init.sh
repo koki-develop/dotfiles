@@ -52,7 +52,7 @@ ln -sf "${DOTFILES_DIR}/src/starship/starship.toml" "${HOME}/.config/starship.to
 ln -sf "${DOTFILES_DIR}/src/brew/.Brewfile" "${HOME}/.Brewfile"
 
 # asdf
-ln -sf "${DOTFILES_DIR}/src/asdf/.tool-versions" "${HOME}/.tool-versions"
+ln -sf "${DOTFILES_DIR}/src/rtx/.tool-versions" "${HOME}/.tool-versions"
 
 echo "Done."
 
