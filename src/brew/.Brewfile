@@ -38,6 +38,7 @@ formulae = %w[
   git-secrets
   glow
   go-task/tap/go-task
+  golangci-lint
   goreleaser/tap/goreleaser
   gpg
   hyperfine
