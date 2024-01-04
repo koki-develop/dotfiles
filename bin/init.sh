@@ -51,8 +51,8 @@ ln -sf "${DOTFILES_DIR}/src/starship/starship.toml" "${HOME}/.config/starship.to
 # homebrew
 ln -sf "${DOTFILES_DIR}/src/brew/.Brewfile" "${HOME}/.Brewfile"
 
-# asdf
-ln -sf "${DOTFILES_DIR}/src/rtx/.tool-versions" "${HOME}/.tool-versions"
+# mise
+ln -sf "${DOTFILES_DIR}/src/mise/.tool-versions" "${HOME}/.tool-versions"
 
 echo "Done."
 

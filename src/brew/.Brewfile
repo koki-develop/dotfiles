@@ -43,9 +43,9 @@ formulae = %w[
   gpg
   hyperfine
   imagemagick
-  jdxcode/tap/rtx
   jq
   libpq
+  mise
   mysql-client
   koki-develop/tap/askai
   koki-develop/tap/clive
