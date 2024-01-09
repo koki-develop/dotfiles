@@ -2,7 +2,6 @@ taps = %w[
   aquaproj/aqua
   go-task/tap
   goreleaser/tap
-  jdxcode/tap
   koki-develop/tap
   jesseduffield/lazygit
   wez/wezterm
