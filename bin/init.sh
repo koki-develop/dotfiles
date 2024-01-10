@@ -52,7 +52,7 @@ ln -sf "${DOTFILES_DIR}/src/starship/starship.toml" "${HOME}/.config/starship.to
 ln -sf "${DOTFILES_DIR}/src/brew/.Brewfile" "${HOME}/.Brewfile"
 
 # mise
-ln -sf "${DOTFILES_DIR}/src/mise/.tool-versions" "${HOME}/.tool-versions"
+ln -sf "${DOTFILES_DIR}/src/mise/config.toml" "${HOME}/.config/mise/config.toml"
 
 echo "Done."
 
