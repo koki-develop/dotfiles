@@ -12,6 +12,7 @@ casks = %w[
   deepl
   docker
   google-japanese-ime
+  neat
   obsidian
   raycast
   slack
@@ -46,7 +47,6 @@ formulae = %w[
   libpq
   mise
   mysql-client
-  neat
   koki-develop/tap/askai
   koki-develop/tap/clive
   koki-develop/tap/ego
