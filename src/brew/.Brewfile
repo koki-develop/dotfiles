@@ -12,7 +12,6 @@ casks = %w[
   deepl
   docker
   google-japanese-ime
-  hammerspoon
   obsidian
   raycast
   slack
