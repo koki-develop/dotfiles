@@ -14,6 +14,7 @@ casks = %w[
   google-japanese-ime
   hammerspoon
   obsidian
+  raycast
   slack
   todoist
   visual-studio-code
