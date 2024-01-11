@@ -46,6 +46,7 @@ formulae = %w[
   libpq
   mise
   mysql-client
+  neat
   koki-develop/tap/askai
   koki-develop/tap/clive
   koki-develop/tap/ego
