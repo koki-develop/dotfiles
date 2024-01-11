@@ -14,7 +14,6 @@ casks = %w[
   hiddenbar
   google-japanese-ime
   neat
-  obsidian
   raycast
   slack
   todoist
