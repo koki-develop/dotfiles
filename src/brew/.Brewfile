@@ -11,6 +11,7 @@ casks = %w[
   aws-vault
   deepl
   docker
+  hiddenbar
   google-japanese-ime
   neat
   obsidian
