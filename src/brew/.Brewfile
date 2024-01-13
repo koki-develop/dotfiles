@@ -13,7 +13,6 @@ casks = %w[
   docker
   hiddenbar
   google-japanese-ime
-  neat
   raycast
   slack
   todoist
