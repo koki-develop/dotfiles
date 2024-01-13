@@ -110,6 +110,7 @@ alias ..2='cd ../..'
 alias ..3='cd ../../..'
 alias ..4='cd ../../../..'
 alias cdd="cd ${HOME}/dotfiles"
+alias cdg='cd "$GHQ_ROOT/$(gh q ls -f)"'
 alias cdw="cd ${HOME}/work"
 # echo
 alias echo='ego'
