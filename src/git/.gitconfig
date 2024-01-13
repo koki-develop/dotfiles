@@ -37,5 +37,3 @@
 	conflictstyle = diff3
 [commit]
 	gpgsign = true
-[ghq]
-	root = /Users/koki/work/repos
