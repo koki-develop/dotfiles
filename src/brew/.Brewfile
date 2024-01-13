@@ -31,7 +31,6 @@ formulae = %w[
   fd
   genact
   gh
-  ghq
   git
   git-delta
   git-secrets
