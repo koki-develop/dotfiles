@@ -18,6 +18,7 @@ casks = %w[
   todoist
   visual-studio-code
   wez/wezterm/wezterm
+  xbar
 ]
 
 formulae = %w[
