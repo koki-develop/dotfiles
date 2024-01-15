@@ -23,6 +23,7 @@ casks = %w[
 
 formulae = %w[
   actionlint
+  aicommits
   aquaproj/aqua/aqua
   awscli
   bottom
