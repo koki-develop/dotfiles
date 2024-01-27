@@ -72,6 +72,9 @@ setopt no_list_beep
 export PATH="$(aqua root-dir)/bin:${PATH}"
 export AQUA_GLOBAL_CONFIG="${HOME}/dotfiles/src/aqua/aqua.yaml"
 
+# Flutter
+export PATH="${HOME}/work/repos/github.com/flutter/flutter/bin:${PATH}"
+
 # mise
 eval "$(mise activate zsh)"
 
