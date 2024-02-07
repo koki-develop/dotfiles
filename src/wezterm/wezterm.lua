@@ -12,6 +12,9 @@ return {
   font_size = 16.0,
 
   color_scheme = "Monokai Remastered",
+  colors = {
+    cursor_bg = 'white',
+  },
   use_ime = true,
   adjust_window_size_when_changing_font_size = false,
 
