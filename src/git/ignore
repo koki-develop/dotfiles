@@ -1,5 +1,6 @@
 .DS_Store
 .tool-versions
+.mise.toml
 .vscode
 
 TODO
