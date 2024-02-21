@@ -15,7 +15,6 @@ casks = %w[
   google-japanese-ime
   raycast
   slack
-  todoist
   visual-studio-code
   wez/wezterm/wezterm
   xbar
