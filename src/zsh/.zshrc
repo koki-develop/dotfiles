@@ -146,6 +146,8 @@ alias mkdir='mkdir -p'
 alias mv='mv -i'
 # rm
 alias rm='gotrash put'
+# sed
+alias sed='gsed'
 # terraform
 alias tf='terraform'
 # vim
