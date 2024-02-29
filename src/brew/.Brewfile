@@ -40,6 +40,7 @@ formulae = %w[
   golangci-lint
   goreleaser/tap/goreleaser
   gpg
+  gsed
   hyperfine
   imagemagick
   jq
