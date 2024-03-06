@@ -54,6 +54,7 @@ formulae = %w[
   koki-develop/tap/gat
   koki-develop/tap/gofzf
   koki-develop/tap/gotrash
+  koki-develop/tap/mingo
   koki-develop/tap/typingo
   jesseduffield/lazygit/lazygit
   neovim
