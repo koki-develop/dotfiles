@@ -5,6 +5,7 @@ taps = %w[
   koki-develop/tap
   jesseduffield/lazygit
   wez/wezterm
+  ynqa/tap
 ]
 
 casks = %w[
@@ -65,6 +66,7 @@ formulae = %w[
   watchexec
   wget
   xh
+  ynqa/tap/jnv
 ]
 
 taps.each { |t| tap t }
