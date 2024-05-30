@@ -1,0 +1,67 @@
+taps = %w[
+  charmbracelet/tap
+  go-task/tap
+  goreleaser/tap
+  koki-develop/tap
+  jesseduffield/lazygit
+  wez/wezterm
+  ynqa/tap
+]
+
+casks = %w[
+  aws-vault
+  deepl
+  docker
+  hiddenbar
+  google-japanese-ime
+  raycast
+  slack
+  visual-studio-code
+  wez/wezterm/wezterm
+  xbar
+]
+
+formulae = %w[
+  actionlint
+  aicommits
+  awscli
+  bottom
+  charmbracelet/tap/freeze
+  direnv
+  eza
+  fd
+  gh
+  git
+  git-delta
+  git-secrets
+  go-task/tap/go-task
+  golangci-lint
+  goreleaser/tap/goreleaser
+  gping
+  gpg
+  gsed
+  hyperfine
+  imagemagick
+  jq
+  libpq
+  mise
+  mysql-client
+  koki-develop/tap/clive
+  koki-develop/tap/ego
+  koki-develop/tap/docker-tags
+  koki-develop/tap/gat
+  koki-develop/tap/gofzf
+  koki-develop/tap/gotrash
+  koki-develop/tap/mingo
+  jesseduffield/lazygit/lazygit
+  neovim
+  ripgrep
+  starship
+  wget
+  xh
+  ynqa/tap/jnv
+]
+
+taps.each { |t| tap t }
+casks.each { |c| cask c }
+formulae.each { |f| brew f }
