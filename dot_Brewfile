@@ -14,7 +14,6 @@ casks = %w[
   deepl
   docker
   hiddenbar
-  google-japanese-ime
   raycast
   slack
   visual-studio-code
