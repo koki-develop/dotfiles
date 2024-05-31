@@ -7,7 +7,7 @@
 
 echo "Setting up git-secrets..."
 git secrets --register-aws --global
-git secrets --install --force ~/.git-templates/git-secrets
+git secrets --install --force $HOME/.git-templates/git-secrets
 echo "Done."
 
 #
@@ -22,5 +22,7 @@ EOF
 ) | base64 --decode > /tmp/github-gpg
 gpg --import /tmp/github-gpg
 rm /tmp/github-gpg
+echo "pinentry-program $(which pinentry-mac)" > $HOME/.gnupg/gpg-agent.conf
+gpgconf --kill gpg-agent
 
 echo "Done."
