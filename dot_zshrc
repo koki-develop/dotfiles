@@ -14,7 +14,7 @@ export GHQ_ROOT="${HOME}/work/repos"
 # Homebrew
 #
 
-eval "$(brew shellenv)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
 export PATH="$(brew --repo)/opt/mysql-client/bin:$PATH"
 
 #
