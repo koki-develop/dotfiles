@@ -1,5 +1,6 @@
 taps = %w[
   charmbracelet/tap
+  dashlane/tap
   go-task/tap
   goreleaser/tap
   koki-develop/tap
@@ -27,6 +28,7 @@ formulae = %w[
   awscli
   bottom
   charmbracelet/tap/freeze
+  dashlane/tap/dashlane-cli
   direnv
   eza
   fd
