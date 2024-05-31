@@ -120,6 +120,8 @@ function cdg() {
   fi
 }
 alias cdw="cd ${HOME}/work"
+# chezmoi
+alias ch='chezmoi'
 # echo
 alias echo='ego'
 # freeze
