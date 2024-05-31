@@ -1,0 +1,33 @@
+[color]
+	ui = true
+[user]
+	name = koki-develop
+	email = kou.pg.0131@gmail.com
+	signingkey = F11718FD5C011056
+[push]
+	default = nothing
+[init]
+	defaultBranch = main
+[fetch]
+	prune = true
+[core]
+	editor = lvim
+	quotepath = false
+	ignorecase = false
+	pager = delta
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	light = false
+[diff]
+	algorithm = histogram
+	colorMoved = default
+[pull]
+	rebase = false
+[merge]
+	conflictstyle = diff3
+[commit]
+	gpgsign = true
+[rebase]
+	autostash = true
