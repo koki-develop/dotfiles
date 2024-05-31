@@ -32,6 +32,7 @@ echo "Done."
 #
 
 if [ ! -f $HOME/.aws/config ]; then
+  mkdir $HOME/.aws
   (cat <<EOF> $HOME/.aws/config
   {{ dashlaneNote ".aws/config (koki)" -}}
   EOF
