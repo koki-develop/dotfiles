@@ -1,3 +1,3 @@
 ```console
-$ sh -c "$(curl -fsLS get.chezmoi.io/lb)" -- init --apply koki-develop
+$ zsh -c "$(curl -sL https://raw.githubusercontent.com/koki-develop/dotfiles/main/install.sh)"
 ```
