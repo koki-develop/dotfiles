@@ -113,7 +113,6 @@ function gess() {
 alias ..2='cd ../..'
 alias ..3='cd ../../..'
 alias ..4='cd ../../../..'
-alias cdd="cd ${HOME}/dotfiles"
 function cdg() {
   REPO=$(gh q ls -f)
   if [ -n "${REPO}" ]; then
