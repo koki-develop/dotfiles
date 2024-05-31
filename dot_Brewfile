@@ -17,7 +17,6 @@ casks = %w[
   docker
   google-chrome
   hiddenbar
-  kindle
   raycast
   slack
   todoist
