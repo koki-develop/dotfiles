@@ -5,9 +5,8 @@
 # https://brew.sh/ja/
 #
 
-echo "Installing Homebrew..."
+echo "Install formulae..."
 
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew bundle --global
 
 echo "Done."
