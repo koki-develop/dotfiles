@@ -18,6 +18,7 @@ casks = %w[
   kindle
   raycast
   slack
+  todoist
   visual-studio-code
   wez/wezterm/wezterm
   xbar
