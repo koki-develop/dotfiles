@@ -26,3 +26,14 @@ echo "pinentry-program $(which pinentry-mac)" > $HOME/.gnupg/gpg-agent.conf
 gpgconf --kill gpg-agent
 
 echo "Done."
+
+#
+# AWS CLI
+#
+
+if [ ! -f $HOME/.aws/config ]; then
+  (cat <<EOF> $HOME/.aws/config
+  {{ dashlaneNote ".aws/config" -}}
+  EOF
+  )
+fi
