@@ -55,6 +55,7 @@ formulae = %w[
   koki-develop/tap/mingo
   jesseduffield/lazygit/lazygit
   neovim
+  pinentry-mac
   ripgrep
   starship
   wget
