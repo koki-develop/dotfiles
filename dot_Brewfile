@@ -11,7 +11,9 @@ taps = %w[
 
 casks = %w[
   aws-vault
+  blender
   deepl
+  discord
   docker
   google-chrome
   hiddenbar
