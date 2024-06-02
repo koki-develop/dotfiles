@@ -10,10 +10,12 @@ tasks:
     cmds:
       - git pull origin main
   diff:
+    aliases: [d]
     deps: [pull]
     cmds:
       - chezmoi diff
   apply:
+    aliases: [a]
     deps: [pull]
     cmds:
       - chezmoi apply -v
