@@ -20,7 +20,7 @@ echo "Setting up GitHub GPG..."
 {{ dashlaneNote "GitHub GPG Secret Key" -}}
 EOF
 ) | base64 --decode > /tmp/github-gpg
-gpg --import /tmp/github-gpg
+echo "{{ (index (dashlanePassword "GitHub GPG Passphrase") 0).password }}" | gpg --batch --yes --passphrase-fd 0 --import /tmp/github-gpg
 rm /tmp/github-gpg
 echo "pinentry-program $(which pinentry-mac)" > $HOME/.gnupg/gpg-agent.conf
 gpgconf --kill gpg-agent
