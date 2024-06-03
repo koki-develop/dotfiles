@@ -10,6 +10,7 @@ return {
   },
   use_ime = true,
   adjust_window_size_when_changing_font_size = false,
+  send_composed_key_when_left_alt_is_pressed = true,
 
   keys = {
     -- Screen
