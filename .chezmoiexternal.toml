@@ -1,4 +1,0 @@
-["work/repos/github.com/koki-develop/xbar-plugin-github"]
-  type = "git-repo"
-  url = "git@github.com:koki-develop/xbar-plugin-github"
-  refreshPeriod = "48h"
