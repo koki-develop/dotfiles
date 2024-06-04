@@ -14,9 +14,9 @@ casks = %w[
   blender
   deepl
   discord
-  docker
   google-chrome
   hiddenbar
+  rancher
   raycast
   slack
   todoist
