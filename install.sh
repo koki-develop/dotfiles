@@ -1,13 +1,16 @@
 #!/bin/zsh
 
+# Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-eval "$(/opt/homebrew/bin/brew shellenv)"
+if [[ "$(uname -p)" == "arm"* ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+else
+  eval "$(/usr/local/bin/brew shellenv)"
+fi
+
+# Install Dashlane CLI
 brew install dashlane/tap/dashlane-cli
 dcli sync
 
-#
-# chezmoi
-# https://www.chezmoi.io/
-#
-
+# Install chezmoi and apply dotfiles
 sh -c "$(curl -fsLS get.chezmoi.io/lb)" -- init --apply koki-develop
