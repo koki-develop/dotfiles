@@ -47,6 +47,7 @@ formulae = %w[
   gsed
   hyperfine
   imagemagick
+  openjdk
   jq
   libpq
   mise
