@@ -15,6 +15,7 @@ casks = %w[
   deepl
   discord
   google-chrome
+  google-cloud-sdk
   hiddenbar
   rancher
   raycast
