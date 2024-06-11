@@ -32,6 +32,7 @@ formulae = %w[
   awscli
   bottom
   charmbracelet/tap/freeze
+  charmbracelet/tap/vhs
   dashlane/tap/dashlane-cli
   direnv
   eza
