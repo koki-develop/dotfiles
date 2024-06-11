@@ -90,7 +90,7 @@ complete -C "$(which aws_completer)" aws
 eval "$(starship init zsh)"
 
 # ollamit
-OLLAMIT_MODEL=llama3:8b
+export OLLAMIT_MODEL=llama3:8b
 
 # gcloud
 source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
