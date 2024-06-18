@@ -8,7 +8,9 @@ vars:
 tasks:
   default:
     cmds:
+      - dcli sync
       - git pull origin main
       - chezmoi apply -v
       - brew bundle --global
       - brew upgrade
+      - dcli logout
