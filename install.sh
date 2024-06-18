@@ -14,3 +14,6 @@ dcli sync
 
 # Install chezmoi and apply dotfiles
 sh -c "$(curl -fsLS get.chezmoi.io/lb)" -- init --apply koki-develop
+
+# Logout Dashlane CLI
+dcli logout
