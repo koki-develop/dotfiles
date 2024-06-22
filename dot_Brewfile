@@ -63,6 +63,7 @@ formulae = %w[
   koki-develop/tap/gofzf
   koki-develop/tap/gotrash
   koki-develop/tap/mingo
+  koki-develop/tap/ollamit
   jesseduffield/lazygit/lazygit
   neovim
   pinentry-mac
