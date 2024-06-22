@@ -5,6 +5,7 @@ taps = %w[
   goreleaser/tap
   koki-develop/tap
   jesseduffield/lazygit
+  oven-sh/bun
   wez/wezterm
   ynqa/tap
 ]
@@ -54,6 +55,7 @@ formulae = %w[
   libpq
   mise
   mysql-client
+  oven-sh/bun/bun
   koki-develop/tap/clive
   koki-develop/tap/ego
   koki-develop/tap/docker-tags
