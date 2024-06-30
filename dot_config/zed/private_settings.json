@@ -1,7 +1,13 @@
 {
-  "theme": "Rosé Pine",
+  "theme": "Rosé Pine Moon",
   "vim_mode": true,
   "ui_font_size": 16,
-  "buffer_font_size": 16,
-  "buffer_font_family": "HackGen Console NF"
+  "buffer_font_size": 15,
+  "buffer_font_family": "HackGen Console NF",
+  "soft_wrap": "none",
+  "show_whitespaces": "all",
+  "remove_trailing_whitespace_on_save": true,
+  "vim": {
+    "use_system_clipboard": "on_yank"
+  }
 }
