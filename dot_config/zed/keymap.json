@@ -2,7 +2,7 @@
   {
     "context": "Editor",
     "bindings": {
-      "alt-c": "editor::ShowCompletions"
+      "alt-escape": "editor::ShowCompletions"
     }
   }
 ]
