@@ -113,6 +113,9 @@ let g:lsp_settings_filetype_typescriptreact = ['typescript-language-server', 'es
 let g:prettier#autoformat = 1
 let g:prettier#autoformat_require_pragma = 0
 
+" indentLine
+let g:indentLine_setConceal = 0
+
 " nerdtree
 nnoremap <Leader>e :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
