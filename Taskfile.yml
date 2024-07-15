@@ -11,6 +11,7 @@ tasks:
       - dcli sync
       - git pull origin main
       - chezmoi apply -v
+      - zplug update
       - brew bundle --global
       - brew upgrade
       - dcli logout
