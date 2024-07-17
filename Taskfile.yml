@@ -2,16 +2,16 @@
 
 version: '3'
 
-vars:
-  GREETING: Hello, World!
-
 tasks:
   default:
     cmds:
       - dcli sync
       - git pull origin main
       - chezmoi apply -v
-      - zplug update
+      - task: update
+      - dcli logout
+
+  update:
+    cmds:
       - brew bundle --global
       - brew upgrade
-      - dcli logout
