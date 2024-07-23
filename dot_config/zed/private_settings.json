@@ -4,7 +4,7 @@
   "ui_font_size": 16,
   "buffer_font_size": 15,
   "buffer_font_family": "HackGen Console NF",
-  "soft_wrap": "none",
+  "soft_wrap": "editor_width",
   "show_whitespaces": "all",
   "remove_trailing_whitespace_on_save": true,
   "vim": {
