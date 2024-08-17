@@ -11,7 +11,7 @@ $time\
 [ ](fg:#06969A)\
 $cmd_duration \
 $status\
-\n\
+$line_break\
 $character\
 """
 
