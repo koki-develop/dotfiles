@@ -9,6 +9,7 @@ $git_status\
 [](fg:#FCA17D bg:#06969A)\
 $time\
 [ ](fg:#06969A)\
+$cmd_duration \
 $status\
 \n\
 $character\
@@ -40,6 +41,10 @@ deleted = '󰅖'
 [status]
 disabled = false
 symbol = ' '
+
+[cmd_duration]
+min_time = 1
+format = '$duration '
 
 [time]
 disabled = false
