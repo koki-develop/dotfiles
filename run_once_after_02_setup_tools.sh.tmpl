@@ -17,7 +17,7 @@ echo "Done."
 echo "Setting up GitHub GPG..."
 
 (cat <<EOF
-{{ dashlaneNote "GitHub GPG Secret Key" -}}
+{{ dashlaneNote "GitHub GPG Secret key" -}}
 EOF
 ) | base64 --decode > /tmp/github-gpg
 echo "{{ (index (dashlanePassword "GitHub GPG Passphrase") 0).password }}" | gpg --batch --yes --passphrase-fd 0 --import /tmp/github-gpg
@@ -34,7 +34,7 @@ echo "Done."
 if [ ! -f $HOME/.aws/config ]; then
   mkdir $HOME/.aws
   (cat <<EOF> $HOME/.aws/config
-{{ dashlaneNote ".aws/config (koki)" -}}
+{{ dashlaneNote ".aws/config" -}}
 EOF
   )
 fi
