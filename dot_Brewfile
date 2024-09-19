@@ -18,6 +18,7 @@ casks = %w[
   google-chrome
   google-cloud-sdk
   hiddenbar
+  koki-develop/tap/koto
   rancher
   raycast
   slack
