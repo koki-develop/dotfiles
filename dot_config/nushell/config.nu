@@ -829,3 +829,18 @@ $env.config = {
         }
     ]
 }
+
+alias g = git
+alias gad = git add
+alias gbr = git branch
+alias gcom = git commit -m
+alias gdi = git diff
+alias gdem = git branch --merged | egrep -v '\*|develop|master|main' | xargs git branch --delete
+alias gfe = git fetch
+alias glo = git log --pretty=oneline
+alias gre = git reset
+alias grest = git restore
+alias gst = git status
+alias gsw = git switch
+
+alias vi = nvim
