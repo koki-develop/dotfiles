@@ -830,6 +830,16 @@ $env.config = {
     ]
 }
 
+# cd
+alias cdd = cd ~/.local/share/chezmoi
+def --env cdg [] {
+    let repo = (gh q ls | gofzf)
+    if ($repo | is-empty) {
+        return
+    }
+    cd $"($env.GHQ_ROOT)/($repo)"
+}
+
 # git
 alias g = git
 alias gad = git add
