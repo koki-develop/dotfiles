@@ -176,3 +176,7 @@ alias sed='gsed'
 alias tf='terraform'
 # vim
 alias vi='nvim'
+
+if [[ $- == *i* ]]; then
+  exec nu
+fi
