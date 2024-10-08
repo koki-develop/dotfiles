@@ -862,11 +862,3 @@ alias lla = ls -la
 
 # vim
 alias vi = nvim
-
-# completions
-use ~/work/repos/github.com/nushell/nu_scripts/custom-completions/eza/eza-completions.nu *
-use ~/work/repos/github.com/nushell/nu_scripts/custom-completions/gh/gh-completions.nu *
-use ~/work/repos/github.com/nushell/nu_scripts/custom-completions/git/git-completions.nu *
-use ~/work/repos/github.com/nushell/nu_scripts/custom-completions/npm/npm-completions.nu *
-use ~/work/repos/github.com/nushell/nu_scripts/custom-completions/pnpm/pnpm-completions.nu *
-use ~/work/repos/github.com/nushell/nu_scripts/custom-completions/rg/rg-completions.nu *
