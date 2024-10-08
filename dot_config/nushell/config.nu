@@ -844,7 +844,7 @@ def --env cdg [] {
 alias g = git
 alias gad = git add
 alias gbr = git branch
-alias gcom = git commit -m
+def gcom [msg] { git commit -m $msg }
 alias gdi = git diff
 alias gdem = git branch --merged | egrep -v '\*|develop|master|main' | xargs git branch --delete
 alias gfe = git fetch
