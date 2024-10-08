@@ -830,6 +830,7 @@ $env.config = {
     ]
 }
 
+# git
 alias g = git
 alias gad = git add
 alias gbr = git branch
@@ -843,4 +844,11 @@ alias grest = git restore
 alias gst = git status
 alias gsw = git switch
 
+# ls
+alias l = ls
+alias ll = ls -l
+alias la = ls -a
+alias lla = ls -la
+
+# vim
 alias vi = nvim
