@@ -52,7 +52,7 @@ zplug load
 # Completion
 #
 
-fpath=(${HOME}/.zsh/completion $fpath)
+fpath=("${HOME}/.zsh/completion" "$(brew --prefix)/share/zsh/site-functions" $fpath)
 autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
 
