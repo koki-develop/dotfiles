@@ -87,7 +87,6 @@ Plug 'leafgarland/typescript-vim'
 Plug 'jparise/vim-graphql'
 Plug 'hashivim/vim-terraform'
 Plug 'elzr/vim-json'
-Plug 'elkasztano/nushell-syntax-vim'
 
 call plug#end()
 

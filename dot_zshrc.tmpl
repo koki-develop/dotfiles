@@ -9,7 +9,6 @@ export PATH="${HOME}/.config/v-analyzer/bin:${PATH}"
 export GPG_TTY=$(tty)
 export EDITOR='nvim'
 export GHQ_ROOT="${HOME}/work/repos"
-export XDG_CONFIG_HOME="$HOME/.config"
 
 #
 # Homebrew
@@ -176,7 +175,3 @@ alias sed='gsed'
 alias tf='terraform'
 # vim
 alias vi='nvim'
-
-if [[ $- == *i* ]]; then
-  exec nu
-fi
