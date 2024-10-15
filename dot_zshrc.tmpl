@@ -156,7 +156,17 @@ alias gnow='git commit --all --message "commit"'
 alias gre='git reset'
 alias grest='git restore'
 alias gst='git status'
-alias gsw='git switch'
+function gsw() {
+  if [ $# -gt 0 ]; then
+    git switch "$@"
+    return
+  fi
+
+  local branch=$(git branch --format='%(refname:short)' | gofzf)
+  if [ -n "${branch}" ]; then
+    git switch "${branch}"
+  fi
+}
 # grep
 alias grep='rg --ignore-case'
 # ls
