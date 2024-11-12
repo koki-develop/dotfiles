@@ -15,7 +15,7 @@ casks = %w[
   blender
   deepl
   discord
-  google-chrome
+  vivaldi
   google-cloud-sdk
   hiddenbar
   koki-develop/tap/koto
