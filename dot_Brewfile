@@ -13,9 +13,9 @@ taps = %w[
 casks = %w[
   aws-vault
   blender
+  cursor
   deepl
   discord
-  vivaldi
   google-cloud-sdk
   hiddenbar
   koki-develop/tap/koto
@@ -24,6 +24,7 @@ casks = %w[
   slack
   todoist
   visual-studio-code
+  vivaldi
   wez/wezterm/wezterm
   xbar
   zed
