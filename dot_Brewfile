@@ -4,7 +4,6 @@ taps = %w[
   dashlane/tap
   go-task/tap
   koki-develop/tap
-  jesseduffield/lazygit
   oven-sh/bun
   wez/wezterm
   ynqa/tap
@@ -67,7 +66,6 @@ formulae = %w[
   koki-develop/tap/gotrash
   koki-develop/tap/mingo
   koki-develop/tap/ollamit
-  jesseduffield/lazygit/lazygit
   neovim
   pinentry-mac
   ripgrep
