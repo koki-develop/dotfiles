@@ -16,7 +16,6 @@ casks = %w[
   cursor
   deepl
   discord
-  duckdb
   google-cloud-sdk
   hiddenbar
   koki-develop/tap/koto
@@ -42,6 +41,7 @@ formulae = %w[
   charmbracelet/tap/vhs
   dashlane/tap/dashlane-cli
   direnv
+  duckdb
   eza
   fd
   gh
