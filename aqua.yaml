@@ -12,3 +12,4 @@ registries:
 packages:
 - name: hashicorp/terraform@v1.9.8
 - name: nodejs/node@v22.11.0
+- name: golang/go@go1.23.3
