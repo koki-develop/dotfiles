@@ -56,7 +56,6 @@ formulae = %w[
   openjdk
   jq
   libpq
-  mise
   mysql-client
   oven-sh/bun/bun
   koki-develop/tap/clive
