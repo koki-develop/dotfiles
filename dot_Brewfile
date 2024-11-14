@@ -49,7 +49,6 @@ formulae = %w[
   git-delta
   git-secrets
   go-task/tap/go-task
-  golangci-lint
   goreleaser/tap/goreleaser
   gping
   gpg
