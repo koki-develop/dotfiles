@@ -3,7 +3,6 @@ taps = %w[
   charmbracelet/tap
   dashlane/tap
   go-task/tap
-  goreleaser/tap
   koki-develop/tap
   jesseduffield/lazygit
   oven-sh/bun
@@ -49,7 +48,6 @@ formulae = %w[
   git-delta
   git-secrets
   go-task/tap/go-task
-  goreleaser/tap/goreleaser
   gping
   gpg
   gsed
