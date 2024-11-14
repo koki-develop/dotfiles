@@ -16,6 +16,7 @@ casks = %w[
   cursor
   deepl
   discord
+  duckdb
   google-cloud-sdk
   hiddenbar
   koki-develop/tap/koto
