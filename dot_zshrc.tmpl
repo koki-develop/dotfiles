@@ -8,7 +8,6 @@ export PATH="${HOME}/.local/bin:${PATH}"
 export PATH="${HOME}/.config/v-analyzer/bin:${PATH}"
 export GPG_TTY=$(tty)
 export EDITOR='nvim'
-export GHQ_ROOT="${HOME}/work/repos"
 
 #
 # Homebrew
@@ -108,6 +107,10 @@ export PATH="$(brew --prefix)/opt/openjdk/bin:$PATH"
 
 # terraform
 complete -o nospace -C "$(which terraform)" terraform
+
+# gh-q
+export GHQ_ROOT="${HOME}/work/repos"
+export GHQ_SSH_KEY_PATH="${HOME}/.ssh/github"
 
 #
 # Aliases
