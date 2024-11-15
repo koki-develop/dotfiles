@@ -1,3 +1,1 @@
-```sh
-zsh -c "$(curl -sL https://raw.githubusercontent.com/koki-develop/dotfiles/main/install.sh)"
-```
+[Wiki](https://github.com/koki-develop/dotfiles/wiki)
