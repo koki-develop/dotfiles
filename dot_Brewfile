@@ -35,6 +35,7 @@ formulae = %w[
   charmbracelet/tap/freeze
   charmbracelet/tap/gum
   charmbracelet/tap/vhs
+  chezmoi
   dashlane/tap/dashlane-cli
   direnv
   duckdb
