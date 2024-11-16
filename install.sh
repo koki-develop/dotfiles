@@ -20,8 +20,11 @@ brew install dashlane/tap/dashlane-cli
 log "Execute Dashlane CLI sync"
 dcli sync
 
-log "Install chezmoi and apply dotfiles"
-sh -c "$(curl -fsLS get.chezmoi.io/lb)" -- init --apply koki-develop
+log "Install chezmoi"
+brew install chezmoi
+
+log "Execute chezmoi init and apply dotfiles"
+chezmoi init --apply koki-develop
 
 log "Logout Dashlane CLI"
 dcli logout
