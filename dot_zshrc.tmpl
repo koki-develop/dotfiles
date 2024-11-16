@@ -102,6 +102,10 @@ export PATH="$(brew --prefix)/opt/mysql-client/bin:$PATH"
 # libpq
 export PATH="$(brew --prefix)/opt/libpq/bin:$PATH"
 
+# npm
+export NPM_CONFIG_PREFIX="${HOME}/.local/share/npm-global"
+export PATH="${NPM_CONFIG_PREFIX}/bin:${PATH}"
+
 # java
 export PATH="$(brew --prefix)/opt/openjdk/bin:$PATH"
 
