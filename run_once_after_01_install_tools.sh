@@ -47,13 +47,3 @@ echo "Installing xbar-plugin-github..."
 )
 
 echo "Done."
-
-#
-# npm tools
-#
-
-echo "Installing tools using npm..."
-
-npm install -g opencommit
-
-echo "Done."
