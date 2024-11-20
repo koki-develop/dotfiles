@@ -8,11 +8,7 @@ function log() {
 
 log "Install Homebrew"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-if [[ "$(uname -p)" == "arm"* ]]; then
-  eval "$(/opt/homebrew/bin/brew shellenv)"
-else
-  eval "$(/usr/local/bin/brew shellenv)"
-fi
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 log "Install Dashlane CLI"
 brew install dashlane/tap/dashlane-cli
