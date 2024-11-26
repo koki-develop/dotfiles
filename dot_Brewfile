@@ -54,6 +54,7 @@ formulae = %w[
   openjdk
   jq
   libpq
+  node
   mysql-client
   oven-sh/bun/bun
   koki-develop/tap/clive
