@@ -14,10 +14,10 @@ casks = %w[
   cursor
   deepl
   discord
+  docker
   google-cloud-sdk
   hiddenbar
   koki-develop/tap/koto
-  rancher
   raycast
   slack
   todoist
