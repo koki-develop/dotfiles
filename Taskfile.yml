@@ -13,5 +13,6 @@ tasks:
 
   update:
     cmds:
+      - brew update
       - brew bundle --global
       - brew upgrade
