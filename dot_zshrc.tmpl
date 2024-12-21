@@ -136,7 +136,7 @@ alias ..3='cd ../../..'
 alias ..4='cd ../../../..'
 alias cdd='cd ~/.local/share/chezmoi'
 function cdg() {
-  REPO=$(gh q ls -f)
+  REPO=$(gh q ls | gofzf --case-sensitive)
   if [ -n "${REPO}" ]; then
     cd "${GHQ_ROOT}/${REPO}"
   fi
