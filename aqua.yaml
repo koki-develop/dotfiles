@@ -2,6 +2,6 @@ registries:
 - type: standard
   ref: v4.275.0 # renovate: depName=aquaproj/aqua-registry
 packages:
-- name: hashicorp/terraform@v1.10.2
+- name: hashicorp/terraform@v1.10.3
 - name: nodejs/node@v22.12.0
 - name: golang/go@go1.23.4
