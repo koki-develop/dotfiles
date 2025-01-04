@@ -69,6 +69,7 @@ formulae = %w[
   pinentry-mac
   ripgrep
   starship
+  vlang
   wget
   xh
   ynqa/tap/jnv
