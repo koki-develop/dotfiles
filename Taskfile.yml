@@ -12,6 +12,20 @@ tasks:
       - dcli logout
 
   update:
+    deps:
+      - update-nvim-plugins
+      - update-brew-formula
+      - update-zplug-packages
+
+  update-nvim-plugins:
+    cmds:
+      - nvim --headless +PlugUpdate +qall
+
+  update-zplug-packages:
+    cmds:
+      - zsh --interactive -c 'zplug update'
+
+  update-brew-formula:
     cmds:
       - brew update
       - brew bundle --global
