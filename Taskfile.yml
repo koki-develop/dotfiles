@@ -12,14 +12,14 @@ tasks:
       - dcli logout
 
   update:
-    deps:
-      - update-nvim-plugins
-      - update-brew-formula
-      - update-zplug-packages
+    cmds:
+      - task: update-nvim-plugins
+      - task: update-brew-formula
+      - task: update-zplug-packages
 
   update-nvim-plugins:
     cmds:
-      - nvim --headless +PlugUpdate +qall
+      - nvim +PlugUpdate +qall
 
   update-zplug-packages:
     cmds:
