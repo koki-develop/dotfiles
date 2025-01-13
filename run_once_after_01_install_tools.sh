@@ -47,3 +47,13 @@ echo "Installing xbar-plugin-github..."
 )
 
 echo "Done."
+
+#
+# aqua
+#
+
+echo "Installing tools with aqua..."
+
+aqua install
+
+echo "Done."
