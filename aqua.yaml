@@ -4,4 +4,4 @@ registries:
 packages:
 - name: hashicorp/terraform@v1.10.4
 - name: nodejs/node@v22.13.0
-- name: golang/go@go1.23.4
+- name: golang/go@go1.23.5
