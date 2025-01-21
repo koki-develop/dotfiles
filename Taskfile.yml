@@ -23,7 +23,7 @@ tasks:
 
   update-zplug-packages:
     cmds:
-      - zsh --interactive -c 'zplug update'
+      - zsh -c '. ~/.zplug/init.zsh && zplug update'
 
   update-brew-formula:
     cmds:
