@@ -1,13 +1,17 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["github>koki-develop/renovate-config"],
+  "packageRules": [
+    {
+      "matchPackageNames": ["aquaproj/aqua-registry"],
+      "automerge": true
+    }
+  ],
   "customManagers": [
     {
       "customType": "regex",
       "fileMatch": ["^\\.chezmoidata\\.toml$"],
-      "matchStrings": [
-        "version\\s*=\\s*\"(?<currentValue>.*?)\"\\s*$"
-      ],
+      "matchStrings": ["version\\s*=\\s*\"(?<currentValue>.*?)\"\\s*$"],
       "depNameTemplate": "yuru7/HackGen",
       "datasourceTemplate": "github-releases",
       "versioningTemplate": "semver"
