@@ -5,6 +5,7 @@ taps = %w[
   go-task/tap
   koki-develop/tap
   oven-sh/bun
+  suzuki-shunsuke/pinact
   wez/wezterm
   ynqa/tap
 ]
@@ -68,6 +69,7 @@ formulae = %w[
   pinentry-mac
   ripgrep
   starship
+  suzuki-shunsuke/pinact/pinact
   vlang
   wget
   xh
