@@ -1,5 +1,6 @@
 [tools]
 go = "1.23.5"
+"go:golang.org/x/tools/cmd/goimports" = "latest"
 node = "22.13.1"
 terraform = "1.10.5"
 
