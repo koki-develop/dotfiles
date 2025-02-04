@@ -56,6 +56,7 @@ formulae = %w[
   jq
   libpq
   node
+  mise
   mysql-client
   oven-sh/bun/bun
   koki-develop/tap/clive
