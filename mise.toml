@@ -2,3 +2,6 @@
 go = "1.23.5"
 node = "22.13.1"
 terraform = "1.10.5"
+
+[settings]
+experimental = true
