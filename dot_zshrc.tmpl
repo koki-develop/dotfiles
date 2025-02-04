@@ -67,12 +67,6 @@ setopt no_list_beep
 # Set up tools
 #
 
-# aqua
-export AQUA_ROOT_DIR="${HOME}/.local/share/aquaproj-aqua"
-export AQUA_GLOBAL_CONFIG="${HOME}/.local/share/chezmoi/aqua.yaml"
-export AQUA_PROGRESS_BAR=true
-export PATH="${AQUA_ROOT_DIR}/bin:$PATH"
-
 # mise
 eval "$(mise activate zsh)"
 
@@ -119,8 +113,6 @@ export GHQ_SSH_KEY_PATH="${HOME}/.ssh/github"
 # Aliases
 #
 
-# aqua
-alias a='aqua'
 # sounds
 alias blow='afplay /System/Library/Sounds/Blow.aiff'
 # aws

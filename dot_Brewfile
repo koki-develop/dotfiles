@@ -1,5 +1,4 @@
 taps = %w[
-  aquaproj/aqua
   charmbracelet/tap
   dashlane/tap
   go-task/tap
@@ -30,7 +29,6 @@ casks = %w[
 
 formulae = %w[
   actionlint
-  aquaproj/aqua/aqua
   awscli
   bottom
   charmbracelet/tap/freeze
