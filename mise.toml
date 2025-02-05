@@ -3,6 +3,7 @@
 go = "1.23.6"
 node = "22.13.1"
 terraform = "1.10.5"
+ruby = "3.4.1"
 
 # go tools
 "go:golang.org/x/tools/cmd/goimports" = "0.29.0"
