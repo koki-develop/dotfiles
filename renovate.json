@@ -1,6 +1,9 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["github>koki-develop/renovate-config"],
+  "extends": [
+    "github>koki-develop/renovate-config",
+    "github>koki-develop/renovate-config:mise"
+  ],
   "customManagers": [
     {
       "customType": "regex",
@@ -9,24 +12,6 @@
       "depNameTemplate": "yuru7/HackGen",
       "datasourceTemplate": "github-releases",
       "versioningTemplate": "semver"
-    },
-
-    {
-      "customType": "regex",
-      "fileMatch": ["^mise\\.toml$"],
-      "matchStrings": [
-        "\"go:(?<depName>[^\"]+)\"\\s*=\\s*\"(?<currentValue>[^\"]+)\""
-      ],
-      "datasourceTemplate": "go"
-    },
-    {
-      "customType": "regex",
-      "fileMatch": ["^mise\\.toml$"],
-      "matchStrings": [
-        "\"npm:(?<depName>[^\"]+)\"\\s*=\\s*\"(?<currentValue>[^\"]+)\""
-      ],
-      "datasourceTemplate": "npm",
-      "versioningTemplate": "npm"
     }
   ]
 }
