@@ -1,7 +1,7 @@
 [tools]
 # languages
 go = "1.23.6"
-node = "23.7.0"
+node = "22.13.1"
 terraform = "1.10.5"
 
 # go tools
