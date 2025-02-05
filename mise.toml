@@ -9,6 +9,7 @@ terraform = "1.10.5"
 
 # npm packages
 "npm:renovate" = "39.160.1"
+"npm:pnpm" = "10.2.0"
 
 [settings]
 experimental = true
