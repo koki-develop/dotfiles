@@ -1,9 +1,14 @@
 [tools]
+# languages
 go = "1.23.5"
-"go:golang.org/x/tools/cmd/goimports" = "latest"
 node = "22.13.1"
-"npm:renovate" = "latest"
 terraform = "1.10.5"
+
+# go tools
+"go:golang.org/x/tools/cmd/goimports" = "latest"
+
+# npm packages
+"npm:renovate" = "latest"
 
 [settings]
 experimental = true
