@@ -8,7 +8,7 @@ terraform = "1.10.5"
 "go:golang.org/x/tools/cmd/goimports" = "0.28.0"
 
 # npm packages
-"npm:renovate" = "39.160.0"
+"npm:renovate" = "39.160.1"
 
 [settings]
 experimental = true
