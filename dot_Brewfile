@@ -53,6 +53,7 @@ formulae = %w[
   openjdk
   jq
   libpq
+  libyaml
   node
   mise
   mysql-client
