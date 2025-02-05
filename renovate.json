@@ -10,14 +10,14 @@
       "datasourceTemplate": "github-releases",
       "versioningTemplate": "semver"
     },
+
     {
       "customType": "regex",
       "fileMatch": ["^mise\\.toml$"],
       "matchStrings": [
-        "\"go:github\\.com/(?<depName>[^/]+/[^/]+)(?:/[^\"]+)?\"\\s*=\\s*\"(?<currentValue>[^\"]+)\""
+        "\"go:(?<depName>[^\"]+)\"\\s*=\\s*\"(?<currentValue>[^\"]+)\""
       ],
-      "datasourceTemplate": "github-tags",
-      "extractVersionTemplate": "^v(?<version>.*)$"
+      "datasourceTemplate": "go"
     },
     {
       "customType": "regex",
@@ -27,15 +27,6 @@
       ],
       "datasourceTemplate": "npm",
       "versioningTemplate": "npm"
-    },
-    {
-      "customType": "regex",
-      "fileMatch": ["^mise\\.toml$"],
-      "matchStrings": [
-        "\"go:(?<depName>golang\\.org/[^\"]+)\"\\s*=\\s*\"(?<currentValue>[^\"]+)\""
-      ],
-      "datasourceTemplate": "go",
-      "extractVersionTemplate": "^v(?<version>.*)$"
     }
   ]
 }
