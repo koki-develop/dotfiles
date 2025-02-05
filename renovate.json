@@ -9,6 +9,15 @@
       "depNameTemplate": "yuru7/HackGen",
       "datasourceTemplate": "github-releases",
       "versioningTemplate": "semver"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["^mise\\.toml$"],
+      "matchStrings": [
+        "\"go:github\\.com/(?<depName>[^/]+/[^/]+)(?:/[^\"]+)?\"\\s*=\\s*\"(?<currentValue>[^\"]+)\""
+      ],
+      "datasourceTemplate": "github-tags",
+      "extractVersionTemplate": "^v(?<version>.*)$"
     }
   ]
 }
