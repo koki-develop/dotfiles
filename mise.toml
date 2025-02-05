@@ -13,5 +13,8 @@ python = "3.13.1"
 "npm:renovate" = "39.160.1"
 "npm:pnpm" = "10.2.0"
 
+# ruby gems
+"gem:xvert" = "0.4.0"
+
 [settings]
 experimental = true
