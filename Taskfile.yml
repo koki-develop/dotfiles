@@ -17,6 +17,7 @@ tasks:
       - task: update-nvim-plugins
       - task: update-brew-formula
       - task: update-zplug-packages
+      - mise install
 
   update-nvim-plugins:
     cmds:
