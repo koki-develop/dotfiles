@@ -6,7 +6,8 @@ tasks:
   default:
     cmds:
       - dcli sync
-      - git pull origin main
+      - git fetch
+      - git rebase origin/main
       - chezmoi apply -v
       - task: update
       - dcli logout
