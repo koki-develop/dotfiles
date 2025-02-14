@@ -10,7 +10,7 @@ python = "3.13.2"
 "go:golang.org/x/tools/cmd/goimports" = "0.30.0"
 
 # npm packages
-"npm:renovate" = "39.164.1"
+"npm:renovate" = "39.166.0"
 "npm:pnpm" = "10.2.1"
 
 # ruby gems
