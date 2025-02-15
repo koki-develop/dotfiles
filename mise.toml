@@ -1,7 +1,7 @@
 [tools]
 # languages
 go = "1.23.6"
-node = "22.13.1"
+node = "22.14.0"
 terraform = "1.10.5"
 ruby = "3.4.1"
 python = "3.13.2"
