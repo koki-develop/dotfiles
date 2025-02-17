@@ -11,7 +11,7 @@ python = "3.13.2"
 
 # npm packages
 "npm:renovate" = "39.170.1"
-"npm:pnpm" = "10.3.0"
+"npm:pnpm" = "10.4.0"
 
 # ruby gems
 "gem:xvert" = "0.4.0"
