@@ -2,6 +2,7 @@
 # languages
 go = "1.24.0"
 node = "22.14.0"
+bun = "1.2.2"
 terraform = "1.10.5"
 ruby = "3.4.2"
 python = "3.13.2"
