@@ -17,6 +17,7 @@ casks = %w[
   docker
   google-cloud-sdk
   hiddenbar
+  keeper-password-manager
   koki-develop/tap/koto
   raycast
   slack
