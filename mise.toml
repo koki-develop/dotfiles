@@ -11,7 +11,7 @@ python = "3.13.2"
 "go:golang.org/x/tools/cmd/goimports" = "0.30.0"
 
 # npm packages
-"npm:renovate" = "39.175.8"
+"npm:renovate" = "39.176.4"
 "npm:pnpm" = "10.4.1"
 "npm:pinpm" = "0.4.0"
 
