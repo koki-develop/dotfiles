@@ -53,6 +53,7 @@ formulae = %w[
   imagemagick
   openjdk
   jq
+  keeper-commander
   libpq
   libyaml
   node
