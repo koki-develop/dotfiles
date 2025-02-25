@@ -10,17 +10,14 @@ log "Install Homebrew"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-log "Install Dashlane CLI"
-brew install dashlane/tap/dashlane-cli
+log "Install Keeper Commander"
+brew install keeper-commander
 
-log "Execute Dashlane CLI sync"
-dcli sync
+log "Login to Keeper Commander"
+echo 'this-device persistent-login on' | keeper --batch-mode shell
 
 log "Install chezmoi"
 brew install chezmoi
 
 log "Execute chezmoi init and apply dotfiles"
 chezmoi init --apply koki-develop
-
-log "Logout Dashlane CLI"
-dcli logout
