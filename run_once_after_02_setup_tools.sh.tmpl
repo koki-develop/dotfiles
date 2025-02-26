@@ -16,8 +16,8 @@ echo "Done."
 
 echo "Setting up GitHub GPG..."
 
-keeper download-attachment nMvxEVRzb9FcUioZEkLjww --out-dir /tmp
-echo "{{ index (index (keeper "nMvxEVRzb9FcUioZEkLjww").custom 0).value 0 }}" \
+keeper download-attachment {{ .keeper.github_gpg_secret_key_uid }} --out-dir /tmp
+echo "{{ index (index (keeper .keeper.github_gpg_secret_key_uid).custom 0).value 0 }}" \
   | gpg \
       --batch \
       --yes \
@@ -35,7 +35,7 @@ echo "Done."
 
 if [ ! -f $HOME/.aws/config ]; then
   mkdir $HOME/.aws
-  keeper get 'qJSx39QdVuRuC2Hta6KpNg' --format=json \
+  keeper get {{ .keeper.aws_config_uid }} --format=json \
     | jq -r '.fields[] | select(.type == "note").value | first' \
     > $HOME/.aws/config
 fi
