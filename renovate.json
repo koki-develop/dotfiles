@@ -3,15 +3,5 @@
   "extends": [
     "github>koki-develop/renovate-config",
     "github>koki-develop/renovate-config:mise"
-  ],
-  "customManagers": [
-    {
-      "customType": "regex",
-      "fileMatch": ["^\\.chezmoidata\\.toml$"],
-      "matchStrings": ["version\\s*=\\s*\"(?<currentValue>.*?)\"\\s*$"],
-      "depNameTemplate": "yuru7/HackGen",
-      "datasourceTemplate": "github-releases",
-      "versioningTemplate": "semver"
-    }
   ]
 }
