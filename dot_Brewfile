@@ -1,6 +1,5 @@
 taps = %w[
   charmbracelet/tap
-  dashlane/tap
   go-task/tap
   koki-develop/tap
   oven-sh/bun
@@ -36,7 +35,6 @@ formulae = %w[
   charmbracelet/tap/gum
   charmbracelet/tap/vhs
   chezmoi
-  dashlane/tap/dashlane-cli
   direnv
   duckdb
   eza
@@ -53,6 +51,7 @@ formulae = %w[
   imagemagick
   openjdk
   jq
+  keeper-commander
   libpq
   libyaml
   node

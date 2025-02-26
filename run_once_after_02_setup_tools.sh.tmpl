@@ -16,12 +16,14 @@ echo "Done."
 
 echo "Setting up GitHub GPG..."
 
-(cat <<EOF
-{{ dashlaneNote "GitHub GPG Secret key" -}}
-EOF
-) | base64 --decode > /tmp/github-gpg
-echo "{{ (index (dashlanePassword "GitHub GPG Passphrase") 0).password }}" | gpg --batch --yes --passphrase-fd 0 --import /tmp/github-gpg
-rm /tmp/github-gpg
+keeper download-attachment {{ .keeper.github_gpg_secret_key_uid }} --out-dir /tmp
+echo "{{ index (index (keeper .keeper.github_gpg_secret_key_uid).custom 0).value 0 }}" \
+  | gpg \
+      --batch \
+      --yes \
+      --passphrase-fd 0 \
+      --import /tmp/github-gpg-secret-key
+rm /tmp/github-gpg-secret-key
 echo "pinentry-program $(which pinentry-mac)" > $HOME/.gnupg/gpg-agent.conf
 gpgconf --kill gpg-agent
 
@@ -33,8 +35,7 @@ echo "Done."
 
 if [ ! -f $HOME/.aws/config ]; then
   mkdir $HOME/.aws
-  (cat <<EOF> $HOME/.aws/config
-{{ dashlaneNote ".aws/config" -}}
-EOF
-  )
+  keeper get {{ .keeper.aws_config_uid }} --format=json \
+    | jq -r '.fields[] | select(.type == "note").value | first' \
+    > $HOME/.aws/config
 fi

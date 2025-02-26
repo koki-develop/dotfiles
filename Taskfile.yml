@@ -5,12 +5,11 @@ version: '3'
 tasks:
   default:
     cmds:
-      - dcli sync
+      - echo 'this-device persistent-login on' | keeper --batch-mode shell
       - git fetch
       - git rebase origin/main
       - chezmoi apply -v
       - task: update
-      - dcli logout
 
   update:
     cmds:
