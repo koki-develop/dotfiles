@@ -33,8 +33,7 @@ echo "Done."
 
 if [ ! -f $HOME/.aws/config ]; then
   mkdir $HOME/.aws
-  (cat <<EOF> $HOME/.aws/config
-{{ dashlaneNote ".aws/config" -}}
-EOF
-  )
+  keeper get 'qJSx39QdVuRuC2Hta6KpNg' --format=json \
+    | jq -r '.fields[] | select(.type == "note").value | first' \
+    > $HOME/.aws/config
 fi
