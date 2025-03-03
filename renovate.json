@@ -3,5 +3,11 @@
   "extends": [
     "github>koki-develop/renovate-config",
     "github>koki-develop/renovate-config:mise"
+  ],
+  "packageRules": [
+    {
+      "matchPackageNames": ["renovate"],
+      "automerge": true
+    }
   ]
 }
