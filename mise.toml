@@ -3,7 +3,7 @@
 go = "1.24.0"
 node = "22.14.0"
 bun = "1.2.4"
-terraform = "1.11.0"
+terraform = "1.11.1"
 ruby = "3.4.2"
 python = "3.13.2"
 
