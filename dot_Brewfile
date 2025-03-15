@@ -2,7 +2,6 @@ taps = %w[
   charmbracelet/tap
   go-task/tap
   koki-develop/tap
-  oven-sh/bun
   suzuki-shunsuke/pinact
   wez/wezterm
   ynqa/tap
@@ -57,7 +56,6 @@ formulae = %w[
   node
   mise
   mysql-client
-  oven-sh/bun/bun
   koki-develop/tap/clive
   koki-develop/tap/ego
   koki-develop/tap/docker-tags
