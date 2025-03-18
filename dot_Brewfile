@@ -2,6 +2,7 @@ taps = %w[
   charmbracelet/tap
   go-task/tap
   koki-develop/tap
+  suzuki-shunsuke/ghalint
   suzuki-shunsuke/pinact
   wez/wezterm
   ynqa/tap
@@ -67,11 +68,13 @@ formulae = %w[
   pinentry-mac
   ripgrep
   starship
+  suzuki-shunsuke/ghalint/ghalint
   suzuki-shunsuke/pinact/pinact
   vlang
   wget
   xh
   ynqa/tap/jnv
+  zizmor
 ]
 
 taps.each { |t| tap t }
