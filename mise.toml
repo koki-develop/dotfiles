@@ -12,7 +12,7 @@ python = "3.13.2"
 
 # npm packages
 "npm:renovate" = "39.188.1"
-"npm:pnpm" = "10.6.4"
+"npm:pnpm" = "10.6.5"
 "npm:pinpm" = "0.4.0"
 
 # ruby gems
