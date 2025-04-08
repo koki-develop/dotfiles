@@ -5,7 +5,7 @@ node = "22.14.0"
 bun = "1.2.6"
 terraform = "1.11.3"
 ruby = "3.4.2"
-python = "3.13.2"
+python = "3.13.3"
 
 # go tools
 "go:golang.org/x/tools/cmd/goimports" = "0.31.0"
