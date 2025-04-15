@@ -4,7 +4,7 @@ go = "1.24.2"
 node = "22.14.0"
 bun = "1.2.8"
 terraform = "1.11.4"
-ruby = "3.4.2"
+ruby = "3.4.3"
 python = "3.13.3"
 
 # go tools
