@@ -43,6 +43,7 @@ formulae = %w[
   git
   git-delta
   git-secrets
+  gitleaks
   go-task/tap/go-task
   gping
   gpg
