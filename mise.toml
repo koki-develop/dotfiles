@@ -14,7 +14,7 @@ python = "3.13.3"
 # npm packages
 "npm:renovate" = "40.35.1"
 "npm:pnpm" = "10.11.1"
-"npm:pinpm" = "0.4.0"
+"npm:pinpm" = "0.4.1"
 "npm:@anthropic-ai/claude-code" = "1.0.11"
 
 # ruby gems
