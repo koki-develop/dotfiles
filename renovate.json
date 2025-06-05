@@ -4,7 +4,8 @@
   "prConcurrentLimit": 10,
   "packageRules": [
     {
-      "matchPackageNames": ["renovate"],
+      "matchPackageNames": ["renovate", "npm:renovate"],
+      "groupName": "renovate",
       "automerge": true
     }
   ]
