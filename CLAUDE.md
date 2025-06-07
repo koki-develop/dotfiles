@@ -21,6 +21,9 @@ This is a dotfiles repository managed by chezmoi, containing personal developmen
 - `task update-zplug-packages` - Update zsh plugins only
 - `mise install` - Install/update tools defined in mise.toml
 
+### Setup
+- `./install.sh` - Initial setup script (installs Homebrew, Keeper Commander, chezmoi, and applies dotfiles)
+
 ### Package Management
 - `brew bundle --global` - Install/update Homebrew packages from dot_Brewfile
 - Tools are managed via mise (defined in mise.toml)
@@ -34,10 +37,11 @@ This is a dotfiles repository managed by chezmoi, containing personal developmen
 - `run_once_after_*` scripts execute once after chezmoi apply for setup tasks
 
 ### Tool Configuration
-- Development tools versioned and managed through mise.toml
+- Development tools versioned and managed through mise.toml (Go, Node, Python, Ruby, etc.)
 - Homebrew packages defined in dot_Brewfile using Ruby DSL
 - Neovim configuration in dot_config/nvim/init.vim using vim-plug
 - Shell configuration in dot_zshrc.tmpl with zplug for plugin management
+- Global mise config at ~/.local/share/chezmoi/mise.toml (referenced via MISE_GLOBAL_CONFIG_FILE)
 
 ### Key Dependencies
 - **chezmoi**: Dotfiles management system
