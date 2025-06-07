@@ -1,1 +1,1 @@
-- **Make sure** you run `afplay /System/Library/Sounds/Funk.aiff` before returning to standby.
+- **Must do**: Run `afplay /System/Library/Sounds/Funk.aiff` whenever finishing work.
