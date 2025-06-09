@@ -16,8 +16,8 @@ This is a dotfiles repository managed by chezmoi, containing personal developmen
 
 ### Development Updates
 - `task update` - Update all development tools (Neovim plugins, Homebrew formulae, zplug packages, mise tools)
-- `task update-nvim-plugins` - Update Neovim plugins only
-- `task update-brew-formula` - Update Homebrew packages only
+- `task update-nvim-plugins` - Update Neovim plugins only (runs `nvim +PlugUpdate +qall`)
+- `task update-brew-formula` - Update Homebrew packages only (runs `brew update && brew bundle --global && brew upgrade`)
 - `task update-zplug-packages` - Update zsh plugins only
 - `mise install` - Install/update tools defined in mise.toml
 
@@ -33,8 +33,10 @@ This is a dotfiles repository managed by chezmoi, containing personal developmen
 
 ### File Structure
 - Files prefixed with `dot_` become dotfiles in the home directory (e.g., `dot_zshrc.tmpl` → `~/.zshrc`)
+- Files prefixed with `private_` have restricted permissions (600) for sensitive data
 - Template files (`.tmpl`) are processed by chezmoi and can contain dynamic content
 - `run_once_after_*` scripts execute once after chezmoi apply for setup tasks
+- Numbered scripts (`01_`, `02_`) define execution order
 
 ### Tool Configuration
 - Development tools versioned and managed through mise.toml (Go, Node, Python, Ruby, etc.)
@@ -53,4 +55,14 @@ This is a dotfiles repository managed by chezmoi, containing personal developmen
 
 ### Security
 - SSH keys and sensitive data managed as private templates
-- Keeper Commander integration for secret management
+- Keeper Commander integration for secret management and credential injection
+- GPG signing enabled for Git commits
+- git-secrets configured for AWS credential detection
+- AWS configuration managed through Keeper Commander templates
+
+### Default Task Workflow
+The `task` command (or `task default`) performs a complete update workflow:
+1. Authenticate with Keeper Commander (`keeper whoami`)
+2. Fetch and rebase from origin/main
+3. Apply dotfiles changes (`chezmoi apply -v`)
+4. Update all development tools (`task update`)
