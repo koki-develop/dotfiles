@@ -3,3 +3,4 @@ install.sh
 Taskfile.yml
 renovate.json
 mise.toml
+CLAUDE.md
