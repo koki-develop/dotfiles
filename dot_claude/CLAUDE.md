@@ -1,2 +1,0 @@
-- **Must do**: Run `afplay /System/Library/Sounds/Funk.aiff` whenever finishing work.
-- **Notification sound before standby**: Always execute `afplay /System/Library/Sounds/Funk.aiff` before returning to standby state (whether task is complete, awaiting user input, or pausing for any reason) to alert the user.
