@@ -163,6 +163,53 @@ function gsw() {
     git switch "${branch}"
   fi
 }
+function gwkt() {
+  case "$1" in
+    add)
+      if [[ -z "$2" ]]; then
+        echo "Usage: gwkt add <branch_name>"
+        return 1
+      fi
+      local branch_name="$2"
+      git worktree add .git/git-wkt/worktrees/"$branch_name" -b "$branch_name"
+      ;;
+    rm)
+      if [[ -z "$2" ]]; then
+        echo "Usage: gwkt rm <branch_name>"
+        return 1
+      fi
+      local branch_name="$2"
+      git worktree remove .git/git-wkt/worktrees/"$branch_name"
+      ;;
+    ls)
+      if [[ -d .git/git-wkt/worktrees ]]; then
+        for dir in .git/git-wkt/worktrees/*/; do
+          if [[ -d "$dir" ]]; then
+            basename "$dir"
+          fi
+        done
+      fi
+      ;;
+    cd)
+      if [[ -z "$2" ]]; then
+        echo "Usage: gwkt cd <branch_name>"
+        return 1
+      fi
+      local branch_name="$2"
+      local worktree_path=".git/git-wkt/worktrees/$branch_name"
+      if [[ -d "$worktree_path" ]]; then
+        cd "$worktree_path"
+      else
+        echo "Worktree '$branch_name' does not exist"
+        return 1
+      fi
+      ;;
+    *)
+      echo "Usage: gwkt {add|rm|ls|cd} <branch_name>"
+      return 1
+      ;;
+  esac
+}
 # grep
 alias grep='rg --ignore-case'
 # ls
