@@ -18,13 +18,8 @@ _gwkt() {
         args)
             case $words[2] in
                 rm|cd)
-                    if [[ -d .git/git-wkt/worktrees ]]; then
-                        local branches=()
-                        for dir in .git/git-wkt/worktrees/*/; do
-                            if [[ -d "$dir" ]]; then
-                                branches+=($(basename "$dir"))
-                            fi
-                        done
+                    local branches=($(git worktree list --porcelain | grep "^worktree $(pwd)/.git/gwkt/worktrees" | sed "s|^worktree $(pwd)/.git/gwkt/worktrees/||"))
+                    if [[ ${#branches[@]} -gt 0 ]]; then
                         _values 'branches' $branches
                     fi
                     ;;

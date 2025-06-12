@@ -171,7 +171,7 @@ function gwkt() {
         return 1
       fi
       local branch_name="$2"
-      git worktree add .git/git-wkt/worktrees/"$branch_name" -b "$branch_name"
+      git worktree add .git/gwkt/worktrees/"$branch_name" -b "$branch_name"
       ;;
     rm)
       if [[ -z "$2" ]]; then
@@ -179,16 +179,10 @@ function gwkt() {
         return 1
       fi
       local branch_name="$2"
-      git worktree remove .git/git-wkt/worktrees/"$branch_name"
+      git worktree remove .git/gwkt/worktrees/"$branch_name"
       ;;
     ls)
-      if [[ -d .git/git-wkt/worktrees ]]; then
-        for dir in .git/git-wkt/worktrees/*/; do
-          if [[ -d "$dir" ]]; then
-            basename "$dir"
-          fi
-        done
-      fi
+      git worktree list --porcelain | grep "^worktree $(pwd)/.git/gwkt/worktrees" | sed "s|^worktree $(pwd)/.git/gwkt/worktrees/||"
       ;;
     cd)
       if [[ -z "$2" ]]; then
@@ -196,7 +190,7 @@ function gwkt() {
         return 1
       fi
       local branch_name="$2"
-      local worktree_path=".git/git-wkt/worktrees/$branch_name"
+      local worktree_path=".git/gwkt/worktrees/$branch_name"
       if [[ -d "$worktree_path" ]]; then
         cd "$worktree_path"
       else
