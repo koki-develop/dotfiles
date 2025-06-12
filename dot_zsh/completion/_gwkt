@@ -1,0 +1,35 @@
+#compdef gwkt
+
+_gwkt() {
+    local state
+    _arguments \
+        '1: :->commands' \
+        '2: :->args' \
+        && return 0
+
+    case $state in
+        commands)
+            _values 'gwkt commands' \
+                'add[Add new worktree]' \
+                'rm[Remove worktree]' \
+                'ls[List worktrees]'
+            ;;
+        args)
+            case $words[2] in
+                rm)
+                    if [[ -d .git/git-wkt/worktrees ]]; then
+                        local branches=()
+                        for dir in .git/git-wkt/worktrees/*/; do
+                            if [[ -d "$dir" ]]; then
+                                branches+=($(basename "$dir"))
+                            fi
+                        done
+                        _values 'branches' $branches
+                    fi
+                    ;;
+            esac
+            ;;
+    esac
+}
+
+_gwkt "$@"

@@ -3,7 +3,7 @@
 case "$1" in
     add)
         if [[ -z "$2" ]]; then
-            echo "Usage: git-wkt add <branch_name>"
+            echo "Usage: gwkt add <branch_name>"
             exit 1
         fi
         branch_name="$2"
@@ -11,7 +11,7 @@ case "$1" in
         ;;
     rm)
         if [[ -z "$2" ]]; then
-            echo "Usage: git-wkt rm <branch_name>"
+            echo "Usage: gwkt rm <branch_name>"
             exit 1
         fi
         branch_name="$2"
@@ -27,7 +27,7 @@ case "$1" in
         fi
         ;;
     *)
-        echo "Usage: git-wkt {add|rm|ls} <branch_name>"
+        echo "Usage: gwkt {add|rm|ls} <branch_name>"
         exit 1
         ;;
 esac
