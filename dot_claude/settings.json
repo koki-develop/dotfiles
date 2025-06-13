@@ -1,7 +1,36 @@
 {
   "permissions": {
     "allow": [
-      "Bash(afplay:*)"
+      "Bash(ls:*)",
+      "Bash(find:*)",
+      "Bash(grep:*)",
+      "Bash(rg:*)",
+
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git fetch:*)",
+      "Bash(git log:*)",
+
+      "Bash(gh run view:*)",
+      "Bash(gh pr checks:*)",
+      "Bash(gh pr status:*)",
+      "Bash(gh pr list:*)",
+      "Bash(gh pr view:*)",
+
+      "Bash(git actionlint:*)",
+      "Bash(git ghalint:*)",
+      "Bash(git zizmor:*)"
+    ],
+    "deny": [
+      "Bash(rm -rf /)",
+      "Bash(rm -rf ~)",
+      "Bash(rm -rf /*)",
+      "Bash(sudo rm:*)",
+      "Bash(curl * | sh)",
+      "Bash(curl * | bash)",
+      "Bash(wget * | sh)",
+      "Bash(wget * | bash)",
+      "Bash(rm -rf .git)"
     ]
   }
 }
