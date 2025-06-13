@@ -19,7 +19,12 @@
 
       "Bash(git actionlint:*)",
       "Bash(git ghalint:*)",
-      "Bash(git zizmor:*)"
+      "Bash(git zizmor:*)",
+
+      "mcp__github__list_issues",
+      "mcp__github__get_issue",
+      "mcp__github__get_pull_request",
+      "mcp__github__get_pull_request_status"
     ],
     "deny": [
       "Bash(rm -rf /)",
