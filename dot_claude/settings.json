@@ -5,6 +5,7 @@
       "Bash(find:*)",
       "Bash(grep:*)",
       "Bash(rg:*)",
+      "Bash(mkdir:*)",
 
       "Bash(git status:*)",
       "Bash(git diff:*)",
