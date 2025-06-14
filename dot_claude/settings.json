@@ -21,6 +21,7 @@
       "Bash(git ghalint:*)",
       "Bash(git zizmor:*)",
 
+      "mcp__github__get_me",
       "mcp__github__list_issues",
       "mcp__github__get_issue",
       "mcp__github__get_pull_request",
