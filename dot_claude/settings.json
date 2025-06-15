@@ -7,6 +7,8 @@
       "Bash(rg:*)",
       "Bash(mkdir:*)",
 
+      "Bash(go doc:*)",
+
       "Bash(git status:*)",
       "Bash(git diff:*)",
       "Bash(git fetch:*)",
