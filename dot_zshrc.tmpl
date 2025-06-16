@@ -71,6 +71,12 @@ setopt no_list_beep
 if [[ $- == *i* ]]; then
   bindkey '^P' up-line-or-history
   bindkey '^N' down-line-or-history
+
+  bindkey '^A' beginning-of-line
+  bindkey '^E' end-of-line
+
+  bindkey '^F' forward-char
+  bindkey '^B' backward-char
 fi
 
 #
