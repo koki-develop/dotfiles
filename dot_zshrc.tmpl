@@ -65,6 +65,15 @@ setopt no_hist_beep
 setopt no_list_beep
 
 #
+# Key bindings
+#
+
+if [[ $- == *i* ]]; then
+  bindkey '^P' up-line-or-history
+  bindkey '^N' down-line-or-history
+fi
+
+#
 # Set up tools
 #
 
