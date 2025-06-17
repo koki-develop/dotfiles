@@ -69,6 +69,7 @@ formulae = %w[
   starship
   suzuki-shunsuke/ghalint/ghalint
   suzuki-shunsuke/pinact/pinact
+  tmux
   vlang
   wget
   xh
