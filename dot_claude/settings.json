@@ -32,6 +32,13 @@
       "mcp__github__get_pull_request_status"
     ],
     "deny": [
+      "Read(.env*)",
+      "Read(~/.ssh/**)",
+
+      "Bash(git add .)",
+      "Bash(git add -A:*)",
+      "Bash(git add --all:*)",
+
       "Bash(rm -rf /)",
       "Bash(rm -rf ~)",
       "Bash(rm -rf /*)",
