@@ -8,6 +8,7 @@
       "Bash(mkdir:*)",
 
       "Bash(go doc:*)",
+      "Bash(go list:*)",
 
       "Bash(git status:*)",
       "Bash(git diff:*)",
