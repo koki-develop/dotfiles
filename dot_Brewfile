@@ -9,17 +9,17 @@ taps = %w[
 ]
 
 casks = %w[
-  aws-vault
+  aws-vault-binary
   cursor
   deepl
   discord
-  docker
+  docker-desktop
   google-cloud-sdk
   hiddenbar
   keeper-password-manager
   raycast
   slack
-  todoist
+  todoist-app
   visual-studio-code
   vivaldi
   wez/wezterm/wezterm
