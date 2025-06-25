@@ -15,7 +15,7 @@ python = "3.13.4"
 "npm:renovate" = "40.35.1"
 "npm:pnpm" = "10.11.1"
 "npm:pinpm" = "0.4.1"
-"npm:@anthropic-ai/claude-code" = "1.0.17"
+"npm:@anthropic-ai/claude-code" = "1.0.33"
 
 # ruby gems
 "gem:xvert" = "0.4.0"
