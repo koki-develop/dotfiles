@@ -7,6 +7,8 @@
       "Bash(rg:*)",
       "Bash(mkdir:*)",
 
+      "Bash(npm info:*)",
+
       "Bash(go doc:*)",
       "Bash(go list:*)",
 
@@ -30,7 +32,10 @@
       "mcp__github__list_issues",
       "mcp__github__get_issue",
       "mcp__github__get_pull_request",
-      "mcp__github__get_pull_request_status"
+      "mcp__github__get_pull_request_status",
+
+      "mcp__context7__resolve-library-id",
+      "mcp__context7__get-library-docs"
     ],
     "deny": [
       "Read(.env*)",
