@@ -59,5 +59,17 @@
       "Bash(wget * | sh)",
       "Bash(wget * | bash)"
     ]
+  },
+  "hooks": {
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "osascript -e \"display notification \\\"$(jq -r '.message')\\\" with title \\\"$(jq -r '.title')\\\" sound name \\\"Funk\\\"\""
+          }
+        ]
+      }
+    ]
   }
 }
