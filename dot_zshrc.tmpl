@@ -244,3 +244,11 @@ alias sed='gsed'
 alias tf='terraform'
 # vim
 alias vi='nvim'
+
+#
+# Auto-start tmux
+#
+
+if [[ -z "$TMUX" ]] && [[ $- == *i* ]]; then
+  tmux attach-session -t main 2>/dev/null || tmux new-session -s main
+fi
