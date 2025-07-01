@@ -66,7 +66,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "osascript -e \"display notification \\\"$(jq -r '.message')\\\" with title \\\"$(jq -r '.title')\\\" sound name \\\"Funk\\\"\""
+            "command": "osascript -e \"display notification \\\"$(jq -r '.message')\\\" with title \\\"Claude Code\\\" sound name \\\"Funk\\\"\""
           }
         ]
       }
