@@ -1,12 +1,24 @@
-Please analyze and resolve the GitHub issue: $ARGUMENTS.
+---
+allowed-tools: Bash(gh issue view:*)
+description: Analyze and resolve a GitHub issue with automated workflow
+---
+
+## Context
+
+- Issue details: !`gh issue view $ARGUMENTS --json number,title,body,state,assignees,labels`
+- Current branch: !`git branch --show-current`
+- Current git status: !`git status --porcelain`
+
+## Your task
+
+Based on the GitHub issue: $ARGUMENTS
 
 Follow these steps:
 
-1. Use GitHub MCP to get the issue details
-2. Understand the requirements described in the issue
-3. Search the codebase for relevant files
-4. Implement the necessary changes to resolve the issue
-5. Write and run tests to verify the resolution
-6. Ensure code passes formatting, linting, type checking, and all tests
-7. Create a descriptive commit message
-8. Push changes with git and use GitHub MCP to create a PR with detailed description of the work done
+1. Analyze the issue details from the context above
+2. Search the codebase for relevant files and understand the current implementation
+3. Implement the necessary changes to resolve the issue
+4. Write and run tests to verify the resolution
+5. Ensure code passes formatting, linting, type checking, and all tests
+6. Create a descriptive commit message and commit the changes
+7. Push changes and create a PR with detailed description of the work done
