@@ -1,8 +1,16 @@
-Create a Pull Request from the current branch.
+---
+allowed-tools: Bash(git status:*), Bash(git diff:*), Bash(git log:*), Bash(git branch:*), Bash(git push:*)
+description: Create a pull request from the current branch
+---
 
-Follow these steps:
+## Context
 
-1. Review the current branch changes
-2. Create appropriate PR title and description based on the changes
-3. Use `gh` to create the Pull Request
-4. Display the created PR URL
+- Current git status: !`git status`
+- Current git diff (all changes since diverged from origin/main): !`git diff origin/main...HEAD`
+- Current branch: !`git branch --show-current`
+- Commits to be included in PR: !`git log --oneline origin/main..HEAD`
+- Remote status: !`git status -u no`
+
+## Your task
+
+Based on the above changes, create a pull request from the current branch to the main branch.
