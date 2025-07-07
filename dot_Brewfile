@@ -9,6 +9,7 @@ taps = %w[
 ]
 
 casks = %w[
+  alacritty
   aws-vault-binary
   cursor
   deepl
