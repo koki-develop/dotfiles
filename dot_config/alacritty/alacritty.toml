@@ -4,6 +4,9 @@ size = 16.0
 [font.normal]
 family = "HackGen Console NF"
 
+[window]
+decorations = "None"
+
 [window.padding]
 x = 8
 y = 8
