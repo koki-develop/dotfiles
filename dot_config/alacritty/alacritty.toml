@@ -1,0 +1,43 @@
+[font]
+size = 16.0
+
+[font.normal]
+family = "HackGen Console NF"
+
+[window.padding]
+x = 8
+y = 8
+
+# Monokai Remastered Color Scheme
+# https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/wezterm/Monokai%20Remastered.toml
+[colors.primary]
+background = "#0c0c0c"
+foreground = "#d9d9d9"
+
+[colors.cursor]
+text = "#000000"
+cursor = "#ffffff"
+
+[colors.selection]
+text = "#ffffff"
+background = "#343434"
+
+[colors.normal]
+black   = "#1a1a1a"
+red     = "#f4005f"
+green   = "#98e024"
+yellow  = "#fd971f"
+blue    = "#9d65ff"
+magenta = "#f4005f"
+cyan    = "#58d1eb"
+white   = "#c4c5b5"
+
+[colors.bright]
+black   = "#625e4c"
+red     = "#f4005f"
+green   = "#98e024"
+yellow  = "#e0d561"
+blue    = "#9d65ff"
+magenta = "#f4005f"
+cyan    = "#58d1eb"
+white   = "#f6f6ef"
