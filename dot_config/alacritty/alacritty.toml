@@ -11,6 +11,15 @@ decorations = "None"
 x = 8
 y = 8
 
+[[keyboard.bindings]]
+key = "¥"
+chars = "\\"
+
+[[keyboard.bindings]]
+key = "¥"
+mods ="Alt"
+chars = "¥"
+
 # Monokai Remastered Color Scheme
 # https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/wezterm/Monokai%20Remastered.toml
 [colors.primary]
