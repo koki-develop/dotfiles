@@ -12,6 +12,7 @@
 
       "Bash(go doc:*)",
       "Bash(go list:*)",
+      "Bash(go fmt:*)",
       "Bash(golangci-lint run:*)",
 
       "Bash(git status:*)",
