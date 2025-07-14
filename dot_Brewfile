@@ -25,6 +25,7 @@ casks = %w[
   vivaldi
   wez/wezterm/wezterm
   xbar
+  zed
 ]
 
 formulae = %w[
