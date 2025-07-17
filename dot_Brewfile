@@ -2,8 +2,6 @@ taps = %w[
   charmbracelet/tap
   go-task/tap
   koki-develop/tap
-  suzuki-shunsuke/ghalint
-  suzuki-shunsuke/pinact
   wez/wezterm
   ynqa/tap
 ]
@@ -41,6 +39,7 @@ formulae = %w[
   eza
   fd
   gh
+  ghalint
   git
   git-delta
   git-secrets
@@ -66,11 +65,10 @@ formulae = %w[
   koki-develop/tap/gotrash
   koki-develop/tap/ollamit
   neovim
+  pinact
   pinentry-mac
   ripgrep
   starship
-  suzuki-shunsuke/ghalint/ghalint
-  suzuki-shunsuke/pinact/pinact
   tmux
   vlang
   wget
