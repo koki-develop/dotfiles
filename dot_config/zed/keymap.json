@@ -4,5 +4,11 @@
     "bindings": {
       "alt-c": "editor::ShowCompletions"
     }
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "ctrl-x ctrl-x": "project_panel::CollapseAllEntries"
+    }
   }
 ]
