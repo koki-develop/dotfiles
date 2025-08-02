@@ -36,7 +36,8 @@ log "Install Homebrew"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 log "Install Keeper Commander"
-brew install keeper-commander
+brew install pipx
+pipx install keepercommander
 
 log "Login to Keeper Commander"
 print_yellow "Please complete the initial Keeper login setup:"
