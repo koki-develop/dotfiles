@@ -1,9 +1,34 @@
 #!/bin/zsh
 
+# Color codes
+readonly GREEN='\033[0;32m'
+readonly YELLOW='\033[0;33m'
+readonly BLUE='\033[0;34m'
+readonly CYAN='\033[0;36m'
+readonly BOLD='\033[1m'
+readonly NC='\033[0m' # No Color
+
+# Color output functions
+function print_yellow() {
+  echo "${YELLOW}$1${NC}"
+}
+
+function print_blue() {
+  echo "${BLUE}$1${NC}"
+}
+
+function print_cyan() {
+  echo "${CYAN}$1${NC}"
+}
+
+function print_bold() {
+  echo "${BOLD}$1${NC}"
+}
+
 function log() {
-  echo "##########################"
-  echo "# $1"
-  echo "##########################"
+  echo "${BLUE}##########################${NC}"
+  echo "${BLUE}#${NC} ${GREEN}$1${NC}"
+  echo "${BLUE}##########################${NC}"
 }
 
 log "Install Homebrew"
@@ -14,11 +39,12 @@ log "Install Keeper Commander"
 brew install keeper-commander
 
 log "Login to Keeper Commander"
-echo "Please complete the initial Keeper login setup:
-1. The Keeper shell will open for initial authentication
-2. After logging in with your credentials and 2FA, run:
-  > this-device persistent-login on
-  > quit"
+print_yellow "Please complete the initial Keeper login setup:"
+print_cyan "1. The Keeper shell will open for initial authentication"
+print_cyan "2. After logging in with your credentials and 2FA, run:"
+print_blue "  > this-device persistent-login on"
+print_blue "  > quit"
+print_bold "Opening Keeper shell..."
 keeper shell
 
 log "Install chezmoi"
