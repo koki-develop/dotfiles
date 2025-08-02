@@ -17,7 +17,7 @@ log "Login to Keeper Commander"
 echo "Please complete the initial Keeper login setup:
 1. The Keeper shell will open for initial authentication
 2. After logging in with your credentials and 2FA, run:
-  > this-devise persistent-login on
+  > this-device persistent-login on
   > quit"
 keeper shell
 
