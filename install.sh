@@ -14,7 +14,12 @@ log "Install Keeper Commander"
 brew install keeper-commander
 
 log "Login to Keeper Commander"
-echo 'this-device persistent-login on' | keeper --batch-mode shell
+echo "Please complete the initial Keeper login setup:
+1. The Keeper shell will open for initial authentication
+2. After logging in with your credentials and 2FA, run:
+  > this-devise persistent-login on
+  > quit"
+keeper shell
 
 log "Install chezmoi"
 brew install chezmoi
