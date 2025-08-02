@@ -20,4 +20,4 @@ log "Install chezmoi"
 brew install chezmoi
 
 log "Execute chezmoi init and apply dotfiles"
-chezmoi init --apply koki-develop
+chezmoi init --verbose --apply koki-develop
