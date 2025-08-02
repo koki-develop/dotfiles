@@ -9,6 +9,7 @@
   "buffer_font_size": 16,
   "ui_font_family": "HackGen Console NF",
   "buffer_font_family": "HackGen Console NF",
+  "soft_wrap": "editor_width",
 
   "vim_mode": true,
   "vim": {
