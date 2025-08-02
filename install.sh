@@ -36,6 +36,7 @@ log "Install Homebrew"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 log "Install Keeper Commander"
+export PATH="${HOME}/.local/bin:${PATH}" # for ~/.local/bin/keeper
 brew install pipx
 pipx install keepercommander
 
@@ -43,6 +44,7 @@ log "Login to Keeper Commander"
 print_yellow "Please complete the initial Keeper login setup:"
 print_cyan "1. The Keeper shell will open for initial authentication"
 print_cyan "2. After logging in with your credentials and 2FA, run:"
+print_blue "  > login kou.pg.0131@gmail.com"
 print_blue "  > this-device persistent-login on"
 print_blue "  > quit"
 print_bold "Opening Keeper shell..."
