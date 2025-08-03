@@ -2,7 +2,6 @@ taps = %w[
   charmbracelet/tap
   go-task/tap
   koki-develop/tap
-  wez/wezterm
   ynqa/tap
 ]
 
@@ -21,7 +20,6 @@ casks = %w[
   todoist-app
   visual-studio-code
   vivaldi
-  wez/wezterm/wezterm
   xbar
   zed
 ]
