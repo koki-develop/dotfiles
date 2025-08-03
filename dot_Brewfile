@@ -15,6 +15,7 @@ casks = %w[
   google-cloud-sdk
   hiddenbar
   keeper-password-manager
+  koki-develop/tap/koto
   raycast
   slack
   todoist-app
