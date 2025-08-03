@@ -27,9 +27,7 @@ casks = %w[
 formulae = %w[
   actionlint
   awscli
-  bottom
   charmbracelet/tap/freeze
-  charmbracelet/tap/gum
   charmbracelet/tap/vhs
   chezmoi
   direnv
@@ -60,7 +58,6 @@ formulae = %w[
   koki-develop/tap/gat
   koki-develop/tap/gofzf
   koki-develop/tap/gotrash
-  koki-develop/tap/ollamit
   neovim
   pinact
   pinentry-mac
