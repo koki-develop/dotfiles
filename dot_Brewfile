@@ -64,6 +64,7 @@ formulae = %w[
   ripgrep
   starship
   tmux
+  uv
   vlang
   wget
   xh
