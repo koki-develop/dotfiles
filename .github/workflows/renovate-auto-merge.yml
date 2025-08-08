@@ -1,0 +1,21 @@
+name: Renovate Auto Merge
+
+permissions: {}
+
+on:
+  pull_request:
+
+jobs:
+  auto-merge:
+    if: |
+      github.event.pull_request.user.login == 'renovate[bot]' && contains(github.event.pull_request.body, '**Automerge**: Enabled')
+    timeout-minutes: 30
+    permissions:
+      pull-requests: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Auto Merge
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: gh pr merge --repo "$GITHUB_REPOSITORY" --squash --auto --delete-branch "$PR_NUMBER"
