@@ -64,6 +64,10 @@
       "Bash(wget * | bash)"
     ]
   },
+  "statusLine": {
+    "type": "command",
+    "command": "bunx ccusage@latest statusline"
+  },
   "hooks": {
     "Notification": [
       {
