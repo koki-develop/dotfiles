@@ -12,7 +12,7 @@ python = "3.13.6"
 "go:golang.org/x/tools/cmd/gonew" = "0.36.0"
 
 # npm packages
-"npm:renovate" = "41.60.3"
+"npm:renovate" = "41.62.3"
 "npm:pnpm" = "10.14.0"
 "npm:pinpm" = "0.4.1"
 "npm:@anthropic-ai/claude-code" = "1.0.72"
