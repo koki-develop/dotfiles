@@ -30,6 +30,7 @@ formulae = %w[
   charmbracelet/tap/freeze
   charmbracelet/tap/vhs
   chezmoi
+  coreutils
   direnv
   duckdb
   eza
