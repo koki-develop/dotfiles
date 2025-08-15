@@ -15,7 +15,7 @@ python = "3.13.6"
 "npm:renovate" = "41.64.4"
 "npm:pnpm" = "10.14.0"
 "npm:pinpm" = "0.4.1"
-"npm:@anthropic-ai/claude-code" = "1.0.77"
+"npm:@anthropic-ai/claude-code" = "1.0.80"
 "npm:@google/gemini-cli" = "0.1.20"
 
 # ruby gems
