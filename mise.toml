@@ -1,6 +1,6 @@
 [tools]
 # languages
-go = "1.24.6"
+go = "1.25.0"
 node = "24.5.0"
 bun = "1.2.18"
 terraform = "1.12.2"
