@@ -1,5 +1,5 @@
 {
-  "model": "sonnet",
+  "model": "opusplan",
   "permissions": {
     "allow": [
       "Bash(ls:*)",
@@ -34,8 +34,10 @@
       "Bash(ghalint:*)",
       "Bash(zizmor:*)",
 
+      "WebSearch",
       "WebFetch(domain:github.com)",
       "WebFetch(domain:www.npmjs.com)",
+      "WebFetch(domain:docs.renovatebot.com)",
 
       "mcp__github__get_me",
       "mcp__github__list_issues",
