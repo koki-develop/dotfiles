@@ -17,6 +17,7 @@ python = "3.13.7"
 "npm:pinpm" = "0.4.1"
 "npm:@anthropic-ai/claude-code" = "1.0.89"
 "npm:@google/gemini-cli" = "0.1.22"
+"npm:@openai/codex" = "0.24.0"
 
 # ruby gems
 "gem:xvert" = "0.4.0"
