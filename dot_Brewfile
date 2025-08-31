@@ -70,6 +70,7 @@ formulae = %w[
   wget
   xh
   ynqa/tap/jnv
+  yq
   zizmor
 ]
 
