@@ -15,7 +15,7 @@ python = "3.13.7"
 "npm:renovate" = "41.82.10"
 "npm:pnpm" = "10.15.0"
 "npm:pinpm" = "0.4.1"
-"npm:@anthropic-ai/claude-code" = "1.0.92"
+"npm:@anthropic-ai/claude-code" = "1.0.96"
 "npm:@google/gemini-cli" = "0.1.22"
 "npm:@openai/codex" = "0.24.0"
 
