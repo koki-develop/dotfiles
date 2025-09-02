@@ -6,7 +6,6 @@
     }
   },
   {
-    "context": "ProjectPanel",
     "bindings": {
       "ctrl-x ctrl-x": "project_panel::CollapseAllEntries"
     }
