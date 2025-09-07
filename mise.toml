@@ -13,6 +13,7 @@ python = "3.13.7"
 
 # npm packages
 "npm:renovate" = "41.96.2"
+"npm:mmcp" = "0.3.0"
 "npm:pnpm" = "10.15.1"
 "npm:pinpm" = "0.4.1"
 "npm:@anthropic-ai/claude-code" = "1.0.107"
