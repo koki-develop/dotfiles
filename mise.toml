@@ -16,7 +16,7 @@ python = "3.13.7"
 "npm:mmcp" = "0.3.2"
 "npm:pnpm" = "10.15.1"
 "npm:pinpm" = "0.4.1"
-"npm:@anthropic-ai/claude-code" = "1.0.112"
+"npm:@anthropic-ai/claude-code" = "1.0.113"
 "npm:@google/gemini-cli" = "0.4.1"
 "npm:@openai/codex" = "0.34.0"
 
