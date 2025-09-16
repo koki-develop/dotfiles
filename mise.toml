@@ -14,7 +14,7 @@ python = "3.13.7"
 # npm packages
 "npm:renovate" = "41.113.0"
 "npm:mmcp" = "0.3.2"
-"npm:pnpm" = "10.16.0"
+"npm:pnpm" = "10.16.1"
 "npm:pinpm" = "0.4.1"
 "npm:@anthropic-ai/claude-code" = "1.0.113"
 "npm:@google/gemini-cli" = "0.4.1"
