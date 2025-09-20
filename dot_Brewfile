@@ -8,7 +8,6 @@ taps = %w[
 casks = %w[
   alacritty
   aws-vault-binary
-  deepl
   discord
   docker-desktop
   google-cloud-sdk
