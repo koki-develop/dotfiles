@@ -14,6 +14,7 @@ casks = %w[
   hiddenbar
   keeper-password-manager
   koki-develop/tap/koto
+  obsidian
   raycast
   slack
   todoist-app
