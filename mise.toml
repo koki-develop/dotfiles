@@ -18,7 +18,7 @@ python = "3.13.7"
 "npm:pinpm" = "0.4.1"
 "npm:@anthropic-ai/claude-code" = "1.0.123"
 "npm:@google/gemini-cli" = "0.5.5"
-"npm:@openai/codex" = "0.39.0"
+"npm:@openai/codex" = "0.40.0"
 "npm:@github/copilot" = "0.0.327"
 
 # ruby gems
