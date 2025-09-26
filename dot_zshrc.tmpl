@@ -87,9 +87,6 @@ eval "$(direnv hook zsh)"
 # aws-cli
 complete -C "$(which aws_completer)" aws
 
-# starship
-eval "$(starship init zsh)"
-
 # ollamit
 export OLLAMIT_MODEL=llama3:8b
 
@@ -241,4 +238,7 @@ alias vi='lvim'
 
 if [[ -z "$TMUX" ]] && [[ $- == *i* ]]; then
   tmux attach-session -t main 2>/dev/null || tmux new-session -s main
+else
+  # starship
+  eval "$(starship init zsh)"
 fi
