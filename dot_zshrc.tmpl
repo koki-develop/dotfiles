@@ -22,28 +22,18 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 zstyle ':completion:*:default' menu select=2
 
+
 #
-# Set up zplug
+# Set up zinit
 #
 
-# Load zplug
-. "${HOME}/.zplug/init.zsh"
-
-# Add plugins
-zplug "zsh-users/zsh-syntax-highlighting"
-zplug "zsh-users/zsh-autosuggestions"
-zplug "azu/ni.zsh"
-
-# Install plugins if there are plugins that have not been installed
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
-fi
+ZINIT_HOME="${HOME}/.local/share/zinit/zinit.git"
+source "${ZINIT_HOME}/zinit.zsh"
 
 # Load plugins
-zplug load
+zinit load "zsh-users/zsh-syntax-highlighting"
+zinit load "zsh-users/zsh-autosuggestions"
+zinit load "azu/ni.zsh"
 
 #
 # Completion

@@ -12,15 +12,14 @@ brew bundle --global
 echo "Done."
 
 #
-# zplug
-# https://github.com/zplug/zplug#installation
+# Zinit
+# https://github.com/zdharma-continuum/zinit#manual
 #
 
-echo "Installing zplug..."
-
-curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
-
-echo "Done."
+ZINIT_HOME="${HOME}/.local/share/zinit/zinit.git"
+[ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
+[ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+source "${ZINIT_HOME}/zinit.zsh"
 
 #
 # xbar-plugin-github
