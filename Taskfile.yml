@@ -14,12 +14,12 @@ tasks:
   update:
     cmds:
       - task: update-brew-formula
-      - task: update-zplug-packages
+      - task: update-zinit-packages
       - mise install
 
-  update-zplug-packages:
+  update-zinit-packages:
     cmds:
-      - zsh -c '. ~/.zplug/init.zsh && zplug update'
+      - zsh -c '. ~/.local/share/zinit/zinit.git/zinit.zsh && zinit update'
 
   update-brew-formula:
     cmds:
