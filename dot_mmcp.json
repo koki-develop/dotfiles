@@ -65,6 +65,14 @@
         "mcp/aws-documentation:latest"
       ],
       "env": {}
+    },
+    "chrome-devtools": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "chrome-devtools-mcp@latest"
+      ],
+      "env": {}
     }
   }
 }
