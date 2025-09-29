@@ -1,5 +1,4 @@
 {
-  "model": "opusplan",
   "permissions": {
     "allow": [
       "Bash(ls:*)",
@@ -36,6 +35,7 @@
       "Bash(zizmor:*)",
 
       "WebSearch",
+
       "WebFetch(domain:github.com)",
       "WebFetch(domain:www.npmjs.com)",
       "WebFetch(domain:docs.renovatebot.com)",
@@ -45,7 +45,6 @@
       "mcp__github__get_issue",
       "mcp__github__get_pull_request",
       "mcp__github__get_pull_request_status",
-
       "mcp__context7__resolve-library-id",
       "mcp__context7__get-library-docs"
     ],
@@ -65,10 +64,6 @@
       "Bash(rm -rf .git)"
     ]
   },
-  "statusLine": {
-    "type": "command",
-    "command": "bunx ccusage@latest statusline"
-  },
   "hooks": {
     "Notification": [
       {
@@ -80,5 +75,9 @@
         ]
       }
     ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "bunx ccusage@latest statusline"
   }
 }
