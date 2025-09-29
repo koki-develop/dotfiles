@@ -10,3 +10,12 @@ lvim.builtin.lualine.on_config_done = function(lualine)
     { "filename", path = 1 } }
   lualine.setup(config)
 end
+
+lvim.plugins = {
+  {
+    "nvim-treesitter/nvim-treesitter",
+    commit = "v0.10.0",
+  }
+}
+
+vim.opt.clipboard = ""
