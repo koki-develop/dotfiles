@@ -15,7 +15,9 @@ lvim.plugins = {
   {
     "nvim-treesitter/nvim-treesitter",
     commit = "v0.10.0",
-  }
+  },
+  { "tpope/vim-fugitive" },
+  { "github/copilot.vim" },
 }
 
 vim.opt.clipboard = ""
