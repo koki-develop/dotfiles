@@ -73,6 +73,14 @@
         "chrome-devtools-mcp@latest"
       ],
       "env": {}
+    },
+    "codex": {
+      "command": "codex",
+      "args": [
+        "mcp",
+        "serve"
+      ],
+      "env": {}
     }
   }
 }
