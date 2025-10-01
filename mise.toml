@@ -13,7 +13,7 @@ terraform = "1.13.0"
 
 # npm packages
 "npm:renovate" = "41.131.9"
-"npm:mmcp" = "0.4.0"
+"npm:mmcp" = "0.5.0"
 "npm:pnpm" = "10.17.1"
 "npm:pinpm" = "0.4.1"
 "npm:@anthropic-ai/claude-code" = "2.0.0"
