@@ -4,7 +4,8 @@
     "claude-desktop",
     "codex-cli",
     "gemini-cli",
-    "cursor"
+    "cursor",
+    "github-copilot-cli"
   ],
   "mcpServers": {
     "context7": {
