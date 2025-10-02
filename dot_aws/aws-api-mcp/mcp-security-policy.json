@@ -1,0 +1,31 @@
+{
+  "version": "1.0",
+  "policy": {
+    "denyList": [
+      "aws iam delete-access-key",
+      "aws iam delete-account-alias",
+      "aws iam delete-account-password-policy",
+      "aws iam delete-group",
+      "aws iam delete-group-policy",
+      "aws iam delete-instance-profile",
+      "aws iam delete-login-profile",
+      "aws iam delete-open-id-connect-provider",
+      "aws iam delete-policy",
+      "aws iam delete-policy-version",
+      "aws iam delete-role",
+      "aws iam delete-role-permissions-boundary",
+      "aws iam delete-role-policy",
+      "aws iam delete-saml-provider",
+      "aws iam delete-server-certificate",
+      "aws iam delete-service-linked-role",
+      "aws iam delete-service-specific-credential",
+      "aws iam delete-signing-certificate",
+      "aws iam delete-ssh-public-key",
+      "aws iam delete-user",
+      "aws iam delete-user-permissions-boundary",
+      "aws iam delete-user-policy",
+      "aws iam delete-virtual-mfa-device",
+    ],
+    "elicitList": []
+  }
+}

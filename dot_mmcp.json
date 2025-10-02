@@ -16,14 +16,6 @@
       ],
       "env": {}
     },
-    "playwright": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "@playwright/mcp@latest"
-      ],
-      "env": {}
-    },
     "terraform": {
       "command": "docker",
       "args": [
@@ -80,6 +72,13 @@
       "args": [
         "mcp",
         "serve"
+      ],
+      "env": {}
+    },
+    "aws-api-mcp-server": {
+      "command": "uvx",
+      "args": [
+        "awslabs.aws-api-mcp-server@latest"
       ],
       "env": {}
     }
