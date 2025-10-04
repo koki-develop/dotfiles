@@ -21,3 +21,4 @@ lvim.plugins = {
 }
 
 vim.opt.clipboard = ""
+vim.opt.wrap = true
