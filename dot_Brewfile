@@ -10,7 +10,7 @@ casks = %w[
   aws-vault-binary
   discord
   docker-desktop
-  google-cloud-sdk
+  gcloud-cli
   hiddenbar
   keeper-password-manager
   koki-develop/tap/koto
