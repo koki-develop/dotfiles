@@ -18,7 +18,7 @@ terraform = "1.13.0"
 "npm:pinpm" = "0.4.1"
 "npm:@anthropic-ai/claude-code" = "2.0.5"
 "npm:@google/gemini-cli" = "0.7.0"
-"npm:@openai/codex" = "0.42.0"
+"npm:@openai/codex" = "0.44.0"
 "npm:@github/copilot" = "0.0.334"
 
 # ruby gems
