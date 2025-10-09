@@ -19,7 +19,7 @@ terraform = "1.13.0"
 "npm:@anthropic-ai/claude-code" = "2.0.10"
 "npm:@google/gemini-cli" = "0.7.0"
 "npm:@openai/codex" = "0.44.0"
-"npm:@github/copilot" = "0.0.335"
+"npm:@github/copilot" = "0.0.336"
 
 # ruby gems
 "gem:xvert" = "0.4.0"
