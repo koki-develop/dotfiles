@@ -42,6 +42,7 @@ zinit load "azu/ni.zsh"
 fpath=("${HOME}/.zsh/completion" "$(brew --prefix)/share/zsh/site-functions" $fpath)
 autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
+zinit cdreplay -q
 
 #
 # Options
