@@ -67,14 +67,6 @@
       ],
       "env": {}
     },
-    "codex": {
-      "command": "codex",
-      "args": [
-        "mcp",
-        "serve"
-      ],
-      "env": {}
-    },
     "aws-api-mcp-server": {
       "command": "uvx",
       "args": [
