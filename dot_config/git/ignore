@@ -1,6 +1,10 @@
-.DS_Store
-.nvim.lua
-mise.local.toml
-.claude/settings.local.json
 TODO
-.hidden
+.DS_Store
+
+mise.local.toml
+
+.claude/settings.local.json
+
+.hidden/
+
+.playwright-mcp/
