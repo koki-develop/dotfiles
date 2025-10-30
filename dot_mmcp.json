@@ -26,16 +26,6 @@
       ],
       "env": {}
     },
-    "hacker-news": {
-      "command": "docker",
-      "args": [
-        "run",
-        "-i",
-        "--rm",
-        "ghcr.io/koki-develop/hacker-news-mcp-server:latest"
-      ],
-      "env": {}
-    },
     "aws-knowledge-mcp-server": {
       "command": "npx",
       "args": [
