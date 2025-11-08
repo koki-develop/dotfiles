@@ -8,6 +8,7 @@ taps = %w[
 casks = %w[
   alacritty
   aws-vault-binary
+  claude-code
   discord
   docker-desktop
   gcloud-cli
