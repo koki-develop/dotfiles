@@ -3,6 +3,10 @@
     "type": "command",
     "command": "bunx ccusage@latest statusline"
   },
+  "sandbox": {
+    "enabled": true,
+    "autoAllowBashIfSandboxed": true
+  },
   "env": {
     "DISABLE_AUTOUPDATER": "1"
   },
