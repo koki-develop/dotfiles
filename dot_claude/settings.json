@@ -1,4 +1,11 @@
 {
+  "statusLine": {
+    "type": "command",
+    "command": "bunx ccusage@latest statusline"
+  },
+  "env": {
+    "DISABLE_AUTOUPDATER": "1"
+  },
   "permissions": {
     "allow": [
       "Bash(ls:*)",
@@ -75,9 +82,5 @@
         ]
       }
     ]
-  },
-  "statusLine": {
-    "type": "command",
-    "command": "bunx ccusage@latest statusline"
   }
 }
