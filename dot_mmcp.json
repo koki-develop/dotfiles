@@ -15,54 +15,6 @@
         "@upstash/context7-mcp@latest"
       ],
       "env": {}
-    },
-    "terraform": {
-      "command": "docker",
-      "args": [
-        "run",
-        "-i",
-        "--rm",
-        "hashicorp/terraform-mcp-server:latest"
-      ],
-      "env": {}
-    },
-    "aws-knowledge-mcp-server": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "mcp-remote@latest",
-        "https://knowledge-mcp.global.api.aws"
-      ],
-      "env": {}
-    },
-    "aws-documentation-mcp-server": {
-      "command": "docker",
-      "args": [
-        "run",
-        "-i",
-        "--rm",
-        "--env",
-        "FASTMCP_LOG_LEVEL=ERROR",
-        "--env",
-        "AWS_DOCUMENTATION_PARTITION=aws",
-        "mcp/aws-documentation:latest"
-      ],
-      "env": {}
-    },
-    "chrome-devtools": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "chrome-devtools-mcp@latest"
-      ],
-      "env": {}
-    },
-    "aws-api-mcp-server": {
-      "command": "uvx",
-      "args": [
-        "awslabs.aws-api-mcp-server@latest"
-      ],
-      "env": {}
     }
   }
 }
