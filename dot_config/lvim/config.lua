@@ -12,12 +12,9 @@ lvim.builtin.lualine.on_config_done = function(lualine)
 end
 
 lvim.plugins = {
-  {
-    "nvim-treesitter/nvim-treesitter",
-    commit = "v0.10.0",
-  },
-  { "tpope/vim-fugitive" },
-  { "github/copilot.vim" },
+  { "nvim-treesitter/nvim-treesitter", commit = "42fc28ba918343ebfd5565147a42a26580579482" }, -- v0.10.0
+  { "tpope/vim-fugitive",              commit = "96c1009fcf8ce60161cc938d149dd5a66d570756" }, -- v3.7
+  { "github/copilot.vim",              commit = "da369d90cfd6c396b1d0ec259836a1c7222fb2ea" }, -- v1.56.0
 }
 
 vim.opt.clipboard = ""
