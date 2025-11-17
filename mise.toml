@@ -23,6 +23,9 @@ terraform = "1.13.0"
 # ruby gems
 "gem:xvert" = "0.4.0"
 
+# pipx packages
+"pipx:git+https://github.com/koki-develop/git-aicommit.git" = "v0.1.1"
+
 [settings]
 experimental = true
 idiomatic_version_file_enable_tools = ["node", "terraform"]
