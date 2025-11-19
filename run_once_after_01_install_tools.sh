@@ -29,6 +29,14 @@ source "${ZINIT_HOME}/zinit.zsh"
 LV_BRANCH='release-1.4/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.4/neovim-0.9/utils/installer/install.sh)
 
 #
+# mise
+#
+
+export MISE_GLOBAL_CONFIG_FILE="${HOME}/.local/share/chezmoi/mise.toml"
+mise install
+eval "$(mise activate zsh)"
+
+#
 # xbar-plugin-github
 # https://github.com/koki-develop/xbar-plugin-github
 #
