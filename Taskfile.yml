@@ -32,3 +32,4 @@ tasks:
       - mkdir -p ~/.zsh/completion
       - codex completion zsh > ~/.zsh/completion/_codex
       - pinact completion zsh > ~/.zsh/completion/_pinact
+      - usage generate completion zsh --file ./completions/aws-vault.kdl aws-vault > ~/.zsh/completion/_aws-vault

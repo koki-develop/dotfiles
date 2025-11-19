@@ -1,0 +1,9 @@
+cmd "login" {
+  arg "<profile>"
+}
+
+cmd "exec" {
+  arg "<profile>"
+}
+
+complete "profile" run="aws-vault list --profiles"
