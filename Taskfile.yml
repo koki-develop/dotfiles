@@ -36,6 +36,3 @@ tasks:
       - gotrash completion zsh > ~/.zsh/completion/_gotrash
       - pinact completion zsh > ~/.zsh/completion/_pinact
       - pnpm completion zsh > ~/.zsh/completion/_pnpm
-
-      - usage generate completion zsh --file ./completions/aws-vault.kdl aws-vault > ~/.zsh/completion/_aws-vault
-      - usage generate completion zsh --file ./completions/direnv.kdl aws-vault > ~/.zsh/completion/_direnv

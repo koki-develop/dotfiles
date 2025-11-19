@@ -44,6 +44,10 @@ autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
 zinit cdreplay -q
 
+for file in ~/.local/share/chezmoi/completions/*.kdl; do
+  . <(usage generate completion zsh --file "$file" "$(basename "$file" .kdl)")
+done
+
 #
 # Options
 #
