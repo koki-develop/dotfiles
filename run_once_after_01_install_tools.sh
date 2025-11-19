@@ -21,12 +21,6 @@ ZINIT_HOME="${HOME}/.local/share/zinit/zinit.git"
 [ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 source "${ZINIT_HOME}/zinit.zsh"
 
-#
-# LunarVim
-# https://www.lunarvim.org/docs/installation
-#
-
-LV_BRANCH='release-1.4/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.4/neovim-0.9/utils/installer/install.sh) -- --no-install-dependencies
 
 #
 # mise
@@ -35,6 +29,13 @@ LV_BRANCH='release-1.4/neovim-0.9' bash <(curl -s https://raw.githubusercontent.
 export MISE_GLOBAL_CONFIG_FILE="${HOME}/.local/share/chezmoi/mise.toml"
 mise install
 eval "$(mise activate zsh)"
+
+#
+# LunarVim
+# https://www.lunarvim.org/docs/installation
+#
+
+LV_BRANCH='release-1.4/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.4/neovim-0.9/utils/installer/install.sh) -- --no-install-dependencies
 
 #
 # xbar-plugin-github
