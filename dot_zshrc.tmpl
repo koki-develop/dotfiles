@@ -35,6 +35,13 @@ zinit load "zsh-users/zsh-autosuggestions"
 zinit load "azu/ni.zsh"
 
 #
+# Set up mise
+#
+
+export MISE_GLOBAL_CONFIG_FILE="${HOME}/.local/share/chezmoi/mise.toml"
+eval "$(mise activate zsh)"
+
+#
 # Completion
 #
 
@@ -86,10 +93,6 @@ fi
 #
 # Set up tools
 #
-
-# mise
-export MISE_GLOBAL_CONFIG_FILE="${HOME}/.local/share/chezmoi/mise.toml"
-eval "$(mise activate zsh)"
 
 # direnv
 eval "$(direnv hook zsh)"
