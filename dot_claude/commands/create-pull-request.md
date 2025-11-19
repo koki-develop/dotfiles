@@ -1,16 +1,17 @@
 ---
-allowed-tools: Bash(git status:*), Bash(git diff:*), Bash(git log:*), Bash(git branch:*), Bash(git push:*)
-description: Create a pull request from the current branch
+allowed-tools: Bash(git status:*), Bash(git diff:*), Bash(git log:*), Bash(git branch:*), Read
+description: Create a pull request using gh pr create command
 ---
-
-## Context
-
-- Current git status: !`git status`
-- Current git diff (all changes since diverged from origin/main): !`git diff origin/main...HEAD`
-- Current branch: !`git branch --show-current`
-- Commits to be included in PR: !`git log --oneline origin/main..HEAD`
-- Remote status: !`git status -u no`
 
 ## Your task
 
-Based on the above changes, create a pull request from the current branch to the main branch.
+Create a pull request using the `gh pr create` command.
+
+### Requirements
+
+1. Check the current git status and branch information
+2. Review all changes and commits that will be included in the PR
+3. Check if `.github/PULL_REQUEST_TEMPLATE.md` (or similar template files) exists in the repository
+4. If a PR template exists, read it and ensure the PR description follows the template structure
+5. Push the current branch to remote if needed
+6. Execute `gh pr create` with an appropriate title and body
