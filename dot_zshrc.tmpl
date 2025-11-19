@@ -171,7 +171,7 @@ function gsw() {
     return
   fi
 
-  local branch=$(git branch --format='%(refname:short)' | gofzf)
+  local branch=$(git branch --all | sed 's/^[* ] //; s|remotes/[^/]*/||' | grep -v -- '->' | sort -u | gofzf)
   if [ -n "${branch}" ]; then
     git switch "${branch}"
   fi
