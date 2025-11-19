@@ -1,0 +1,4 @@
+cmd "allow"
+cmd "deny"
+cmd "edit"
+cmd "reload"

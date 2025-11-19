@@ -16,6 +16,7 @@ tasks:
       - task: update-brew-formula
       - task: update-zinit-packages
       - mise install
+      - task: update-completions
 
   update-zinit-packages:
     cmds:
@@ -31,5 +32,9 @@ tasks:
     cmds:
       - mkdir -p ~/.zsh/completion
       - codex completion zsh > ~/.zsh/completion/_codex
+      - ghalint completion zsh > ~/.zsh/completion/_ghalint
+      - gotrash completion zsh > ~/.zsh/completion/_gotrash
       - pinact completion zsh > ~/.zsh/completion/_pinact
+
       - usage generate completion zsh --file ./completions/aws-vault.kdl aws-vault > ~/.zsh/completion/_aws-vault
+      - usage generate completion zsh --file ./completions/direnv.kdl aws-vault > ~/.zsh/completion/_direnv
