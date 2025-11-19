@@ -26,3 +26,9 @@ tasks:
       - brew update
       - brew bundle --global
       - brew upgrade
+
+  update-completions:
+    cmds:
+      - mkdir -p ~/.zsh/completion
+      - codex completion zsh > ~/.zsh/completion/_codex
+      - pinact completion zsh > ~/.zsh/completion/_pinact
