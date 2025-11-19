@@ -1,0 +1,20 @@
+complete "branch_name" run="git worktree list --porcelain | grep \"^worktree $(pwd)/.git/gwkt/worktrees\" | sed \"s|^worktree $(pwd)/.git/gwkt/worktrees/||\""
+
+cmd "add" {
+  help "Create a new git worktree with a new branch"
+  arg "<branch_name>" help="Name of the new branch to create"
+}
+
+cmd "rm" {
+  help "Remove an existing git worktree"
+  arg "<branch_name>" help="Name of the branch/worktree to remove"
+}
+
+cmd "ls" {
+  help "List all managed git worktrees"
+}
+
+cmd "cd" {
+  help "Change directory to a worktree"
+  arg "<branch_name>" help="Name of the branch/worktree to navigate to"
+}
