@@ -1,0 +1,5 @@
+arg "[branch]"
+
+flag "-c --create <branch>"
+
+complete "branch" run="git branch --all --format='%(refname:short)' | sed 's#^origin/##' | grep -v '^origin$' | sort -u"
