@@ -1,4 +1,5 @@
 {
+  "mode": "replace",
   "agents": [
     "claude-code",
     "claude-desktop",
