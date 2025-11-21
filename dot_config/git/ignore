@@ -1,11 +1,11 @@
-TODO
 .DS_Store
+TODO
+._/
 
+# local files
 mise.local.toml
 
+# ai tools
 .claude/settings.local.json
-
-.hidden/
-
 .playwright-mcp/
 .serena/
