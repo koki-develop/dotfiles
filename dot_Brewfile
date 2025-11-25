@@ -27,6 +27,7 @@ casks = %w[
 
 formulae = %w[
   actionlint
+  atuin
   awscli
   charmbracelet/tap/freeze
   charmbracelet/tap/vhs
