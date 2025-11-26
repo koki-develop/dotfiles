@@ -88,6 +88,17 @@ if [[ $- == *i* ]]; then
   bindkey '^R' history-incremental-search-backward
 
   bindkey '^D' delete-char-or-list
+
+  # ghq repository selector widget
+  function _ghq_cd_widget() {
+    REPO=$(gh q ls | gofzf --case-sensitive)
+    if [ -n "${REPO}" ]; then
+      cd "${GHQ_ROOT}/${REPO}"
+    fi
+    zle reset-prompt
+  }
+  zle -N _ghq_cd_widget
+  bindkey '^G' _ghq_cd_widget
 fi
 
 #
@@ -150,12 +161,6 @@ alias ..2='cd ../..'
 alias ..3='cd ../../..'
 alias ..4='cd ../../../..'
 alias cdd='cd ~/.local/share/chezmoi'
-function cdg() {
-  REPO=$(gh q ls | gofzf --case-sensitive)
-  if [ -n "${REPO}" ]; then
-    cd "${GHQ_ROOT}/${REPO}"
-  fi
-}
 alias cdw="cd ${HOME}/work"
 # chezmoi
 alias ch='chezmoi'
