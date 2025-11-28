@@ -13,7 +13,7 @@ terraform = "1.13.0"
 
 # npm packages
 "npm:renovate" = "41.173.1"
-"npm:mmcp" = "0.6.0"
+"npm:mmcp" = "0.6.1"
 "npm:pnpm" = "10.23.0"
 "npm:pinpm" = "0.4.1"
 "npm:@google/gemini-cli" = "0.17.1"
