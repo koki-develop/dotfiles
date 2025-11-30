@@ -1,4 +1,7 @@
 [keeper]
 github_gpg_secret_key_uid = "nMvxEVRzb9FcUioZEkLjww"
 github_ssh_private_key_uid = "aG19deM-voJYvwVs8YCa2w"
+
 aws_config_uid = "qJSx39QdVuRuC2Hta6KpNg"
+
+git_aicommit_openai_api_key_uid = "SqTJowT1EUBHkVvBkfffMQ"

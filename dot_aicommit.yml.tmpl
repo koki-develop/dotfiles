@@ -1,0 +1,5 @@
+provider: openai
+
+openai:
+  model: gpt-4.1-mini
+  api-key: {{ index (index (keeper .keeper.git_aicommit_openai_api_key_uid).fields 0).value 0 }}
