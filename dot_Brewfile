@@ -70,7 +70,6 @@ formulae = %w[
   tmux
   usage
   uv
-  vlang
   wget
   xh
   ynqa/tap/jnv
