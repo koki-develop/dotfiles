@@ -2,7 +2,7 @@
 bun = "1.2.18"
 go = "1.25.5"
 node = "24.11.1"
-python = "3.14.1"
+python = "3.14.2"
 ruby = "3.4.7"
 rust = "1.91.1"
 terraform = "1.13.0"
