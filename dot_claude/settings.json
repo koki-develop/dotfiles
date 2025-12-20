@@ -3,9 +3,17 @@
     "type": "command",
     "command": "bunx ccusage@latest statusline"
   },
+
   "env": {
     "DISABLE_AUTOUPDATER": "1"
   },
+
+  "enabledPlugins": {
+    "frontend-design@claude-code-plugins": true
+  },
+
+  "alwaysThinkingEnabled": true,
+
   "permissions": {
     "allow": [
       "Bash(ls:*)",
