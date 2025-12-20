@@ -1,6 +1,6 @@
 ---
 description: CLAUDE.md とコードベースの内容を照らし合わせて、必要に応じて CLAUDE.md を更新する
-allowed-tools: Read, Write, Edit
+allowed-tools: Read, Edit
 ---
 
 # CLAUDE.md 同期タスク
