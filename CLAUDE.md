@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository Overview
 
-This is a dotfiles repository managed by chezmoi, containing personal development environment configuration files. The repository manages configuration for tools like Neovim, Zsh, Git, and various development utilities.
+This is a dotfiles repository managed by chezmoi, containing personal development environment configuration files. The repository manages configuration for tools like LunarVim (lvim), Zsh, Git, Ghostty, and various development utilities.
 
 ## Common Commands
 
@@ -15,10 +15,12 @@ This is a dotfiles repository managed by chezmoi, containing personal developmen
 - `chezmoi edit <file>` - Edit a managed file
 
 ### Development Updates
-- `task update` - Update all development tools (Neovim plugins, Homebrew formulae, zplug packages, mise tools)
-- `task update-nvim-plugins` - Update Neovim plugins only (runs `nvim +PlugUpdate +qall`)
-- `task update-brew-formula` - Update Homebrew packages only (runs `brew update && brew bundle --global && brew upgrade`)
-- `task update-zplug-packages` - Update zsh plugins only
+Updates are automatically executed via `run_after_03_update_tools.sh` after `chezmoi apply`:
+- Homebrew packages (`brew update && brew bundle --global && brew upgrade`)
+- mise tools (`mise install`)
+- zinit plugins (`zinit update`)
+
+Manual update command:
 - `mise install` - Install/update tools defined in mise.toml
 
 ### Setup
@@ -27,7 +29,7 @@ This is a dotfiles repository managed by chezmoi, containing personal developmen
 ### Package Management
 - `brew bundle --global` - Install/update Homebrew packages from dot_Brewfile
 - Tools are managed via mise (defined in mise.toml)
-- Zsh plugins managed via zplug
+- Zsh plugins managed via zinit
 
 ## Architecture Notes
 
@@ -36,13 +38,15 @@ This is a dotfiles repository managed by chezmoi, containing personal developmen
 - Files prefixed with `private_` have restricted permissions (600) for sensitive data
 - Template files (`.tmpl`) are processed by chezmoi and can contain dynamic content
 - `run_once_after_*` scripts execute once after chezmoi apply for setup tasks
-- Numbered scripts (`01_`, `02_`) define execution order
+- `run_after_*` scripts execute every time after chezmoi apply (e.g., update tasks)
+- Numbered scripts (`01_`, `02_`, `03_`) define execution order
 
 ### Tool Configuration
 - Development tools versioned and managed through mise.toml (Go, Node, Python, Ruby, etc.)
 - Homebrew packages defined in dot_Brewfile using Ruby DSL
-- Neovim configuration in dot_config/nvim/init.vim using vim-plug
-- Shell configuration in dot_zshrc.tmpl with zplug for plugin management
+- LunarVim configuration in dot_config/lvim/config.lua
+- Shell configuration in dot_zshrc.tmpl with zinit for plugin management
+- Terminal: Ghostty (dot_config/ghostty/), Alacritty (dot_config/alacritty/)
 - Global mise config at ~/.local/share/chezmoi/mise.toml (referenced via MISE_GLOBAL_CONFIG_FILE)
 
 ### Key Dependencies
@@ -50,8 +54,8 @@ This is a dotfiles repository managed by chezmoi, containing personal developmen
 - **mise**: Development tool version management (successor to asdf)
 - **Task**: Task runner for common operations
 - **Homebrew**: Package management for macOS
-- **zplug**: Zsh plugin manager
-- **vim-plug**: Neovim plugin manager
+- **zinit**: Zsh plugin manager
+- **LunarVim**: Neovim distribution with Lua-based configuration
 
 ### Security
 - SSH keys and sensitive data managed as private templates
@@ -62,7 +66,7 @@ This is a dotfiles repository managed by chezmoi, containing personal developmen
 
 ### Default Task Workflow
 The `task` command (or `task default`) performs a complete update workflow:
-1. Authenticate with Keeper Commander (`keeper whoami`)
+1. Authenticate with Keeper Commander (`keeper shell`)
 2. Fetch and rebase from origin/main
 3. Apply dotfiles changes (`chezmoi apply -v`)
-4. Update all development tools (`task update`)
+4. After apply, `run_after_03_update_tools.sh` automatically updates tools
