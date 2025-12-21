@@ -1,56 +1,56 @@
 ---
-description: CLAUDE.md とコードベースの内容を照らし合わせて、必要に応じて CLAUDE.md を更新する
+description: Compare CLAUDE.md with the codebase and update CLAUDE.md as needed
 allowed-tools: Read, Edit
 ---
 
-# CLAUDE.md 同期タスク
+# CLAUDE.md Sync Task
 
-コードベースの現状と CLAUDE.md の内容を照らし合わせて、乖離がないか確認し、必要に応じて CLAUDE.md を更新してください。
+Compare the current state of the codebase with the contents of CLAUDE.md, identify any discrepancies, and update CLAUDE.md as needed.
 
-## 現在の CLAUDE.md の内容
+## Current CLAUDE.md Contents
 
 @CLAUDE.md
 
-## 確認すべき項目
+## Items to Check
 
-以下の観点でコードベースを調査し、CLAUDE.md との乖離を特定してください：
+Investigate the codebase from the following perspectives to identify discrepancies with CLAUDE.md:
 
-### 1. プロジェクト構造
-- ディレクトリ構造が CLAUDE.md の記載と一致しているか
-- 新しいディレクトリやファイルが追加されていないか
-- 削除されたディレクトリやファイルがないか
+### 1. Project Structure
+- Does the directory structure match what's documented in CLAUDE.md?
+- Have any new directories or files been added?
+- Have any directories or files been removed?
 
-### 2. 技術スタック・依存関係
-- package.json, requirements.txt, Cargo.toml などの依存関係ファイルを確認
-- 使用しているフレームワークやライブラリのバージョン
-- 新しく追加された依存関係
+### 2. Tech Stack & Dependencies
+- Check dependency files (package.json, requirements.txt, Cargo.toml, etc.)
+- Framework and library versions in use
+- Newly added dependencies
 
-### 3. 開発コマンド・スクリプト
-- package.json の scripts セクション
-- Makefile やその他のビルドスクリプト
-- 実際に使用できるコマンドと CLAUDE.md の記載が一致しているか
+### 3. Development Commands & Scripts
+- Scripts section in package.json
+- Makefile and other build scripts
+- Do available commands match what's documented in CLAUDE.md?
 
-### 4. 設定ファイル
-- 環境変数の設定（.env.example など）
-- 設定ファイルの構造や必須項目
+### 4. Configuration Files
+- Environment variable settings (.env.example, etc.)
+- Configuration file structure and required fields
 
-### 5. コーディング規約・パターン
-- 実際のコードで使用されているパターン
-- linter/formatter の設定（.eslintrc, .prettierrc, pyproject.toml など）
+### 5. Coding Conventions & Patterns
+- Patterns used in actual code
+- Linter/formatter settings (.eslintrc, .prettierrc, pyproject.toml, etc.)
 
-### 6. テスト
-- テストの実行方法
-- テストファイルの配置場所
+### 6. Testing
+- How to run tests
+- Test file locations
 
-## 出力形式
+## Output Format
 
-1. **乖離の報告**: 発見した乖離を箇条書きでリストアップ
-2. **CLAUDE.md を更新**: 乖離があれば即座に CLAUDE.md を更新する
-3. **更新サマリー**: 何を変更したかを簡潔に報告
+1. **Report Discrepancies**: List discovered discrepancies as bullet points
+2. **Update CLAUDE.md**: If discrepancies exist, update CLAUDE.md immediately
+3. **Update Summary**: Briefly report what was changed
 
-## 注意事項
+## Notes
 
-- 不要な情報は追加しない（CLAUDE.md は簡潔に保つ）
-- 既存の記載で正しいものは変更しない
-- 重要度の高い変更から順に報告する
-- コードベースに存在しないものを CLAUDE.md から削除することも提案する
+- Do not add unnecessary information (keep CLAUDE.md concise)
+- Do not change existing documentation that is correct
+- Report changes in order of importance
+- Also propose removing items from CLAUDE.md that no longer exist in the codebase

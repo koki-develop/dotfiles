@@ -1,37 +1,37 @@
 ---
-description: セッションを振り返り、CLAUDE.mdを更新する
+description: Reflect on the session and update CLAUDE.md
 allowed-tools: Read, Edit
 ---
 
-# セッションの振り返りと CLAUDE.md の更新
+# Session Reflection and CLAUDE.md Update
 
-今回のセッションを振り返り、必要に応じて CLAUDE.md を更新してください。
+Reflect on this session and update CLAUDE.md as needed.
 
-## 振り返りのポイント
+## Reflection Points
 
-1. **学んだこと**: このセッションで新しく発見したこと、理解したこと
-2. **ユーザーの好み**: コーディングスタイル、コミットメッセージの書き方、命名規則など
-3. **プロジェクト固有のパターン**: このプロジェクトで重要なアーキテクチャや設計パターン
-4. **失敗と教訓**: うまくいかなかったこと、今後避けるべきこと
-5. **便利なコマンド**: よく使ったコマンドやワークフロー
+1. **What was learned**: New discoveries and insights from this session
+2. **User preferences**: Coding style, commit message conventions, naming conventions, etc.
+3. **Project-specific patterns**: Important architecture and design patterns for this project
+4. **Failures and lessons**: What didn't work well, what to avoid in the future
+5. **Useful commands**: Frequently used commands and workflows
 
-## 更新のルール
+## Update Rules
 
-- 既存の CLAUDE.md の内容と重複しないこと
-- 具体的で実用的な内容のみ追加すること
-- 一般的すぎる内容（「コードは読みやすく書く」など）は追加しない
+- Do not duplicate existing CLAUDE.md content
+- Only add specific and practical information
+- Do not add overly generic content (e.g., "write readable code")
 
-## 更新が不要なパターン
+## When Updates Are Not Needed
 
-- 単純な質問への回答だけのセッションだった
-- 既に CLAUDE.md に書かれている内容の範囲内だった
-- 一時的・一回限りの作業で、今後に活かせる知見がなかった
+- The session only involved answering simple questions
+- Everything was already covered by existing CLAUDE.md content
+- It was temporary or one-time work with no insights applicable to future sessions
 
-更新が不要な場合は、無理に追記せず「更新の必要はありませんでした」と報告すること。
+If no update is needed, do not force additions. Simply report "No updates were necessary."
 
-## 手順
+## Procedure
 
-1. まず現在の CLAUDE.md を読む
-2. 今回のセッションで得られた知見を整理する
-3. 追加すべき内容があれば CLAUDE.md に追記する
-4. 追加した内容をユーザーに報告する
+1. First, read the current CLAUDE.md
+2. Organize insights gained from this session
+3. If there is content to add, append it to CLAUDE.md
+4. Report what was added to the user
