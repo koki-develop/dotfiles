@@ -12,6 +12,7 @@ casks = %w[
   discord
   docker-desktop
   gcloud-cli
+  ghostty
   hiddenbar
   keeper-password-manager
   koki-develop/tap/koto
