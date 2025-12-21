@@ -1,5 +1,5 @@
-# Font
 font-family = HackGen Console NF
 font-size = 16
 
 theme = Monokai Remastered
+window-decoration = none
