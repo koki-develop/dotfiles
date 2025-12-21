@@ -152,7 +152,7 @@ alias av='aws-vault'
 alias d='docker'
 alias dc='docker compose'
 # cat
-alias cat='gat'
+alias cat='gat --mask-secrets'
 function gess() {
   gat --force-color "$@" | less -R
 }
