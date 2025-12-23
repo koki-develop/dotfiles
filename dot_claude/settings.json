@@ -1,19 +1,7 @@
 {
-  "statusLine": {
-    "type": "command",
-    "command": "bunx ccusage@latest statusline"
-  },
-
   "env": {
     "DISABLE_AUTOUPDATER": "1"
   },
-
-  "enabledPlugins": {
-    "frontend-design@claude-code-plugins": true
-  },
-
-  "alwaysThinkingEnabled": true,
-
   "permissions": {
     "allow": [
       "Bash(ls:*)",
@@ -21,9 +9,7 @@
       "Bash(grep:*)",
       "Bash(rg:*)",
       "Bash(mkdir:*)",
-
       "Bash(npm info:*)",
-
       "Bash(go doc:*)",
       "Bash(go list:*)",
       "Bash(go vet:*)",
@@ -31,12 +17,10 @@
       "Bash(gofmt:*)",
       "Bash(goimports:*)",
       "Bash(golangci-lint run:*)",
-
       "Bash(git status:*)",
       "Bash(git diff:*)",
       "Bash(git fetch:*)",
       "Bash(git log:*)",
-
       "Bash(gh run view:*)",
       "Bash(gh run list:*)",
       "Bash(gh pr checks:*)",
@@ -44,34 +28,23 @@
       "Bash(gh pr status:*)",
       "Bash(gh pr list:*)",
       "Bash(gh pr view:*)",
-
       "Bash(actionlint:*)",
       "Bash(ghalint:*)",
       "Bash(zizmor:*)",
-
       "WebSearch",
-
       "WebFetch(domain:github.com)",
       "WebFetch(domain:www.npmjs.com)",
       "WebFetch(domain:docs.renovatebot.com)",
-
-      "mcp__github__get_me",
-      "mcp__github__list_issues",
-      "mcp__github__get_issue",
-      "mcp__github__get_pull_request",
-      "mcp__github__get_pull_request_status",
       "mcp__context7__resolve-library-id",
       "mcp__context7__get-library-docs"
     ],
     "deny": [
       "Read(.env*)",
       "Read(~/.ssh/**)",
-
       "Bash(git add .)",
       "Bash(git add -A:*)",
       "Bash(git add --all:*)",
       "Bash(git push)",
-
       "Bash(rm -rf /)",
       "Bash(rm -rf ~)",
       "Bash(rm -rf /*)",
@@ -90,5 +63,14 @@
         ]
       }
     ]
-  }
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "bunx ccusage@latest statusline"
+  },
+  "enabledPlugins": {
+    "frontend-design@claude-code-plugins": true,
+    "context7@claude-plugins-official": true
+  },
+  "alwaysThinkingEnabled": true
 }
