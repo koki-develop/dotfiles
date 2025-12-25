@@ -21,6 +21,7 @@
       "Bash(git diff:*)",
       "Bash(git fetch:*)",
       "Bash(git log:*)",
+      "Bash(git show:*)",
       "Bash(gh run view:*)",
       "Bash(gh run list:*)",
       "Bash(gh pr checks:*)",
