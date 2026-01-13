@@ -66,6 +66,7 @@ formulae = %w[
   neovim
   pinact
   pinentry-mac
+  pnpm
   ripgrep
   starship
   tmux
