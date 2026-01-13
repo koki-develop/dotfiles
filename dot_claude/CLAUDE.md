@@ -1,4 +1,3 @@
-- **MUST DO**: Please think in **English** and answer in **Japanese**.
 - **MUST DO**: When executing `git add`, you MUST always specify individual file paths explicitly. The following commands are strictly prohibited: `git add .`, `git add --all`, `git add -A`. Always use `git add <specific-file-path>` for each file individually.
 - **MUST DO**: When executing `git push`, you MUST always specify the remote and branch name explicitly. The command `git push` without arguments is strictly prohibited. Always use `git push <remote> <branch>` (e.g., `git push origin main`).
 - **MUST DO**: When multiple valid approaches exist for solving a problem or handling an issue, you MUST present all options to the user with clear explanations and wait for their explicit decision before proceeding. Never make independent choices when alternatives exist.
