@@ -37,9 +37,7 @@
       "Bash(ghalint:*)",
       "Bash(zizmor:*)",
       "WebSearch",
-      "WebFetch(domain:github.com)",
-      "WebFetch(domain:www.npmjs.com)",
-      "WebFetch(domain:docs.renovatebot.com)",
+      "WebFetch",
       "mcp__plugin_context7_context7__resolve-library-id",
       "mcp__plugin_context7_context7__get-library-docs",
       "mcp__plugin_context7_context7__query-docs"
