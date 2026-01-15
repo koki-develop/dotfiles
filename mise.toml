@@ -23,7 +23,7 @@ terraform = "1.13.0"
 "gem:xvert" = "0.4.0"
 
 # pipx packages
-"pipx:git+https://github.com/koki-develop/git-aicommit.git" = "v0.12.0"
+"pipx:git+https://github.com/koki-develop/git-aicommit.git" = "v0.13.0"
 
 [settings]
 experimental = true
