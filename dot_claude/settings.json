@@ -79,6 +79,7 @@
     "commit-commands@claude-plugins-official": true,
     "pr-review-toolkit@claude-plugins-official": true
   },
+  "language": "Japanese",
   "alwaysThinkingEnabled": true,
-  "language": "Japanese"
+  "model": "opus"
 }
