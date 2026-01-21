@@ -49,7 +49,8 @@
       "mcp__plugin_serena_serena__list_dir",
       "mcp__plugin_serena_serena__list_memories",
       "mcp__plugin_serena_serena__read_file",
-      "mcp__plugin_serena_serena__think_about_collected_information"
+      "mcp__plugin_serena_serena__think_about_collected_information",
+      "Skill(frontend-design)"
     ],
     "deny": [
       "Read(.env*)",
