@@ -146,6 +146,19 @@ export GHQ_SSH_KEY_PATH="${HOME}/.ssh/github"
 
 # sounds
 alias blow='afplay /System/Library/Sounds/Blow.aiff'
+alias sosumi='afplay /System/Library/Sounds/Sosumi.aiff'
+
+function ws() {
+eval "${(q)@}"
+local exit_code=$?
+  if [ $exit_code -eq 0 ]; then
+    blow
+  else
+    sosumi
+  fi
+  return $exit_code
+}
+
 # aws
 alias av='aws-vault'
 # docker
