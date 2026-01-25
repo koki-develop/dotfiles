@@ -66,6 +66,7 @@
       "Bash(rm -rf .git)"
     ]
   },
+  "model": "opus",
   "hooks": {
     "Notification": [
       {
@@ -91,5 +92,5 @@
   },
   "language": "Japanese",
   "alwaysThinkingEnabled": true,
-  "model": "opus"
+  "promptSuggestionEnabled": false
 }
