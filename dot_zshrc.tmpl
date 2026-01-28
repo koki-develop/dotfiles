@@ -76,6 +76,11 @@ setopt no_list_beep
 #
 
 if [[ $- == *i* ]]; then
+  # edit-command-line: Edit command in $EDITOR
+  autoload -U edit-command-line
+  zle -N edit-command-line
+  bindkey '^O' edit-command-line
+
   bindkey '^P' up-line-or-history
   bindkey '^N' down-line-or-history
 
