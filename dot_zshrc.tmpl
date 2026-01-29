@@ -95,8 +95,6 @@ if [[ $- == *i* ]]; then
   bindkey '^F' forward-char
   bindkey '^B' backward-char
 
-  bindkey '^R' history-incremental-search-backward
-
   bindkey '^D' delete-char-or-list
 
   # ghq repository selector widget
@@ -159,8 +157,8 @@ alias blow='afplay /System/Library/Sounds/Blow.aiff'
 alias sosumi='afplay /System/Library/Sounds/Sosumi.aiff'
 
 function ws() {
-eval "${(q)@}"
-local exit_code=$?
+  eval "${(q)@}"
+  local exit_code=$?
   if [ $exit_code -eq 0 ]; then
     blow
   else
