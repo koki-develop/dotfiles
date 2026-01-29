@@ -10,15 +10,5 @@
       "matchUpdateTypes": ["minor", "patch"],
       "automerge": true
     }
-  ],
-  "customManagers": [
-    {
-      "customType": "regex",
-      "managerFilePatterns": ["/^dot_config/lvim/config\\.lua$/"],
-      "matchStrings": [
-        "\\{\\s*\"(?<depName>[^/\"]+/[^/\"]+)\"\\s*,\\s*commit\\s*=\\s*\"(?<currentDigest>[a-f0-9]+)\"\\s*\\}\\s*,\\s*--\\s*(?<currentValue>[^\\s]+)"
-      ],
-      "datasourceTemplate": "github-tags"
-    }
   ]
 }
