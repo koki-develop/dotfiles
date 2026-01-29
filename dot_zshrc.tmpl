@@ -59,7 +59,7 @@ eval "$(mise activate zsh)"
 # Completion
 #
 
-fpath=("${HOME}/.zsh/completion" "${BREW_PREFIX}/share/zsh/site-functions" $fpath)
+fpath=("${HOME}/.zsh/completion" $fpath)
 autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
 zinit cdreplay -q
