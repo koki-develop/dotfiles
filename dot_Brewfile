@@ -30,6 +30,7 @@ formulae = %w[
   actionlint
   atuin
   awscli
+  bat
   charmbracelet/tap/freeze
   charmbracelet/tap/vhs
   chezmoi
@@ -39,6 +40,7 @@ formulae = %w[
   duckdb
   eza
   fd
+  fzf
   gh
   ghalint
   git
