@@ -17,6 +17,7 @@ export EDITOR='nvim'
 #
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
+BREW_PREFIX=$(brew --prefix)
 
 #
 # Styles
@@ -47,7 +48,7 @@ eval "$(mise activate zsh)"
 # Completion
 #
 
-fpath=("${HOME}/.zsh/completion" "$(brew --prefix)/share/zsh/site-functions" $fpath)
+fpath=("${HOME}/.zsh/completion" "${BREW_PREFIX}/share/zsh/site-functions" $fpath)
 autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
 zinit cdreplay -q
@@ -125,20 +126,20 @@ complete -C "$(which aws_completer)" aws
 export OLLAMIT_MODEL=llama3:8b
 
 # gcloud
-source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
-source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
+source "${BREW_PREFIX}/share/google-cloud-sdk/path.zsh.inc"
+source "${BREW_PREFIX}/share/google-cloud-sdk/completion.zsh.inc"
 
 # mysql
-export PATH="$(brew --prefix)/opt/mysql-client/bin:$PATH"
+export PATH="${BREW_PREFIX}/opt/mysql-client/bin:$PATH"
 
 # libpq
-export PATH="$(brew --prefix)/opt/libpq/bin:$PATH"
+export PATH="${BREW_PREFIX}/opt/libpq/bin:$PATH"
 
 # go
 export PATH="${HOME}/go/bin:${PATH}"
 
 # java
-export PATH="$(brew --prefix)/opt/openjdk/bin:$PATH"
+export PATH="${BREW_PREFIX}/opt/openjdk/bin:$PATH"
 
 # terraform
 complete -o nospace -C "$(which terraform)" terraform
