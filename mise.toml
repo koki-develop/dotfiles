@@ -8,7 +8,6 @@ rust = "1.93.0"
 terraform = "1.13.0"
 
 # go tools
-"go:golang.org/x/tools/cmd/goimports" = "0.39.0"
 "go:golang.org/x/tools/cmd/gonew" = "0.39.0"
 
 # npm packages
