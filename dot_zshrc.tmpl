@@ -43,10 +43,13 @@ zstyle ':completion:*:default' menu select=2
 ZINIT_HOME="${HOME}/.local/share/zinit/zinit.git"
 source "${ZINIT_HOME}/zinit.zsh"
 
-# Load plugins
-zinit load "zsh-users/zsh-syntax-highlighting"
-zinit load "zsh-users/zsh-autosuggestions"
-zinit load "azu/ni.zsh"
+# Load plugins (turbo mode)
+zinit ice wait lucid
+zinit light "zsh-users/zsh-syntax-highlighting"
+zinit ice wait lucid
+zinit light "zsh-users/zsh-autosuggestions"
+zinit ice wait lucid
+zinit light "azu/ni.zsh"
 
 #
 # Set up mise
