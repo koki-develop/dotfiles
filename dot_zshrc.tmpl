@@ -1,5 +1,7 @@
 # !/bin/zsh -e
 
+zmodload zsh/zprof
+
 #
 # Environment variables
 #
@@ -282,3 +284,5 @@ else
   # starship
   eval "$(starship init zsh)"
 fi
+
+zprof
