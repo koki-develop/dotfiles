@@ -68,12 +68,6 @@ for file in ~/.local/share/chezmoi/completions/*.kdl; do
   . <(usage generate completion zsh --file "$file" "$(basename "$file" .kdl)")
 done
 
-. <(codex completion zsh)
-. <(ghalint completion zsh)
-. <(gotrash completion zsh)
-. <(pinact completion zsh)
-. <(pnpm completion zsh)
-
 #
 # Key bindings
 #
