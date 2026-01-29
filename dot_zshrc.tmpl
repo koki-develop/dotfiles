@@ -3,6 +3,17 @@
 zmodload zsh/zprof
 
 #
+# Options
+#
+
+setopt auto_cd
+setopt magic_equal_subst
+setopt hist_ignore_dups
+setopt no_beep
+setopt no_hist_beep
+setopt no_list_beep
+
+#
 # Environment variables
 #
 
@@ -62,17 +73,6 @@ done
 . <(gotrash completion zsh)
 . <(pinact completion zsh)
 . <(pnpm completion zsh)
-
-#
-# Options
-#
-
-setopt auto_cd
-setopt magic_equal_subst
-setopt hist_ignore_dups
-setopt no_beep
-setopt no_hist_beep
-setopt no_list_beep
 
 #
 # Key bindings
