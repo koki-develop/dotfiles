@@ -27,4 +27,5 @@ terraform = "1.13.0"
 
 [settings]
 experimental = true
+hook_env.chpwd_only = true
 idiomatic_version_file_enable_tools = ["node", "terraform"]
