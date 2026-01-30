@@ -40,4 +40,4 @@
 	allowed = AKIAIOSFODNN7EXAMPLE
 	allowed = wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 [alias]
-	claude-commit = !claude /commit-commands:commit
+	claude-commit = "!f() { claude \"/commit-commands:commit $*\"; }; f"
