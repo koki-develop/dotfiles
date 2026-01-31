@@ -1,4 +1,5 @@
 ---
+name: plan-feature
 description: Create an implementation plan for a feature
 argument-hint: [Brief description of the feature to implement]
 ---

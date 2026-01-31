@@ -1,4 +1,5 @@
 ---
+name: sync-claude-md
 description: Compare CLAUDE.md with the codebase and update CLAUDE.md as needed
 allowed-tools: Read, Edit
 ---

@@ -1,4 +1,5 @@
 ---
+name: reflect
 description: Reflect on the session and update CLAUDE.md
 allowed-tools: Read, Edit
 ---
