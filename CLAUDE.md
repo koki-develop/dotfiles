@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository Overview
 
-This is a dotfiles repository managed by chezmoi, containing personal development environment configuration files. The repository manages configuration for tools like LunarVim (lvim), Zsh, Git, Ghostty, and various development utilities.
+This is a dotfiles repository managed by chezmoi, containing personal development environment configuration files. The repository manages configuration for tools like Neovim, Zsh, Git, Ghostty, Starship, Atuin, and various development utilities.
 
 ## Common Commands
 
@@ -42,11 +42,14 @@ Manual update command:
 - Numbered scripts (`01_`, `02_`, `03_`) define execution order
 
 ### Tool Configuration
-- Development tools versioned and managed through mise.toml (Go, Node, Python, Ruby, etc.)
+- Development tools versioned and managed through mise.toml (Go, Node, Python, Ruby, Rust, Bun, etc.)
 - Homebrew packages defined in dot_Brewfile using Ruby DSL
-- LunarVim configuration in dot_config/lvim/config.lua
 - Shell configuration in dot_zshrc.tmpl with zinit for plugin management
 - Terminal: Ghostty (dot_config/ghostty/), Alacritty (dot_config/alacritty/)
+- Prompt: Starship (dot_config/starship.toml)
+- Shell history: Atuin (dot_config/private_atuin/)
+- Editor: Neovim (installed via Homebrew), Zed (dot_config/zed/)
+- Claude Code: dot_claude/ (settings.json, skills, agents)
 - Global mise config at ~/.local/share/chezmoi/mise.toml (referenced via MISE_GLOBAL_CONFIG_FILE)
 
 ### Key Dependencies
@@ -55,7 +58,9 @@ Manual update command:
 - **Task**: Task runner for common operations
 - **Homebrew**: Package management for macOS
 - **zinit**: Zsh plugin manager
-- **LunarVim**: Neovim distribution with Lua-based configuration
+- **Neovim**: Text editor (installed via Homebrew)
+- **Starship**: Cross-shell prompt
+- **Atuin**: Shell history sync and search
 
 ### Security
 - SSH keys and sensitive data managed as private templates
