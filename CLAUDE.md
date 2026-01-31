@@ -69,6 +69,10 @@ Manual update command:
 - git-secrets configured for AWS credential detection
 - AWS configuration managed through Keeper Commander templates
 
+### Git Conventions
+- Do not use Conventional Commits format (e.g., `feat:`, `fix:`, `chore:`)
+- Write commit messages in plain English
+
 ### Default Task Workflow
 The `task` command (or `task default`) performs a complete update workflow:
 1. Authenticate with Keeper Commander (`keeper shell`)
