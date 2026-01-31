@@ -55,6 +55,7 @@ formulae = %w[
   imagemagick
   openjdk
   jq
+  lazygit
   libpq
   libyaml
   node
