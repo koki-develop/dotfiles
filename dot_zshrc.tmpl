@@ -78,6 +78,9 @@ done
 #
 
 if [[ $- == *i* ]]; then
+  # push-line: Temporarily shelve the current command line
+  bindkey '^S' push-line
+
   # edit-command-line: Edit command in $EDITOR
   autoload -U edit-command-line
   zle -N edit-command-line
