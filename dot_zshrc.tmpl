@@ -267,8 +267,8 @@ alias vim='nvim'
 #
 
 autoload -Uz add-zsh-hook
-alias blow='afplay /System/Library/Sounds/Blow.aiff'
-alias sosumi='afplay /System/Library/Sounds/Sosumi.aiff'
+alias blow='(afplay /System/Library/Sounds/Blow.aiff &)'
+alias sosumi='(afplay /System/Library/Sounds/Sosumi.aiff &)'
 
 # Long command notification
 _long_cmd_notify_ignore=(vi vim nvim less man claude)
