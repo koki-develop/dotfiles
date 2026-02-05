@@ -8,7 +8,7 @@ rust = "1.93.0"
 terraform = "1.13.0"
 
 # npm packages
-"npm:renovate" = "41.173.1"
+"npm:renovate" = "42.95.1"
 "npm:mmcp" = "0.6.2"
 "npm:pinpm" = "0.4.1"
 
