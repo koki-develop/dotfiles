@@ -73,6 +73,7 @@ formulae = %w[
   ripgrep
   starship
   tmux
+  tokei
   usage
   uv
   wget
