@@ -1,6 +1,44 @@
-- **MUST DO**: When executing `git add`, you MUST always specify individual file paths explicitly. The following commands are strictly prohibited: `git add .`, `git add --all`, `git add -A`. Always use `git add <specific-file-path>` for each file individually.
-- **MUST DO**: When executing `git push`, you MUST always specify the remote and branch name explicitly. The command `git push` without arguments is strictly prohibited. Always use `git push <remote> <branch>` (e.g., `git push origin main`).
-- **MUST DO**: When multiple valid approaches exist for solving a problem or handling an issue, you MUST present all options to the user with clear explanations and wait for their explicit decision before proceeding. Never make independent choices when alternatives exist.
-- **MUST DO**: When encountering errors or getting stuck, DO NOT blindly attempt trial-and-error fixes. Instead, first investigate and research the latest information (official documentation, release notes, known issues) using web search or other available tools to understand the root cause before attempting solutions.
-- **MUST DO**: When using the Task tool with `subagent_type=Explore`, you MUST specify `model: "sonnet"` to use the Sonnet model for efficiency.
-- **MUST DO**: When creating, editing, or deleting files, you MUST use the Task tool with `subagent_type=file-editor`. This agent strictly follows given instructions and asks for confirmation when instructions are unclear or additional edits seem necessary. When there are multiple independent edit tasks with different contexts, launch separate file-editor agents in parallel for each task to maximize efficiency.
+# Global Instructions
+
+This document defines mandatory rules and prohibited actions for Claude Code.
+
+---
+
+## MUST DO (Required Actions)
+
+### Decision Making
+- When multiple valid approaches exist for solving a problem, you MUST present all options to the user with clear explanations and wait for their explicit decision before proceeding. Never make independent choices when alternatives exist.
+
+### Problem Solving
+- When encountering errors or getting stuck, you MUST first investigate and research the latest information (official documentation, release notes, known issues) using web search or other available tools to understand the root cause before attempting solutions. DO NOT blindly attempt trial-and-error fixes.
+
+### Git Operations
+- When executing `git add`, you MUST always specify individual file paths explicitly.
+  - Example: `git add src/index.ts` `git add README.md`
+- When executing `git push`, you MUST always specify the remote and branch name explicitly.
+  - Example: `git push origin main`
+
+### File Operations
+- When creating, editing, or deleting files, you MUST use the Task tool with `subagent_type=file-editor`. This agent strictly follows given instructions and asks for confirmation when instructions are unclear or additional edits seem necessary.
+- When there are multiple independent edit tasks with different contexts, launch separate file-editor agents in parallel for each task to maximize efficiency.
+
+### Tool Usage
+- When using the Task tool with `subagent_type=Explore`, you MUST specify `model: "sonnet"` to use the Sonnet model for efficiency.
+
+---
+
+## MUST NOT (Prohibited Actions)
+
+### Git Operations
+- **NEVER** use the following commands:
+  - `git add .`
+  - `git add --all`
+  - `git add -A`
+  - `git push` (without explicit remote and branch)
+
+### File Operations
+- **NEVER** use `Edit`, `Write`, or `NotebookEdit` tools directly. Always use the Task tool with `subagent_type=file-editor` for all file creation, editing, and deletion.
+
+### Problem Solving
+- **NEVER** blindly attempt trial-and-error fixes without first researching the root cause.
+- **NEVER** make independent choices when multiple valid approaches exist.
