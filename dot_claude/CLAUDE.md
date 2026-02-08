@@ -16,6 +16,12 @@ This document defines mandatory rules and prohibited actions for Claude Code.
   - Step-by-step implementation instructions detailed enough for execution without additional context
   - Any constraints, edge cases, or decisions made during the planning phase
 - Do NOT rely on prior conversation context or assume the implementer has access to previously discussed information. Everything must be written into the plan.
+- The final plan MUST be deterministic: every step specifies exactly one concrete action. ALL decisions and trade-offs MUST be resolved with the user BEFORE writing the plan. The plan must never contain:
+  - Alternative options (e.g., "do X, or alternatively do Y")
+  - Conditional branches based on unresolved decisions (e.g., "if we use approach A... if approach B...")
+  - Vague or deferred choices (e.g., "choose an appropriate method")
+  - Hedging language that leaves implementation details open (e.g., "we could", "consider using", "optionally")
+  The finalized plan must read as a linear, unambiguous sequence of instructions executable without any further judgment calls.
 
 ### Decision Making
 - When multiple valid approaches exist for solving a problem, you MUST present all options to the user with clear explanations and wait for their explicit decision before proceeding. Never make independent choices when alternatives exist.
@@ -46,3 +52,6 @@ This document defines mandatory rules and prohibited actions for Claude Code.
 
 ### File Operations
 - **NEVER** use `Edit`, `Write`, or `NotebookEdit` tools directly.
+
+### Planning
+- **NEVER** include unresolved alternatives, conditional branches, or ambiguous choices in a finalized plan. All decisions must be made before the plan is written.
