@@ -6,6 +6,17 @@ This document defines mandatory rules and prohibited actions for Claude Code.
 
 ## MUST DO (Required Actions)
 
+### Planning
+- Plans MUST be fully self-contained and include ALL information necessary for task execution. After a plan is created, the conversation context will be cleared before implementation begins—any information not written in the plan will be lost.
+- The plan MUST explicitly include:
+  - Exact file paths to read, create, edit, or delete
+  - Relevant code snippets, type definitions, and interface signatures referenced during investigation
+  - External information sources (documentation URLs, API references, etc.) consulted during research
+  - Specific configuration values, environment variables, or parameters required
+  - Step-by-step implementation instructions detailed enough for execution without additional context
+  - Any constraints, edge cases, or decisions made during the planning phase
+- Do NOT rely on prior conversation context or assume the implementer has access to previously discussed information. Everything must be written into the plan.
+
 ### Decision Making
 - When multiple valid approaches exist for solving a problem, you MUST present all options to the user with clear explanations and wait for their explicit decision before proceeding. Never make independent choices when alternatives exist.
 
