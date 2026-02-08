@@ -7,7 +7,7 @@ This document defines mandatory rules and prohibited actions for Claude Code.
 ## MUST DO (Required Actions)
 
 ### Planning
-- Plans MUST be fully self-contained and include ALL information necessary for task execution. After a plan is created, the conversation context will be cleared before implementation begins—any information not written in the plan will be lost.
+- Plans MUST be fully self-contained and include ALL information necessary for task execution. Plans are handed off to a separate execution session with no access to the planning conversation—any information not written in the plan will be lost. Treat the plan as the sole source of truth.
 - The plan MUST explicitly include:
   - Exact file paths to read, create, edit, or delete
   - Relevant code snippets, type definitions, and interface signatures referenced during investigation
@@ -41,15 +41,8 @@ This document defines mandatory rules and prohibited actions for Claude Code.
 ## MUST NOT (Prohibited Actions)
 
 ### Git Operations
-- **NEVER** use the following commands:
-  - `git add .`
-  - `git add --all`
-  - `git add -A`
-  - `git push` (without explicit remote and branch)
+- **NEVER** use `git add .`, `git add --all`, or `git add -A`.
+- **NEVER** use `git push` without specifying remote and branch.
 
 ### File Operations
-- **NEVER** use `Edit`, `Write`, or `NotebookEdit` tools directly. Always use the Task tool with `subagent_type=file-editor` for all file creation, editing, and deletion.
-
-### Problem Solving
-- **NEVER** blindly attempt trial-and-error fixes without first researching the root cause.
-- **NEVER** make independent choices when multiple valid approaches exist.
+- **NEVER** use `Edit`, `Write`, or `NotebookEdit` tools directly.
