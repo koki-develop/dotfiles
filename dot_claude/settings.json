@@ -42,7 +42,8 @@
       "Bash(zizmor:*)",
       "WebSearch",
       "WebFetch",
-      "Skill(frontend-design)"
+      "Skill(frontend-design)",
+      "Skill(validate-plan)"
     ],
     "deny": [
       "Read(.env*)",

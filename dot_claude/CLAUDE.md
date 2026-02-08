@@ -22,6 +22,7 @@ This document defines mandatory rules and prohibited actions for Claude Code.
   - Vague or deferred choices (e.g., "choose an appropriate method")
   - Hedging language that leaves implementation details open (e.g., "we could", "consider using", "optionally")
   The finalized plan must read as a linear, unambiguous sequence of instructions executable without any further judgment calls.
+- After writing a plan, you MUST run the `validate-plan` skill (`/validate-plan <plan-file-path>`) before presenting the plan to the user for approval. If the validation result is not "✅ Approved", you MUST revise the plan to address all reported issues and re-run validation until it passes. Do NOT present an unvalidated or failed plan to the user.
 
 ### Decision Making
 - When multiple valid approaches exist for solving a problem, you MUST present all options to the user with clear explanations and wait for their explicit decision before proceeding. Never make independent choices when alternatives exist.
