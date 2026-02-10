@@ -56,3 +56,4 @@ This document defines mandatory rules and prohibited actions for Claude Code.
 
 ### Planning
 - **NEVER** include unresolved alternatives, conditional branches, or ambiguous choices in a finalized plan. All decisions must be made before the plan is written.
+- **NEVER** present a plan to the user that has not passed `validate-plan` validation. All plans must be validated and receive "✅ Approved" before requesting user approval.
