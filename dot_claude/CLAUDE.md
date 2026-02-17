@@ -37,6 +37,7 @@ This document defines mandatory rules and prohibited actions for Claude Code.
   - Example: `git push origin main`
 
 ### File Operations
+- These rules apply ONLY to the top-level (main) agent. Subagents (agents launched via the Task tool) are exempt and SHOULD use their own available tools (`Edit`, `Write`, `Bash`, etc.) directly.
 - When creating, editing, or deleting files, you MUST use the Task tool with `subagent_type=file-editor`. This agent strictly follows given instructions and asks for confirmation when instructions are unclear or additional edits seem necessary.
 - When there are multiple independent edit tasks with different contexts, launch separate file-editor agents in parallel for each task to maximize efficiency.
 
@@ -52,8 +53,7 @@ This document defines mandatory rules and prohibited actions for Claude Code.
 - **NEVER** use `git push` without specifying remote and branch.
 
 ### File Operations
-- **NEVER** use `Edit`, `Write`, or `NotebookEdit` tools directly.
+- **NEVER** use `Edit`, `Write`, or `NotebookEdit` tools directly. (This rule applies ONLY to the top-level agent. Subagents are exempt and should use their available tools directly.)
 
 ### Planning
 - **NEVER** include unresolved alternatives, conditional branches, or ambiguous choices in a finalized plan. All decisions must be made before the plan is written.
-- **NEVER** present a plan to the user that has not passed `validate-plan` validation. All plans must be validated and receive "✅ Approved" before requesting user approval.
