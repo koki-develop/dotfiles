@@ -54,6 +54,7 @@ This document defines mandatory rules and prohibited actions for Claude Code.
 
 ### File Operations
 - **NEVER** use `Edit`, `Write`, or `NotebookEdit` tools directly. (This rule applies ONLY to the top-level agent. Subagents are exempt and should use their available tools directly.)
+- **NEVER** use `cat <<EOF`, `cat <<'EOF'`, `cat <<HEREDOC`, or any other heredoc/here-string redirection via `Bash` to create or overwrite files. Always use the `Write` tool (subagents) or the Task tool with `subagent_type=file-editor` (top-level agent) instead.
 
 ### Planning
 - **NEVER** include unresolved alternatives, conditional branches, or ambiguous choices in a finalized plan. All decisions must be made before the plan is written.
