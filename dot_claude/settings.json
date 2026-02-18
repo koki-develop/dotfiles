@@ -77,7 +77,6 @@
     "command": "bunx ccusage@latest statusline"
   },
   "enabledPlugins": {
-    "commit-commands@claude-plugins-official": true,
     "pr-review-toolkit@claude-plugins-official": true
   },
   "language": "Japanese",
