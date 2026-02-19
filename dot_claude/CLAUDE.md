@@ -51,6 +51,7 @@ This document defines mandatory rules and prohibited actions for Claude Code.
 ### Git Operations
 - **NEVER** use `git add .`, `git add --all`, or `git add -A`.
 - **NEVER** use `git push` without specifying remote and branch.
+- **NEVER** use `git -C <path>` or `cd <repo-path> && git ...` to explicitly specify the repository root. Git automatically discovers the repository root from any subdirectory—run git commands directly from the current directory.
 
 ### File Operations
 - **NEVER** use `Edit`, `Write`, or `NotebookEdit` tools directly. (This rule applies ONLY to the top-level agent. Subagents are exempt and should use their available tools directly.)
