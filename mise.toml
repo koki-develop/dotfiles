@@ -11,7 +11,7 @@ terraform = "1.13.0"
 "npm:renovate" = "41.173.1"
 "npm:mmcp" = "0.6.2"
 "npm:pinpm" = "0.4.1"
-"npm:@google/gemini-cli" = "0.29.7"
+"npm:@google/gemini-cli" = "0.30.0"
 
 # ruby gems
 "gem:xvert" = "0.4.0"
