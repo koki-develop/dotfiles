@@ -1,16 +1,16 @@
 ---
 name: sync-claude-md
-description: Compare CLAUDE.md with the codebase and update CLAUDE.md as needed
+description: Compare all CLAUDE.md files with the codebase and update them as needed
 allowed-tools: Read, Edit
 ---
 
 # CLAUDE.md Sync Task
 
-Compare the current state of the codebase with the contents of CLAUDE.md, identify any discrepancies, and update CLAUDE.md as needed.
+Compare the current state of the codebase with the contents of all CLAUDE.md files in the project, identify any discrepancies, and update them as needed.
 
-## Current CLAUDE.md Contents
+## Discovery
 
-@CLAUDE.md
+First, discover all CLAUDE.md files in the project using the glob pattern `**/CLAUDE.md`. Each discovered file should be read and checked against its relevant scope in the codebase.
 
 ## Items to Check
 
@@ -46,7 +46,7 @@ Investigate the codebase from the following perspectives to identify discrepanci
 ## Output Format
 
 1. **Report Discrepancies**: List discovered discrepancies as bullet points
-2. **Update CLAUDE.md**: If discrepancies exist, update CLAUDE.md immediately
+2. **Update CLAUDE.md**: If discrepancies exist, update the relevant CLAUDE.md file(s) immediately
 3. **Update Summary**: Briefly report what was changed
 
 ## Notes
