@@ -38,7 +38,8 @@ This document defines mandatory rules and prohibited actions for Claude Code.
 
 ### File Operations
 - These rules apply ONLY to the top-level (main) agent. Subagents (agents launched via the Task tool) are exempt and SHOULD use their own available tools (`Edit`, `Write`, `Bash`, etc.) directly.
-- When creating, editing, or deleting files, you MUST use the Task tool with `subagent_type=file-editor`. This agent strictly follows given instructions and asks for confirmation when instructions are unclear or additional edits seem necessary.
+- When creating, editing, or deleting a single file, you may use `Edit`, `Write`, or `NotebookEdit` tools directly.
+- When creating, editing, or deleting two or more files, you MUST use the Task tool with `subagent_type=file-editor`. This agent strictly follows given instructions and asks for confirmation when instructions are unclear or additional edits seem necessary.
 - When there are multiple independent edit tasks with different contexts, launch separate file-editor agents in parallel for each task to maximize efficiency.
 - **Exception**: Plan files (files created/edited during plan mode) may be written or edited directly using `Edit` or `Write` tools without delegating to file-editor. This avoids unnecessary overhead for plan authoring.
 
@@ -55,7 +56,7 @@ This document defines mandatory rules and prohibited actions for Claude Code.
 - **NEVER** use `git -C <path>` or `cd <repo-path> && git ...` to explicitly specify the repository root. Git automatically discovers the repository root from any subdirectory—run git commands directly from the current directory.
 
 ### File Operations
-- **NEVER** use `Edit`, `Write`, or `NotebookEdit` tools directly, except for plan files. (This rule applies ONLY to the top-level agent. Subagents are exempt and should use their available tools directly.)
+- **NEVER** use `Edit`, `Write`, or `NotebookEdit` tools directly when editing two or more files — use the Task tool with `subagent_type=file-editor` instead. (This rule applies ONLY to the top-level agent. Subagents are exempt and should use their available tools directly.)
 - **NEVER** use `cat <<EOF`, `cat <<'EOF'`, `cat <<HEREDOC`, or any other heredoc/here-string redirection via `Bash` to create or overwrite files. Always use the `Write` tool (subagents) or the Task tool with `subagent_type=file-editor` (top-level agent) instead.
 - **NEVER** use `Bash` to execute inline code via programming language interpreters (e.g., `python3 -c "..."`, `python -c "..."`, `ruby -e "..."`, `node -e "..."`, `perl -e "..."`) for file reading, writing, or any other operation. Always use the dedicated tools (`Read`, `Glob`, `Grep`, `Edit`, `Write`) or the Task tool with `subagent_type=file-editor` instead.
 
