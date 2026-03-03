@@ -40,7 +40,7 @@ This document defines mandatory rules and prohibited actions for Claude Code.
 - These rules apply ONLY to the top-level (main) agent. Subagents (agents launched via the Task tool) are exempt and SHOULD use their own available tools (`Edit`, `Write`, `Bash`, etc.) directly.
 - When creating, editing, or deleting a single file, you may use `Edit`, `Write`, or `NotebookEdit` tools directly.
 - When creating, editing, or deleting two or more files, you MUST use the Task tool with `subagent_type=file-editor`. This agent strictly follows given instructions and asks for confirmation when instructions are unclear or additional edits seem necessary.
-- When there are multiple independent edit tasks with different contexts, launch separate file-editor agents in parallel for each task to maximize efficiency.
+- When editing multiple files, you MUST launch separate file-editor agents in parallel — one per file (or per closely related file group). Do NOT send all files to a single file-editor agent. Maximize parallelism.
 - **Exception**: Plan files (files created/edited during plan mode) may be written or edited directly using `Edit` or `Write` tools without delegating to file-editor. This avoids unnecessary overhead for plan authoring.
 
 ### Tool Usage
