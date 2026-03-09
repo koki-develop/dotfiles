@@ -1,20 +1,20 @@
 ---
 name: sync-claude-md
-description: Compare all CLAUDE.md files with the codebase and update them as needed
+description: Compare all CLAUDE.md and AGENTS.md files with the codebase and update them as needed
 allowed-tools: Read, Edit
 ---
 
-# CLAUDE.md Sync Task
+# CLAUDE.md / AGENTS.md Sync Task
 
-Compare the current state of the codebase with the contents of all CLAUDE.md files in the project, identify any discrepancies, and update them as needed.
+Compare the current state of the codebase with the contents of all CLAUDE.md and AGENTS.md files in the project, identify any discrepancies, and update them as needed.
 
 ## Discovery
 
-First, discover all CLAUDE.md files in the project using the glob pattern `**/CLAUDE.md`. Each discovered file should be read and checked against its relevant scope in the codebase.
+First, discover all CLAUDE.md and AGENTS.md files in the project using the glob patterns `**/CLAUDE.md` and `**/AGENTS.md`. Each discovered file should be read and checked against its relevant scope in the codebase.
 
 ## Items to Check
 
-Investigate the codebase from the following perspectives to identify discrepancies with CLAUDE.md:
+Investigate the codebase from the following perspectives to identify discrepancies with CLAUDE.md / AGENTS.md:
 
 ### 1. Project Structure
 - Does the directory structure match what's documented in CLAUDE.md?
@@ -29,7 +29,7 @@ Investigate the codebase from the following perspectives to identify discrepanci
 ### 3. Development Commands & Scripts
 - Scripts section in package.json
 - Makefile and other build scripts
-- Do available commands match what's documented in CLAUDE.md?
+- Do available commands match what's documented in CLAUDE.md / AGENTS.md?
 
 ### 4. Configuration Files
 - Environment variable settings (.env.example, etc.)
@@ -46,12 +46,12 @@ Investigate the codebase from the following perspectives to identify discrepanci
 ## Output Format
 
 1. **Report Discrepancies**: List discovered discrepancies as bullet points
-2. **Update CLAUDE.md**: If discrepancies exist, update the relevant CLAUDE.md file(s) immediately
+2. **Update CLAUDE.md / AGENTS.md**: If discrepancies exist, update the relevant file(s) immediately
 3. **Update Summary**: Briefly report what was changed
 
 ## Notes
 
-- Do not add unnecessary information (keep CLAUDE.md concise)
+- Do not add unnecessary information (keep CLAUDE.md / AGENTS.md concise)
 - Do not change existing documentation that is correct
 - Report changes in order of importance
-- Also propose removing items from CLAUDE.md that no longer exist in the codebase
+- Also propose removing items from CLAUDE.md / AGENTS.md that no longer exist in the codebase
