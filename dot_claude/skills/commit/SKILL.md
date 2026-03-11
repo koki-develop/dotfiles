@@ -1,7 +1,7 @@
 ---
 name: commit
 description: Review changes made during the current session, then commit only those files. If no session changes exist, commit currently staged files instead. Use when the user wants to commit their work.
-allowed-tools: Bash(git status:*), Bash(git add:*), Bash(git commit:*), Bash(git diff:*), Bash(git log:*)
+allowed-tools: Bash(git status *), Bash(git add *), Bash(git commit *), Bash(git diff *), Bash(git log *)
 ---
 
 # Session Commit
