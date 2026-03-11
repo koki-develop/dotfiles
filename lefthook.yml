@@ -1,0 +1,11 @@
+pre-commit:
+  commands:
+    gitleaks:
+      glob: "**/*"
+      run: gitleaks git --pre-commit --staged
+
+pre-push:
+  commands:
+    gitleaks:
+      glob: "**/*"
+      run: gitleaks git

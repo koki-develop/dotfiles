@@ -5,3 +5,4 @@ renovate.json
 mise.toml
 CLAUDE.md
 completions
+lefthook.yml
