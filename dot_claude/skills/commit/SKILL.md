@@ -8,6 +8,10 @@ allowed-tools: Bash(git status *), Bash(git add *), Bash(git commit *), Bash(git
 
 Review and commit only the changes made during the current Claude Code session. If no session changes exist, commit the currently staged files instead.
 
+## Sandbox Restriction
+
+**All `git` commands in this skill MUST be run with `dangerouslyDisableSandbox: true`.** The sandbox blocks write access to the `.git` directory, causing `git add` and `git commit` to fail. Do NOT attempt commands inside the sandbox first — always disable the sandbox for every Bash call in this skill.
+
 ## Context
 
 Current git status:
