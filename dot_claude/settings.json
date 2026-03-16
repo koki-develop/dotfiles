@@ -71,10 +71,6 @@
       }
     ]
   },
-  "statusLine": {
-    "type": "command",
-    "command": "bunx ccusage@latest statusline"
-  },
   "enabledPlugins": {
     "skill-creator@claude-plugins-official": true,
     "pr-review-toolkit@claude-plugins-official": true,
@@ -86,5 +82,9 @@
     "autoAllowBashIfSandboxed": true
   },
   "alwaysThinkingEnabled": true,
-  "promptSuggestionEnabled": false
+  "promptSuggestionEnabled": false,
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/statusline.sh"
+  }
 }
