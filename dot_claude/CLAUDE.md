@@ -6,27 +6,6 @@ This document defines mandatory rules and prohibited actions for Claude Code.
 
 ## MUST DO (Required Actions)
 
-### Planning
-- Plans MUST be fully self-contained and include ALL information necessary for task execution. Plans are handed off to a separate execution session with no access to the planning conversation—any information not written in the plan will be lost. Treat the plan as the sole source of truth.
-- The plan MUST explicitly include:
-  - Exact file paths to read, create, edit, or delete
-  - Relevant code snippets, type definitions, and interface signatures referenced during investigation
-  - External information sources (documentation URLs, API references, etc.) consulted during research
-  - Specific configuration values, environment variables, or parameters required
-  - Step-by-step implementation instructions detailed enough for execution without additional context
-  - Any constraints, edge cases, or decisions made during the planning phase
-- Do NOT rely on prior conversation context or assume the implementer has access to previously discussed information. Everything must be written into the plan.
-- The final plan MUST be deterministic: every step specifies exactly one concrete action. ALL decisions and trade-offs MUST be resolved with the user BEFORE writing the plan. The plan must never contain:
-  - Alternative options (e.g., "do X, or alternatively do Y")
-  - Conditional branches based on unresolved decisions (e.g., "if we use approach A... if approach B...")
-  - Vague or deferred choices (e.g., "choose an appropriate method")
-  - Hedging language that leaves implementation details open (e.g., "we could", "consider using", "optionally")
-  The finalized plan must read as a linear, unambiguous sequence of instructions executable without any further judgment calls.
-- After writing a plan, you MUST run the `validate-plan` skill (`/validate-plan <plan-file-path>`) before presenting the plan to the user for approval. If the validation result is not "✅ Approved", you MUST revise the plan to address all reported issues and re-run validation until it passes. Do NOT present an unvalidated or failed plan to the user.
-
-### Decision Making
-- When multiple valid approaches exist for solving a problem, you MUST present all options to the user with clear explanations and wait for their explicit decision before proceeding. Never make independent choices when alternatives exist.
-
 ### Communication
 - You MUST always state your honest, objective opinion. Do NOT default to agreeing with the user or telling them what they want to hear.
 - If the user's approach has flaws, inefficiencies, or better alternatives exist, you MUST point them out clearly and explain why — even if the user seems committed to their current direction.
@@ -35,24 +14,11 @@ This document defines mandatory rules and prohibited actions for Claude Code.
 - When you disagree with the user, state your position with evidence. If the user insists after hearing your reasoning, defer to their decision — but make sure the trade-offs are clearly understood first.
 - Avoid hollow affirmations (e.g., "Great idea!", "That makes sense!", "Sure, we can do that!") unless you genuinely believe the statement is warranted. Silence on quality is better than false praise.
 
-### Problem Solving
-- When encountering errors or getting stuck, you MUST first investigate and research the latest information (official documentation, release notes, known issues) using web search or other available tools to understand the root cause before attempting solutions. DO NOT blindly attempt trial-and-error fixes.
-
 ### Git Operations
 - When executing `git add`, you MUST always specify individual file paths explicitly.
   - Example: `git add src/index.ts` `git add README.md`
 - When executing `git push`, you MUST always specify the remote and branch name explicitly.
   - Example: `git push origin main`
-
-### File Operations
-- These rules apply ONLY to the top-level (main) agent. Subagents (agents launched via the Task tool) are exempt and SHOULD use their own available tools (`Edit`, `Write`, `Bash`, etc.) directly.
-- When creating, editing, or deleting a single file, you may use `Edit`, `Write`, or `NotebookEdit` tools directly.
-- When creating, editing, or deleting two or more files, you MUST use the Task tool with `subagent_type=file-editor`. This agent strictly follows given instructions and asks for confirmation when instructions are unclear or additional edits seem necessary.
-- When editing multiple files, you MUST launch separate file-editor agents in parallel — one per file (or per closely related file group). Do NOT send all files to a single file-editor agent. Maximize parallelism.
-- **Exception**: Plan files (files created/edited during plan mode) may be written or edited directly using `Edit` or `Write` tools without delegating to file-editor. This avoids unnecessary overhead for plan authoring.
-
-### Tool Usage
-- When using the Task tool with `subagent_type=Explore`, you MUST specify `model: "sonnet"` to use the Sonnet model for efficiency.
 
 ---
 
@@ -62,11 +28,3 @@ This document defines mandatory rules and prohibited actions for Claude Code.
 - **NEVER** use `git add .`, `git add --all`, or `git add -A`.
 - **NEVER** use `git push` without specifying remote and branch.
 - **NEVER** use `git -C <path>` or `cd <repo-path> && git ...` to explicitly specify the repository root. Git automatically discovers the repository root from any subdirectory—run git commands directly from the current directory.
-
-### File Operations
-- **NEVER** use `Edit`, `Write`, or `NotebookEdit` tools directly when editing two or more files — use the Task tool with `subagent_type=file-editor` instead. (This rule applies ONLY to the top-level agent. Subagents are exempt and should use their available tools directly.)
-- **NEVER** use `cat <<EOF`, `cat <<'EOF'`, `cat <<HEREDOC`, or any other heredoc/here-string redirection via `Bash` to create or overwrite files. Always use the `Write` tool (subagents) or the Task tool with `subagent_type=file-editor` (top-level agent) instead.
-- **NEVER** use `Bash` to execute inline code via programming language interpreters (e.g., `python3 -c "..."`, `python -c "..."`, `ruby -e "..."`, `node -e "..."`, `perl -e "..."`) for file reading, writing, or any other operation. Always use the dedicated tools (`Read`, `Glob`, `Grep`, `Edit`, `Write`) or the Task tool with `subagent_type=file-editor` instead.
-
-### Planning
-- **NEVER** include unresolved alternatives, conditional branches, or ambiguous choices in a finalized plan. All decisions must be made before the plan is written.
