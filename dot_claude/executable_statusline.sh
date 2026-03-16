@@ -2,7 +2,7 @@
 
 input=$(cat)
 
-# ANSI colors (may not be supported — remove if statusline renders raw codes)
+# ANSI colors
 C_RESET='\033[0m'
 C_MODEL='\033[1;36m'     # bold cyan
 C_DIR='\033[0;33m'       # yellow
@@ -22,6 +22,13 @@ eval "$(jq -r '
 
 cwd="${raw_cwd/#"$HOME"/\~}"
 
+# Truncate deep directory paths: keep at most 3 trailing components
+max_depth=3
+IFS='/' read -ra parts <<< "$cwd"
+if (( ${#parts[@]} > max_depth )); then
+  cwd="…/$(IFS='/'; echo "${parts[*]: -${max_depth}}")"
+fi
+
 branch=""
 if [[ -n "$raw_cwd" ]] && command -v git &>/dev/null; then
   branch=$(git -C "$raw_cwd" branch --show-current 2>/dev/null)
@@ -36,14 +43,13 @@ bar+="${C_BAR_EMPTY}"
 for ((i = 0; i < empty; i++)); do bar+="░"; done
 bar+="${C_RESET}"
 
-# Line 1: model, cwd, branch
+# Line 1: directory, branch
 line1=""
-[[ -n "$model" ]] && line1+="${C_MODEL}${model}${C_RESET}"
-[[ -n "$cwd" ]] && line1+=" ${C_DIR}${cwd}${C_RESET}"
-[[ -n "$branch" ]] && line1+=" ${C_BRANCH} ${branch}${C_RESET}"
+[[ -n "$cwd" ]] && line1+="${C_DIR}${cwd}${C_RESET}"
+[[ -n "$branch" ]] && line1+=" ${C_BRANCH} ${branch}${C_RESET}"
 
-# Line 2: usage
-line2="${bar} ${C_VALUE}${used}% used (${remaining}% remaining)${C_RESET}"
+# Line 2: model, usage
+line2="${C_MODEL}${model}${C_RESET} ${bar} ${C_VALUE}${used}% used (${remaining}% remaining)${C_RESET}"
 
 # Line 3: session id
 line3=""
