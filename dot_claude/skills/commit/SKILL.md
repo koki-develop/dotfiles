@@ -2,6 +2,7 @@
 name: commit
 description: |
   Create a git commit for work done in the current session. Use this skill whenever the user invokes /commit or asks to commit their changes. This skill handles file selection (session-changed files, staged files, or explicitly specified files), commit message generation based on the repository's existing style, and outputs a summary of the commit. MUST be used for any commit operation — never commit without following this workflow.
+allowed-tools: Bash(git add *), Bash(git commit *)
 ---
 
 # Commit
@@ -45,7 +46,11 @@ Write a commit message that:
 - Summarizes what changed and why in a way that's useful to someone reading the log later
 - Uses a single line unless the change is complex enough to warrant a body
 
-## Step 4: Output the result
+## Step 4: Commit
+
+The sandbox blocks access to `~/.gnupg`, which is required for GPG-signed commits. Run `git commit` with `dangerouslyDisableSandbox: true`.
+
+## Step 5: Output the result
 
 After a successful commit, run `git log -1 --format="%H"` and report:
 
