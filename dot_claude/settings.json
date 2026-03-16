@@ -59,7 +59,6 @@
       "Bash(rm -rf .git)"
     ]
   },
-  "model": "opus",
   "hooks": {
     "Notification": [
       {
@@ -78,13 +77,14 @@
   },
   "enabledPlugins": {
     "skill-creator@claude-plugins-official": true,
-    "pr-review-toolkit@claude-plugins-official": true
+    "pr-review-toolkit@claude-plugins-official": true,
+    "superpowers@claude-plugins-official": true
   },
   "language": "Japanese",
-  "alwaysThinkingEnabled": true,
-  "promptSuggestionEnabled": false,
   "sandbox": {
     "enabled": true,
     "autoAllowBashIfSandboxed": true
-  }
+  },
+  "alwaysThinkingEnabled": true,
+  "promptSuggestionEnabled": false
 }
