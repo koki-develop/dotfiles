@@ -12,6 +12,7 @@ C_BAR_EMPTY='\033[0;90m' # dark gray
 C_LABEL='\033[0;90m'     # dark gray
 C_VALUE='\033[0;37m'     # white
 
+used=0 remaining=100 raw_cwd="" model="" session_id=""
 eval "$(jq -r '
   @sh "raw_cwd=\(.cwd // "")",
   @sh "model=\(.model.display_name // "")",
