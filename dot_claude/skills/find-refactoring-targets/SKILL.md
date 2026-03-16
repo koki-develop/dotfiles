@@ -40,12 +40,13 @@ Each agent should:
 - Open and read files that look suspicious from search results
 - Record specific file paths, line ranges, and a brief description of the issue
 - Assess the severity and improvement potential
+- Report at most **5 findings** per category — if more are found, keep only the highest-impact ones
 
 **Important:** Agents should focus on patterns that are genuinely problematic. Not every long function needs splitting. Not every duplication warrants a shared abstraction. Apply judgment — the question is always "would a refactoring here meaningfully improve the developer's experience when reading or modifying this code?"
 
 ### Step 3: Compile and Prioritize
 
-Collect results from all agents and merge into a single list. Remove duplicates (different agents may flag the same code from different angles).
+Collect results from all agents and merge into a single list. Remove duplicates (different agents may flag the same code from different angles). The final report should contain **at most 15 candidates total** — if more remain after deduplication, drop the lowest-priority items.
 
 **Prioritization criteria:**
 
