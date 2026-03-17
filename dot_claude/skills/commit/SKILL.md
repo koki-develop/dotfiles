@@ -23,6 +23,9 @@ Untracked files:
 Recent commit messages (for style reference):
 !`git log --format="%s" -20`
 
+Working directory prefix (empty = repo root):
+!`git rev-parse --show-prefix`
+
 ## Step 1: Determine commit targets
 
 Select files using this priority:
@@ -35,7 +38,7 @@ If none of these produce any files, tell the user there's nothing to commit and 
 
 ## Step 2: Stage the files
 
-First, resolve file paths relative to cwd. The cwd may not be the repository root — run `git rev-parse --show-prefix` to check. If cwd is a subdirectory, convert absolute paths to cwd-relative paths before passing them to `git add`.
+Resolve file paths relative to cwd. If the working directory prefix above is non-empty, cwd is a subdirectory — convert absolute paths to cwd-relative paths before passing them to `git add`.
 
 Run `git add` with each file path specified individually. Never use `git add .`, `git add --all`, or `git add -A`.
 
