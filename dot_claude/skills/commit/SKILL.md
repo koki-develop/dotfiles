@@ -12,7 +12,7 @@ Create a git commit with intelligent file selection and style-consistent message
 ## Current git state
 
 Staged files:
-!`git diff --cached --name-only`
+!`git diff --staged --name-only`
 
 Unstaged changes:
 !`git diff --name-only`
@@ -41,7 +41,7 @@ Run `git add` with each file path specified individually. Never use `git add .`,
 
 The sandbox blocks `.git/` writes, so run `git add` with `dangerouslyDisableSandbox: true`.
 
-After staging, verify with `git diff --cached --name-only` that all intended files are included.
+After staging, verify with `git diff --staged --name-only` that all intended files are included.
 
 ## Step 3: Generate the commit message
 
