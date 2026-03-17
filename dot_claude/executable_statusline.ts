@@ -22,6 +22,12 @@ function shortenHome(path: string): string {
   return home ? path.replace(home, "~") : path;
 }
 
+function truncatePath(path: string, maxDepth = 3): string {
+  const parts = path.split("/");
+  if (parts.length <= maxDepth) return path;
+  return `…/${parts.slice(-maxDepth).join("/")}`;
+}
+
 async function getCurrentBranch(cwd: string): Promise<string> {
   if (!cwd) return "";
   return (await $`git -C ${cwd} branch --show-current`.text()).trim();
@@ -47,7 +53,7 @@ const used = data.context_window?.used_percentage ?? 0;
 const remaining = data.context_window?.remaining_percentage ?? 100;
 const sessionId = data.session_id ?? "";
 
-const cwd = shortenHome(rawCwd);
+const cwd = truncatePath(shortenHome(rawCwd));
 const branch = await getCurrentBranch(rawCwd);
 
 console.log(headerLine(model, cwd, branch));
