@@ -42,7 +42,7 @@ function headerLine(model: string, cwd: string, branch: string): string {
   const parts: string[] = [];
   if (model) parts.push(boldCyan(model));
   if (cwd) parts.push(yellow(cwd));
-  if (branch) parts.push(green(` ${branch}`));
+  if (branch) parts.push(green(` ${branch}`));
   return parts.join(" ");
 }
 
@@ -57,5 +57,7 @@ const cwd = truncatePath(shortenHome(rawCwd));
 const branch = await getCurrentBranch(rawCwd);
 
 console.log(headerLine(model, cwd, branch));
-console.log(`${progressBar(used)} ${white(`${used}% used (${remaining}% remaining)`)}`);
+console.log(
+  `${progressBar(used)} ${white(`${used}% used (${remaining}% remaining)`)}`,
+);
 if (sessionId) console.log(gray(`Session: ${sessionId}`));
