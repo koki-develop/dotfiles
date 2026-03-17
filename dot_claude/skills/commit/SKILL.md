@@ -35,7 +35,11 @@ If none of these produce any files, tell the user there's nothing to commit and 
 
 ## Step 2: Stage the files
 
+First, resolve file paths relative to cwd. The cwd may not be the repository root — run `git rev-parse --show-prefix` to check. If cwd is a subdirectory, convert absolute paths to cwd-relative paths before passing them to `git add`.
+
 Run `git add` with each file path specified individually. Never use `git add .`, `git add --all`, or `git add -A`.
+
+The sandbox blocks `.git/` writes, so run `git add` with `dangerouslyDisableSandbox: true`.
 
 After staging, verify with `git diff --cached --name-only` that all intended files are included.
 
