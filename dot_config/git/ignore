@@ -8,3 +8,7 @@ mise.local.toml
 # ai tools
 **/.claude/settings.local.json
 .playwright-mcp/
+
+# superpowers
+docs/superpowers/plans/**
+docs/superpowers/specs/**
