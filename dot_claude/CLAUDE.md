@@ -28,3 +28,6 @@ This document defines mandatory rules and prohibited actions for Claude Code.
 - **NEVER** use `git add .`, `git add --all`, or `git add -A`.
 - **NEVER** use `git push` without specifying remote and branch.
 - **NEVER** use `git -C <path>` or `cd <repo-path> && git ...` to explicitly specify the repository root. Git automatically discovers the repository root from any subdirectory—run git commands directly from the current directory.
+
+### Generated Files
+- **NEVER** commit superpowers-generated documents (`docs/superpowers/plans/**`, `docs/superpowers/specs/**`). These are ephemeral working artifacts, not project deliverables.
