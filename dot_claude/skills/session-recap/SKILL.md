@@ -6,7 +6,9 @@ description: |
 
 # Session Recap
 
-Review the work done during this session and evaluate whether CLAUDE.md / AGENTS.md files need updating. If no updates are needed, do nothing.
+Review the work done during this session. Two things to deliver:
+1. Evaluate whether CLAUDE.md / AGENTS.md files need updating (only update when genuinely necessary)
+2. Report any pain points — tasks that were tedious, time-consuming, or required excessive manual effort
 
 ## Workflow
 
@@ -20,7 +22,16 @@ Review the conversation and identify changes that may affect documentation:
 - **Tooling and configuration** — new tools introduced, config file changes, CI/CD modifications
 - **Key design decisions** — decisions that affect future work (e.g., "we're using pattern X in this project")
 
-Do not read any files yet. First, build an understanding of "what changed" purely from the session context.
+Also identify pain points from the session — things that were annoying, slow, or required disproportionate effort relative to the value they produced. Examples:
+
+- **Repetitive manual steps** — doing the same thing over and over, copy-pasting, manually running a sequence of commands
+- **Tooling friction** — fighting with tools, working around limitations, needing multiple attempts to get something right
+- **Unclear or missing information** — having to dig through code or docs to find something that should have been obvious
+- **Brittle processes** — things that broke unexpectedly or required careful manual coordination to avoid breaking
+
+These pain points are not used for documentation updates — they are reported separately so the user can identify opportunities for automation, tooling improvements, or workflow changes.
+
+Do not read any files yet. First, build an understanding of "what changed" and "what was painful" purely from the session context.
 
 ### 2. Assess whether documentation is affected
 
@@ -37,7 +48,7 @@ Consider whether the changes identified in step 1 affect content that is (or sho
 - The work followed existing documented conventions — nothing new to capture
 - Changes were temporary or experimental and shouldn't be persisted
 
-If no impact is found, communicate that and stop. There is no obligation to update anything.
+If no impact is found, communicate that — but still continue to step 5 to report pain points if any were identified.
 
 ### 3. Read relevant files
 
@@ -61,20 +72,35 @@ When updating, follow these principles:
 
 ### 5. Report results
 
-**When no updates are needed:**
+**Documentation updates:**
+
 ```
+# When no updates are needed:
 Reviewed the session. No CLAUDE.md / AGENTS.md updates needed.
 Reason: [brief reason]
-```
 
-**When updates were made:**
-```
+# When updates were made:
 Based on this session's work, updated the following:
-
 - `path/to/CLAUDE.md`:
   - [what changed and why]
-- `path/to/AGENTS.md`:
-  - [what changed and why]
+```
+
+**Pain points** (always report if any were identified, regardless of documentation updates):
+
+```
+## Pain Points
+
+- **[short label]**: [what was tedious/difficult and why]
+  → Possible improvement: [concrete suggestion if one comes to mind, otherwise omit]
+
+- **[short label]**: [what was tedious/difficult and why]
+  → Possible improvement: [concrete suggestion]
+```
+
+If no pain points were identified, report that too — a smooth session is worth noting:
+```
+## Pain Points
+None — this session went smoothly.
 ```
 
 ## When in doubt
