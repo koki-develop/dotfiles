@@ -72,7 +72,7 @@ Manual update command:
 ### Git Conventions
 - Do not use Conventional Commits format (e.g., `feat:`, `fix:`, `chore:`)
 - Write commit messages in plain English
-- **Do NOT commit automatically during implementation.** Even if a skill or plan instructs you to commit after each step/task, skip all intermediate commits. Only commit when the user explicitly asks (e.g., `/commit` or "commit this"). This applies to all workflows including superpowers plans, TDD cycles, and subagent-driven development.
+
 
 ### Default Task Workflow
 The `task` command (or `task default`) performs a complete update workflow:
