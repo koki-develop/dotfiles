@@ -9,6 +9,7 @@ casks = %w[
   alacritty
   aws-vault-binary
   claude-code
+  codex
   discord
   docker-desktop
   gcloud-cli
