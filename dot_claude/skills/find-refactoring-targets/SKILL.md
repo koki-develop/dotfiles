@@ -33,6 +33,7 @@ Launch multiple Explore agents in parallel, each responsible for a different det
 | **Duplication** | Repeated conditional logic, copy-paste code with minor variations, duplicated derivation of the same value |
 | **Size** | Oversized files, oversized functions/methods/classes, large code blocks that could be decomposed |
 | **Abstraction** | Inline logic that should be extracted, missing data-driven patterns (e.g., lookup tables vs. switch chains), premature or unnecessary abstractions |
+| **Fragmentation** | Over-split files/functions, excessive indirection, thin pass-through/wrapper layers, over-engineered design patterns, forced DRY that hurts readability |
 | **Coupling** | Mixed concerns in a single module, tight coupling between unrelated modules, excessive parameter passing across layers |
 
 Each agent should:

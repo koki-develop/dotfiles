@@ -77,18 +77,63 @@ Detailed checklist for each detection category. Use this as a guide when scannin
 - **Repeated error handling patterns**: Same try/catch or error-check structure copied across multiple call sites
 
 ### Unnecessary Abstractions
+
+*These patterns are about individual extractions that did not pay off. For systemic over-decomposition (too many layers, too many files), see Fragmentation.*
+
 - **Single-use wrappers**: Helper functions, classes, or modules used exactly once, adding indirection without reuse value
 - **Over-parameterized utilities**: Utility functions with many options/flags that make them harder to understand than the inline code they replaced
 - **Premature generalization**: Abstractions built for "future flexibility" that add complexity without current benefit
 
 ### Search hints
 ```
-# Switch/match statements with many cases
-switch\s*\(
-match\s+
-case .* case .* case
+# Branching constructs with many cases (switch/match/when/cond etc.)
+# Look for files where "case" or equivalent keyword appears 8+ times
 
-# Magic numbers (numbers other than 0, 1, -1 in conditions or calculations)
+# Magic numbers (numbers other than 0, 1, -1 appearing in conditions or calculations)
+# Search for bare numeric literals in logic — not in constants, config, or test data
+```
+
+## Fragmentation
+
+Over-fragmentation makes code harder to follow than necessary. The cost of splitting — indirection, context-switching between files, loss of locality — can exceed the benefit. Look for places where consolidation would improve readability without sacrificing modularity.
+
+*For individual unnecessary extractions (single-use wrappers, premature generalization), see Abstraction > Unnecessary Abstractions. This category focuses on systemic over-decomposition — too many layers, files, or indirection steps.*
+
+### Over-Split Files / Modules
+- **Micro-files**: Files containing only 1-2 small functions or a single trivial type definition, where the content would read more naturally alongside its only consumer
+- **One-class-per-file taken too far**: Dozens of tiny files in a directory where several logically related types/functions could coexist in one module without confusion
+- **Matching pairs that always travel together**: A module and its "helper" or "utils" file that are always imported together and have no independent consumers
+
+### Excessive Indirection
+- **Deep call chains for simple operations**: Following a straightforward operation (e.g., saving a record) requires tracing through 5+ function calls across multiple files, each doing minimal work before delegating
+- **Thin pass-through layers**: Functions, methods, or classes that accept arguments and forward them to the next layer with little or no transformation — adding a layer of indirection without adding value
+- **Wrapper-only modules**: Modules whose sole purpose is re-exporting or thinly wrapping another module's API
+
+### Over-Engineered Patterns
+- **Design patterns for trivial cases**: Strategy, Factory, Observer, Visitor, etc. applied where a simple function call or conditional would suffice — the pattern adds ceremony without flexibility benefit
+- **Excessive interface/protocol definitions**: Interfaces or abstract classes with only one implementation and no realistic prospect of a second, adding indirection for hypothetical extensibility
+- **Plugin architectures for fixed requirements**: Extension points, registries, or hook systems built for requirements that are known and stable — a direct implementation would be simpler and easier to trace
+
+### Forced DRY (Over-Abstracted Shared Code)
+- **Divergent callers sharing a "common" function**: A shared function serving callers with different needs, resulting in many parameters, flags, or conditional branches that make the function harder to understand than the duplicated code it replaced
+- **Premature parameterization**: Code extracted into a "reusable" utility before there's a second use case, burdened with options no current caller exercises
+- **Abstraction with more config than logic**: Helper functions or components where the majority of lines handle options, defaults, or feature flags rather than the core operation
+
+### Search hints
+```
+# Very small files (use wc -l to find files under ~20 lines in source directories)
+
+# Re-export / barrel files (look for files that only re-export or re-import)
+# Keyword: "export", "from", "require", "__all__", "pub use" etc. depending on language
+
+# Over-engineered patterns (search for naming conventions that suggest ceremony)
+Factory
+Registry
+Provider
+Handler  # when combined with a directory full of single-method handlers
+
+# Directories with many tiny files (use ls + wc -l to spot directories
+# where average file size is under ~30 lines)
 ```
 
 ## Coupling
