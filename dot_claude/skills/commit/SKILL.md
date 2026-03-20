@@ -12,19 +12,16 @@ Create a git commit with intelligent file selection and style-consistent message
 ## Current git state
 
 Staged files:
-!`git diff --staged --name-only`
+!`git diff --staged --name-only --relative`
 
 Unstaged changes:
-!`git diff --name-only`
+!`git diff --name-only --relative`
 
 Untracked files:
 !`git ls-files --others --exclude-standard`
 
 Recent commit messages (for style reference):
 !`git log --format="%s" -20`
-
-Working directory prefix (empty = repo root):
-!`git rev-parse --show-prefix`
 
 ## Step 1: Determine commit targets
 
@@ -38,13 +35,13 @@ If none of these produce any files, tell the user there's nothing to commit and 
 
 ## Step 2: Stage the files
 
-Resolve file paths relative to cwd. If the working directory prefix above is non-empty, cwd is a subdirectory — convert absolute paths to cwd-relative paths before passing them to `git add`.
+The file lists above use `--relative`, so paths are already relative to cwd. Pass them directly to `git add` — never `cd` to the repo root.
 
 Run `git add` with each file path specified individually. Never use `git add .`, `git add --all`, or `git add -A`.
 
 The sandbox blocks `.git/` writes, so run `git add` with `dangerouslyDisableSandbox: true`.
 
-After staging, verify with `git diff --staged --name-only` that all intended files are included.
+After staging, verify with `git diff --staged --name-only --relative` that all intended files are included.
 
 ## Step 3: Generate the commit message
 
