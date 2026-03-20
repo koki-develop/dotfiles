@@ -80,7 +80,10 @@
   "language": "Japanese",
   "sandbox": {
     "enabled": true,
-    "autoAllowBashIfSandboxed": true
+    "autoAllowBashIfSandboxed": true,
+    "ignoreViolations": {
+      "Bash": ["expansion-obfuscation"]
+    }
   },
   "alwaysThinkingEnabled": true,
   "promptSuggestionEnabled": false,
