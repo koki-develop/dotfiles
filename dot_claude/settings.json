@@ -72,6 +72,10 @@
       }
     ]
   },
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/statusline.ts"
+  },
   "enabledPlugins": {
     "skill-creator@claude-plugins-official": true,
     "pr-review-toolkit@claude-plugins-official": true,
@@ -85,10 +89,7 @@
       "Bash": ["expansion-obfuscation"]
     }
   },
+  "autoMemoryEnabled": false,
   "alwaysThinkingEnabled": true,
-  "promptSuggestionEnabled": false,
-  "statusLine": {
-    "type": "command",
-    "command": "~/.claude/statusline.ts"
-  }
+  "promptSuggestionEnabled": false
 }
