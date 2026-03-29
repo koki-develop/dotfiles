@@ -67,6 +67,7 @@ formulae = %w[
   koki-develop/tap/clive
   koki-develop/tap/docker-tags
   koki-develop/tap/gat
+  koki-develop/tap/ghasec
   koki-develop/tap/gofzf
   koki-develop/tap/gotrash
   neovim
