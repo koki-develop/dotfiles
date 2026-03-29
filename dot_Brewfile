@@ -1,6 +1,7 @@
 taps = %w[
   charmbracelet/tap
   go-task/tap
+  k1LoW/tap
   koki-develop/tap
   ynqa/tap
 ]
@@ -56,6 +57,7 @@ formulae = %w[
   imagemagick
   openjdk
   jq
+  k1LoW/tap/mo
   lazygit
   libpq
   libyaml
