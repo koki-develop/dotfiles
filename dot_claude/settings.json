@@ -86,10 +86,13 @@
     "enabled": true,
     "autoAllowBashIfSandboxed": true,
     "ignoreViolations": {
-      "Bash": ["expansion-obfuscation"]
+      "Bash": [
+        "expansion-obfuscation",
+        "potential-obfuscation"
+      ]
     }
   },
-  "autoMemoryEnabled": false,
   "alwaysThinkingEnabled": true,
-  "promptSuggestionEnabled": false
+  "promptSuggestionEnabled": false,
+  "autoMemoryEnabled": false
 }
