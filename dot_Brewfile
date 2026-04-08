@@ -79,6 +79,7 @@ formulae = %w[
   tokei
   usage
   uv
+  watchexec
   wget
   xh
   ynqa/tap/jnv
