@@ -9,6 +9,10 @@
     {
       "matchUpdateTypes": ["minor", "patch"],
       "automerge": true
+    },
+    {
+      "matchPackageNames": ["aqua:anthropics/claude-code"],
+      "minimumReleaseAge": "2 days"
     }
   ]
 }
