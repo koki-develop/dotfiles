@@ -36,6 +36,7 @@
       "Bash(ls *)",
       "Bash(mkdir *)",
       "Bash(npm info *)",
+      "Bash(npx ctx7@latest *)",
       "Bash(rg *)",
       "Bash(sort *)",
       "Bash(test *)",
@@ -86,10 +87,7 @@
     "enabled": true,
     "autoAllowBashIfSandboxed": true,
     "ignoreViolations": {
-      "Bash": [
-        "expansion-obfuscation",
-        "potential-obfuscation"
-      ]
+      "Bash": ["expansion-obfuscation", "potential-obfuscation"]
     }
   },
   "alwaysThinkingEnabled": true,
