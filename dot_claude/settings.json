@@ -19,6 +19,7 @@
       "Bash(gh release view *)",
       "Bash(gh run list *)",
       "Bash(gh run view *)",
+      "Bash(gh search *)",
       "Bash(ghalint *)",
       "Bash(git diff *)",
       "Bash(git fetch *)",
