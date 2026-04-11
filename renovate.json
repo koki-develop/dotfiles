@@ -11,11 +11,6 @@
       "automerge": true
     },
     {
-      "matchManagers": ["mise"],
-      "matchDatasources": ["github-tags"],
-      "pinDigests": false
-    },
-    {
       "matchPackageNames": ["aqua:anthropics/claude-code"],
       "minimumReleaseAge": "2 days"
     }
