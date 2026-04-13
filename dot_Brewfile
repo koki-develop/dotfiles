@@ -7,7 +7,6 @@ taps = %w[
 ]
 
 casks = %w[
-  alacritty
   aws-vault-binary
   codex
   discord
