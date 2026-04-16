@@ -15,7 +15,7 @@ terraform = "1.13.0"
 "npm:mmcp" = "0.6.2"
 "npm:pinpm" = "0.4.1"
 "npm:sfw" = "2.0.4"
-"npm:@google/gemini-cli" = "0.36.0"
+"npm:@google/gemini-cli" = "0.37.0"
 "npm:@codize/cli" = "0.6.0"
 
 # ruby gems
