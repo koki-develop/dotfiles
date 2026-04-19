@@ -14,6 +14,7 @@
       "Bash(gh pr list *)",
       "Bash(gh pr status *)",
       "Bash(gh pr view *)",
+      "Bash(gh repo list *)",
       "Bash(gh repo view *)",
       "Bash(gh release list *)",
       "Bash(gh release view *)",
@@ -49,6 +50,11 @@
       "Skill(validate-plan)"
     ],
     "deny": [
+      "Bash(gh repo archive *)",
+      "Bash(gh repo create *)",
+      "Bash(gh repo delete *)",
+      "Bash(gh repo rename *)",
+      "Bash(gh repo unarchive *)",
       "Read(.env*)",
       "Read(~/.ssh/**)",
       "Bash(git add .)",
