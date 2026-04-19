@@ -25,7 +25,7 @@ terraform = "1.13.0"
 "pipx:git+https://github.com/koki-develop/git-aicommit.git" = "v0.14.1"
 
 # aqua packages
-"aqua:anthropics/claude-code" = "2.1.104"
+"aqua:anthropics/claude-code" = "2.1.114"
 
 [settings]
 experimental = true
