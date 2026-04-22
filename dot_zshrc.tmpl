@@ -243,6 +243,9 @@ function gwkt() {
       ;;
   esac
 }
+function wcd() {
+  cd "$(wtp cd "$@")"
+}
 # fd
 alias fd='fd --hidden --full-path'
 # ls
