@@ -11,7 +11,7 @@ terraform = "1.13.0"
 "go:github.com/chrishrb/go-grip" = "0.8.0"
 
 # npm packages
-"npm:renovate" = "43.120.1"
+"npm:renovate" = "43.123.5"
 "npm:mmcp" = "0.6.2"
 "npm:pinpm" = "0.4.1"
 "npm:sfw" = "2.0.4"
