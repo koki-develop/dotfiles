@@ -4,7 +4,7 @@ go = "1.26.2"
 node = "24.15.0"
 python = "3.14.4"
 ruby = "4.0.2"
-rust = "1.94.1"
+rust = "1.95.0"
 terraform = "1.13.0"
 
 # go tools
