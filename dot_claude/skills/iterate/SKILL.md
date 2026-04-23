@@ -51,14 +51,29 @@ The subagent's job was to find issues. Your job now is to ruthlessly verify whet
 For each finding:
 
 1. **Verify accuracy** — Go to the primary source yourself. Read the actual file, check the actual URL the subagent referenced, consult the actual documentation. If the subagent says "function X doesn't handle null" — read function X. If the subagent says "this contradicts the official docs at URL Y" — fetch URL Y and confirm. If the subagent cites a source but you don't verify that source, you haven't validated anything — you've just added a layer of unchecked trust. The whole point of this phase is to catch the subagent's mistakes, so skipping source verification defeats the purpose.
+
+   **Specific file paths, line numbers, and verbatim-looking quotes are claims, not evidence.** Subagents hallucinate confidently: a "quote" might be paraphrased, attributed to the wrong page, or partially invented; a cited file:line might not contain what the subagent says it does. The more specific and confident-sounding a subagent's finding, the more tempting it is to skip verification — resist that. Verify every finding, regardless of how authoritative the citation looks.
+
 2. **Assess severity** — Is this a real problem or noise? Would ignoring it cause actual harm?
 3. **Judge necessity** — Does this need fixing now, or is it a false positive / nitpick?
 
-Classify each finding as:
-- **Fix** — Genuine issue, will address now
-- **Skip** — Not accurate, not worth changing, or out of scope
+##### Verification trace — required per finding
 
-Report the validation results to the user before proceeding. Keep it brief — a short list showing what you'll fix and what you're skipping (with a reason for each skip).
+**After steps 1–3, capture your work as a verification trace.** The trace is your classification — if you can't write it, you haven't validated. Format:
+
+```
+Finding N: <tool call you actually ran, e.g. "WebFetch https://..." or "Read foo.py:40-60"> → <what you observed> → Fix / Skip because <reason>
+```
+
+If you cannot name the tool call you ran and what it showed, go run the verification first. The trace is what distinguishes real validation from rubber-stamping. A batch judgment like "all findings look reasonable, Fix" is always a failure mode, no matter how strong the subagent's report is.
+
+If a cycle produces 2 or more findings, create a TodoWrite with one item per finding and mark each completed only after its verification trace is written. The failure mode isn't about finding count — it's the "batch processing" mindset that kicks in the moment you're handling multiple items, where individual verification gets silently skipped in favor of a collective judgment. TodoWrite forces per-finding accountability that mindset can't evade.
+
+Classify each finding as:
+- **Fix** — Genuine issue, verified against primary source, will address now
+- **Skip** — Verified to be inaccurate, not worth changing, or out of scope
+
+Report these traces to the user before moving to Phase 3 (Fix). Making the verification action observable is what turns the discipline from self-policing into accountability.
 
 #### Phase 3: Fix
 
