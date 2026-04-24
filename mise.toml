@@ -22,7 +22,7 @@ terraform = "1.13.0"
 "gem:xvert" = "0.4.0"
 
 # aqua packages
-"aqua:anthropics/claude-code" = "2.1.114"
+"aqua:anthropics/claude-code" = "2.1.119"
 "aqua:evilmartians/lefthook" = "2.1.6"
 
 [settings]
