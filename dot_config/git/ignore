@@ -10,5 +10,5 @@ mise.local.toml
 .playwright-mcp/
 
 # superpowers
-docs/superpowers/plans/**
-docs/superpowers/specs/**
+**/docs/superpowers/plans/**
+**/docs/superpowers/specs/**
