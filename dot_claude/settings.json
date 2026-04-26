@@ -57,14 +57,15 @@
       "Bash(gh repo unarchive *)",
       "Read(.env*)",
       "Read(~/.ssh/**)",
+      "Write(~/.ssh/**)",
       "Bash(git add .)",
       "Bash(git add -A *)",
       "Bash(git add --all *)",
-      "Bash(git push)",
+      "Bash(git push *)",
+      "Bash(sudo rm *)",
       "Bash(rm -rf /)",
       "Bash(rm -rf ~)",
       "Bash(rm -rf /*)",
-      "Bash(sudo rm *)",
       "Bash(rm -rf .git)"
     ]
   },
@@ -99,5 +100,7 @@
   },
   "alwaysThinkingEnabled": true,
   "promptSuggestionEnabled": false,
-  "autoMemoryEnabled": false
+  "autoMemoryEnabled": false,
+  "preferredNotifChannel": "ghostty",
+  "skipAutoPermissionPrompt": true
 }

@@ -19,8 +19,6 @@ This document defines mandatory rules and prohibited actions for Claude Code.
 ### Git Operations
 - When executing `git add`, you MUST always specify individual file paths explicitly.
   - Example: `git add src/index.ts` `git add README.md`
-- When executing `git push`, you MUST always specify the remote and branch name explicitly.
-  - Example: `git push origin main`
 
 ---
 
@@ -28,9 +26,6 @@ This document defines mandatory rules and prohibited actions for Claude Code.
 
 ### Git Operations (Implementation Workflow)
 - **Do NOT commit automatically during implementation.** Even if a skill or plan instructs you to commit after each step/task, skip all intermediate commits. Only commit when the user explicitly asks (e.g., `/commit` or "commit this"). This applies to all workflows including superpowers plans, TDD cycles, and subagent-driven development.
-
-### Bash Command Execution
-- **NEVER** reflexively append `| head`, `| tail`, `| head -n <N>`, `| tail -n <N>`, or similar truncation pipes to Bash commands. Run commands as-is and let the full output come back by default.
 
 ### Generated Files
 - **NEVER** commit superpowers-generated documents (`docs/superpowers/plans/**`, `docs/superpowers/specs/**`). These are ephemeral working artifacts, not project deliverables.
