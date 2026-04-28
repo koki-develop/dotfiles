@@ -15,6 +15,9 @@ This document defines mandatory rules and prohibited actions for Claude Code.
 - When executing `git add`, you MUST always specify individual file paths explicitly.
   - Example: `git add src/index.ts` `git add README.md`
 
+### Technical Research
+- **Do NOT over-trust existing knowledge.** Specs, APIs, and behavior of libraries, frameworks, languages, SDKs, and CLI tools change frequently and your knowledge may be outdated or wrong. Whenever you design, implement, or answer questions involving an external technology, you MUST verify against official, up-to-date sources — covering API signatures, version-specific behavior, configuration options, syntax, and breaking changes. Never fill gaps with assumptions from prior training.
+
 ---
 
 ## MUST NOT (Prohibited Actions)
