@@ -13,6 +13,7 @@ terraform = "1.13.0"
 # npm packages
 "npm:renovate" = "43.140.0"
 "npm:mmcp" = "0.6.2"
+"npm:opensrc" = "0.7.2"
 "npm:pinpm" = "0.4.1"
 "npm:sfw" = "2.0.4"
 "npm:@google/gemini-cli" = "0.39.0"
@@ -22,7 +23,7 @@ terraform = "1.13.0"
 "gem:xvert" = "0.4.0"
 
 # aqua packages
-"aqua:anthropics/claude-code" = "2.1.119"
+"aqua:anthropics/claude-code" = "2.1.126"
 "aqua:evilmartians/lefthook" = "2.1.6"
 
 [settings]
