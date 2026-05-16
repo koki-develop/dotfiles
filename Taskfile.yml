@@ -6,6 +6,5 @@ tasks:
   default:
     cmds:
       - keeper shell
-      - git fetch
-      - git rebase origin/main
+      - git pull --rebase origin main
       - chezmoi apply -v
