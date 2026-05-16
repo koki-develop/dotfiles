@@ -7,16 +7,12 @@ ruby = "4.0.3"
 rust = "1.95.0"
 terraform = "1.13.0"
 
-# go tools
-"go:github.com/chrishrb/go-grip" = "0.8.0"
-
 # npm packages
 "npm:renovate" = "43.150.0"
 "npm:mmcp" = "0.6.2"
 "npm:opensrc" = "0.7.2"
 "npm:pinpm" = "0.4.1"
 "npm:sfw" = "2.0.4"
-"npm:@google/gemini-cli" = "0.41.2"
 "npm:@codize/cli" = "0.6.0"
 
 # ruby gems
