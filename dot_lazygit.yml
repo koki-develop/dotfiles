@@ -4,9 +4,3 @@ gui:
 git:
   pagers:
     - pager: delta --paging=never
-
-customCommands:
-  - key: "<c-a>" # ctrl + a
-    command: "git aicommit"
-    context: "files"
-    output: terminal
