@@ -20,6 +20,7 @@ casks = %w[
   obsidian
   raycast
   slack
+  suzuki-shunsuke/ghtkn/ghtkn
   todoist-app
   visual-studio-code
   vivaldi

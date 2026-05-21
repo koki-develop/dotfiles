@@ -243,8 +243,9 @@ function gwkt() {
       ;;
   esac
 }
-function wcd() {
-  cd "$(wtp cd "$@")"
+# gh
+gh() {
+  env GH_TOKEN=$(ghtkn get) command gh "$@"
 }
 # fd
 alias fd='fd --hidden --full-path'
@@ -272,6 +273,10 @@ alias tf='terraform'
 # vim
 alias vi='nvim'
 alias vim='nvim'
+# wtp
+function wcd() {
+  cd "$(wtp cd "$@")"
+}
 
 #
 # Hooks
