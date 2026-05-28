@@ -1,4 +1,6 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/suzuki-shunsuke/ghtkn-go-sdk/refs/heads/main/json-schema/ghtkn.json
 apps:
-  - name: koki-develop/read # The name to identify the app
-    client_id: Iv23liFwDSjQDi1dJswY # Your GitHub App Client ID
+  - name: koki-develop/write
+    client_id: Iv23liT97xzdAklQEfhn
+  - name: codize-dev/write
+    client_id: Iv23lirSKLqzkLsTebJl
