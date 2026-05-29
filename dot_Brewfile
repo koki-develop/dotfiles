@@ -7,7 +7,6 @@ taps = %w[
 ]
 
 casks = %w[
-  aws-vault-binary
   codex
   discord
   docker-desktop
@@ -32,6 +31,7 @@ formulae = %w[
   actionlint
   atuin
   awscli
+  aws-vault
   bat
   charmbracelet/tap/freeze
   charmbracelet/tap/vhs
