@@ -99,7 +99,7 @@ if [[ $- == *i* ]]; then
 
   # ghq repository selector widget
   function _ghq_cd_widget() {
-    REPO=$(gh q ls | gofzf --case-sensitive)
+    REPO=$(ghq list | gofzf --case-sensitive)
     if [ -n "${REPO}" ]; then
       cd "${GHQ_ROOT}/${REPO}"
     fi
