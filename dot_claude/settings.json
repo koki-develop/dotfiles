@@ -80,7 +80,7 @@
   "hooks": {
     "PostToolUse": [
       {
-        "matcher": "Bash|BashOutput|Read|Grep|Glob|mcp__.*",
+        "matcher": "Bash|Read|Grep|Glob|mcp__.*",
         "hooks": [
           {
             "type": "command",
