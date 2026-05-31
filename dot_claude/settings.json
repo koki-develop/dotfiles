@@ -78,6 +78,17 @@
     ]
   },
   "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Bash|BashOutput|Read|Grep|Glob|mcp__.*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/hooks/mask-secrets.sh"
+          }
+        ]
+      }
+    ],
     "Notification": [
       {
         "hooks": [
