@@ -14,6 +14,7 @@ terraform = "1.13.0"
 "npm:pinpm" = "0.4.1"
 "npm:sfw" = "2.0.6"
 "npm:@codize/cli" = "0.6.0"
+"npm:@fission-ai/openspec" = "1.4.1"
 
 # ruby gems
 "gem:xvert" = "0.4.0"
