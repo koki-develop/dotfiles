@@ -13,7 +13,7 @@ terraform = "1.15.6"
 "npm:opensrc" = "0.7.2"
 "npm:pinpm" = "0.4.1"
 "npm:sfw" = "2.0.6"
-"npm:@codize/cli" = "0.6.0"
+"npm:@codize/cli" = "0.7.0"
 "npm:@fission-ai/openspec" = "1.4.1"
 
 # ruby gems
