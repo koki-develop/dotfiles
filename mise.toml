@@ -10,7 +10,7 @@ terraform = "1.15.6"
 # npm packages
 "npm:renovate" = "43.240.0"
 "npm:mmcp" = "0.6.2"
-"npm:opensrc" = "0.7.2"
+"npm:opensrc" = "0.7.3"
 "npm:pinpm" = "0.4.1"
 "npm:sfw" = "2.0.6"
 "npm:@codize/cli" = "0.7.0"
