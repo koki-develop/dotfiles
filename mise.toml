@@ -20,7 +20,7 @@ terraform = "1.15.7"
 
 # aqua packages
 "aqua:anthropics/claude-code" = "2.1.205"
-"aqua:evilmartians/lefthook" = "2.1.9"
+"aqua:evilmartians/lefthook" = "2.1.10"
 
 [settings]
 experimental = true
