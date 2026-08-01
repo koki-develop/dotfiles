@@ -12,6 +12,7 @@ terraform = "1.15.8"
 "npm:opensrc" = "0.7.3"
 "npm:pinpm" = "0.4.1"
 "npm:sfw" = "2.0.6"
+"npm:swampman" = "0.0.1"
 "npm:@codize/cli" = "0.7.0"
 "npm:@fission-ai/openspec" = "1.6.0"
 
