@@ -17,6 +17,7 @@ This document defines mandatory rules and prohibited actions for Claude Code.
 
 ### Technical Research
 - **Do NOT over-trust existing knowledge.** Specs, APIs, and behavior of libraries, frameworks, languages, SDKs, and CLI tools change frequently and your knowledge may be outdated or wrong. Whenever you design, implement, or answer questions involving an external technology, you MUST verify against official, up-to-date sources — covering API signatures, version-specific behavior, configuration options, syntax, and breaking changes. Never fill gaps with assumptions from prior training.
+- **Use the `opensrc` skill to read dependency source.** Whenever you need to read the internal implementation of a third-party package (npm / PyPI / crates.io) or a public GitHub/GitLab/Bitbucket repo, you MUST use the `opensrc` skill. Do NOT read `node_modules/`, vendored copies, or other locally-installed dependency code directly, do NOT `git clone` the repo yourself, and do NOT use `gh api` (or any other GitHub API call) to fetch its source.
 
 ---
 
