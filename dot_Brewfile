@@ -66,7 +66,6 @@ formulae = %w[
   neovim
   pinact
   pinentry-mac
-  pnpm
   reattach-to-user-namespace
   ripgrep
   starship
