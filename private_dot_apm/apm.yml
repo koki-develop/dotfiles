@@ -9,6 +9,7 @@ targets:
 dependencies:
   apm:
     - upstash/context7/skills/find-docs
+    - vercel-labs/opensrc/skills/opensrc
   mcp: []
 includes: auto
 scripts: {}
