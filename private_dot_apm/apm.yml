@@ -1,0 +1,14 @@
+name: koki
+version: 1.0.0
+description: APM project for koki
+author: koki-develop
+
+targets:
+  - claude
+
+dependencies:
+  apm:
+    - upstash/context7/skills/find-docs
+  mcp: []
+includes: auto
+scripts: {}
