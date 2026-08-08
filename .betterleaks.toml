@@ -1,0 +1,12 @@
+title = 'betterleaks config (chezmoi dotfiles)'
+
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = 'Keeper Commander record UIDs in .chezmoidata.toml (vault identifiers, not secrets)'
+targetRules = ['generic-api-key']
+condition = 'AND'
+paths = ['''(^|/)\.chezmoidata\.toml$''']
+regexTarget = 'line'
+regexes = ['''_uid\s*=\s*["'][A-Za-z0-9_-]{22}["']''']
