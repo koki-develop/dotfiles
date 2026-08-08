@@ -104,11 +104,6 @@
     "type": "command",
     "command": "~/.claude/statusline.ts"
   },
-  "enabledPlugins": {
-    "skill-creator@claude-plugins-official": true,
-    "pr-review-toolkit@claude-plugins-official": true,
-    "superpowers@claude-plugins-official": true
-  },
   "language": "Japanese",
   "sandbox": {
     "enabled": true,
