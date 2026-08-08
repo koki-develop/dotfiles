@@ -2,5 +2,3 @@
 apps:
   - name: koki-develop/write
     client_id: Iv23liT97xzdAklQEfhn
-  - name: codize-dev/write
-    client_id: Iv23lirSKLqzkLsTebJl
