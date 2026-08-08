@@ -8,16 +8,12 @@ rust = "1.97.1"
 terraform = "1.15.8"
 
 # npm packages
-"npm:mmcp" = "0.6.2"
 "npm:opensrc" = "0.7.3"
 "npm:pinpm" = "0.4.1"
 "npm:sfw" = "2.0.6"
 "npm:swampman" = "0.0.2"
 "npm:@codize/cli" = "0.7.0"
 "npm:@fission-ai/openspec" = "1.7.0"
-
-# ruby gems
-"gem:xvert" = "0.4.0"
 
 # aqua packages
 "aqua:anthropics/claude-code" = "2.1.226"
