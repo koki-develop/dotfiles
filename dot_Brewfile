@@ -33,6 +33,7 @@ formulae = %w[
   awscli
   aws-vault
   bat
+  betterleaks
   charmbracelet/tap/freeze
   charmbracelet/tap/vhs
   chezmoi
@@ -48,7 +49,6 @@ formulae = %w[
   git
   git-delta
   git-secrets
-  gitleaks
   go-task/tap/go-task
   gping
   gpg
