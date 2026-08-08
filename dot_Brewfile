@@ -15,14 +15,12 @@ casks = %w[
   karabiner-elements
   keeper-password-manager
   koki-develop/tap/koto
-  obsidian
   raycast
   slack
   suzuki-shunsuke/ghtkn/ghtkn
+  thebrowsercompany-dia
   todoist-app
   visual-studio-code
-  vivaldi
-  xbar
   zed
 ]
 
