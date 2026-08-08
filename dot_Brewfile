@@ -3,7 +3,6 @@ taps = %w[
   go-task/tap
   k1LoW/tap
   koki-develop/tap
-  ynqa/tap
 ]
 
 casks = %w[
@@ -32,7 +31,6 @@ formulae = %w[
   atuin
   awscli
   aws-vault
-  bat
   betterleaks
   charmbracelet/tap/freeze
   charmbracelet/tap/vhs
@@ -40,7 +38,6 @@ formulae = %w[
   colordiff
   coreutils
   direnv
-  duckdb
   eza
   fd
   fzf
@@ -58,7 +55,6 @@ formulae = %w[
   openjdk
   jq
   k1LoW/tap/mo
-  lazygit
   libpq
   libyaml
   node
@@ -77,13 +73,11 @@ formulae = %w[
   ripgrep
   starship
   tmux
-  tokei
   usage
   uv
   watchexec
   wget
   xh
-  ynqa/tap/jnv
   yq
   zizmor
 ]
