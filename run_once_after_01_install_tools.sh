@@ -28,17 +28,3 @@ source "${ZINIT_HOME}/zinit.zsh"
 export MISE_GLOBAL_CONFIG_FILE="${HOME}/.local/share/chezmoi/mise.toml"
 mise install
 eval "$(mise activate zsh)"
-
-#
-# xbar-plugin-github
-# https://github.com/koki-develop/xbar-plugin-github
-#
-
-echo "Installing xbar-plugin-github..."
-
-(
-  cd ~/work/repos/github.com/koki-develop/xbar-plugin-github
-  make
-)
-
-echo "Done."
