@@ -2,13 +2,8 @@
 TODO
 ._/
 
-# local files
+# mise
 mise.local.toml
 
-# ai tools
+# Claude Code
 **/.claude/settings.local.json
-.playwright-mcp/
-
-# superpowers
-**/docs/superpowers/plans/**
-**/docs/superpowers/specs/**
