@@ -45,7 +45,6 @@ formulae = %w[
   ghalint
   git
   git-delta
-  git-secrets
   go-task/tap/go-task
   gping
   gpg

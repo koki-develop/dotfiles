@@ -6,9 +6,6 @@
 	signingkey = F11718FD5C011056
 [push]
 	default = nothing
-[init]
-	defaultBranch = main
-	templateDir = ~/.git-templates/git-secrets
 [fetch]
 	prune = true
 [core]
