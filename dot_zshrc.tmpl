@@ -16,8 +16,6 @@ setopt no_list_beep
 #
 
 export PATH="${HOME}/.local/bin:${PATH}"
-export PATH="${HOME}/.config/v-analyzer/bin:${PATH}"
-export PATH="${HOME}/scripts:${PATH}"
 export GPG_TTY=$(tty)
 export EDITOR='nvim'
 
@@ -122,9 +120,6 @@ eval "$(direnv hook zsh)"
 # aws-cli
 complete -C "$(which aws_completer)" aws
 
-# ollamit
-export OLLAMIT_MODEL=llama3:8b
-
 # gcloud
 source "${BREW_PREFIX}/share/google-cloud-sdk/path.zsh.inc"
 source "${BREW_PREFIX}/share/google-cloud-sdk/completion.zsh.inc"
@@ -134,9 +129,6 @@ export PATH="${BREW_PREFIX}/opt/mysql-client/bin:$PATH"
 
 # libpq
 export PATH="${BREW_PREFIX}/opt/libpq/bin:$PATH"
-
-# llvm
-export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 
 # ni
 export NI_USE_SOCKET_FIREWALL=1
@@ -150,7 +142,7 @@ export PATH="${BREW_PREFIX}/opt/openjdk/bin:$PATH"
 # terraform
 complete -o nospace -C "$(which terraform)" terraform
 
-# gh-q
+# ghq
 export GHQ_ROOT="${HOME}/work/repos"
 
 #
@@ -159,37 +151,43 @@ export GHQ_ROOT="${HOME}/work/repos"
 
 # aws
 alias av='aws-vault'
+
 # docker
 alias d='docker'
 alias dc='docker compose'
+
 # cat
 alias cat='gat'
 function gess() {
   gat --force-color "$@" | less -R
 }
+
 # cd
 alias ..2='cd ../..'
 alias ..3='cd ../../..'
 alias ..4='cd ../../../..'
 alias cdd='cd ~/.local/share/chezmoi'
 alias cdw="cd ${HOME}/work"
+
 # chezmoi
 alias ch='chezmoi'
+
 # diff
 alias diff='colordiff'
+
 # git
 alias g='git'
 alias gad='git add'
 alias gbr='git branch'
 alias gcom='git commit -m'
 alias gdi='git diff'
-alias gdem="git branch --merged | egrep -v '\*|develop|master|main' | xargs git branch --delete"
 alias gfe='git fetch'
 alias glo='git log --pretty=oneline'
 alias gnow='git commit --all --message "commit"'
 alias gre='git reset'
 alias grest='git restore'
 alias gst='git status'
+
 function gsw() {
   if [ $# -gt 0 ]; then
     git switch "$@"
@@ -201,53 +199,15 @@ function gsw() {
     git switch "${branch}"
   fi
 }
-function gwkt() {
-  case "$1" in
-    add)
-      if [[ -z "$2" ]]; then
-        echo "Usage: gwkt add <branch_name>"
-        return 1
-      fi
-      local branch_name="$2"
-      git worktree add .git/gwkt/worktrees/"$branch_name" -b "$branch_name"
-      ;;
-    rm)
-      if [[ -z "$2" ]]; then
-        echo "Usage: gwkt rm <branch_name>"
-        return 1
-      fi
-      local branch_name="$2"
-      git worktree remove .git/gwkt/worktrees/"$branch_name"
-      ;;
-    ls)
-      git worktree list --porcelain | grep "^worktree $(pwd)/.git/gwkt/worktrees" | sed "s|^worktree $(pwd)/.git/gwkt/worktrees/||"
-      ;;
-    cd)
-      if [[ -z "$2" ]]; then
-        echo "Usage: gwkt cd <branch_name>"
-        return 1
-      fi
-      local branch_name="$2"
-      local worktree_path=".git/gwkt/worktrees/$branch_name"
-      if [[ -d "$worktree_path" ]]; then
-        cd "$worktree_path"
-      else
-        echo "Worktree '$branch_name' does not exist"
-        return 1
-      fi
-      ;;
-    *)
-      echo "Usage: gwkt {add|rm|ls|cd} <branch_name>"
-      return 1
-      ;;
-  esac
-}
+
 # gh
 gh() {
-  env GH_TOKEN=$(ghtkn get) command gh "$@"
+  ghtkn exec -e GH_TOKEN -- gh "$@"
 }
+
 # fd
 alias fd='fd --hidden --full-path'
+
 # ls
 alias ls='eza -1 --icons always'
 alias l='ls'
@@ -255,23 +215,29 @@ alias la='ls -a'
 alias ll='ls -l'
 alias lla='ls -la'
 alias tree='ls --tree --git-ignore'
+
 # mkdir
 alias mkdir='mkdir -p'
-# mo
-alias mo='mo --open'
+
 # mv
 alias mv='mv -i'
+
 # rg
 alias rg='rg --ignore-case --hidden'
+
 # rm
 alias rm='gotrash put --rm-mode'
+
 # sed
 alias sed='gsed'
+
 # terraform
 alias tf='terraform'
+
 # vim
 alias vi='nvim'
 alias vim='nvim'
+
 # wtp
 function wcd() {
   cd "$(wtp cd "$@")"
