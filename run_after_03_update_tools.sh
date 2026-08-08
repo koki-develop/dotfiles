@@ -9,6 +9,12 @@ brew bundle --global
 brew upgrade
 
 #
+# APM
+#
+
+apm update --global --yes
+
+#
 # mise
 #
 
