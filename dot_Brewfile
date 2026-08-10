@@ -1,4 +1,5 @@
 taps = %w[
+  betterleaks/tap
   charmbracelet/tap
   go-task/tap
   k1LoW/tap
@@ -6,6 +7,7 @@ taps = %w[
 ]
 
 casks = %w[
+  betterleaks/tap/betterleaks
   codex
   discord
   docker-desktop
@@ -29,7 +31,6 @@ formulae = %w[
   atuin
   awscli
   aws-vault
-  betterleaks
   charmbracelet/tap/freeze
   charmbracelet/tap/vhs
   chezmoi
