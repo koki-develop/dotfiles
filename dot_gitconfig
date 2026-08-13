@@ -34,3 +34,5 @@
 	autostash = true
 [credential]
 	helper = !ghtkn git-credential
+[init]
+	defaultBranch = main
