@@ -18,6 +18,7 @@ casks = %w[
   keeper-password-manager
   koki-develop/tap/koto
   raycast
+  session-manager-plugin
   slack
   suzuki-shunsuke/ghtkn/ghtkn
   thebrowsercompany-dia
