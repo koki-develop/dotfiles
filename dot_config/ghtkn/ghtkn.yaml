@@ -1,4 +1,0 @@
-# yaml-language-server: $schema=https://raw.githubusercontent.com/suzuki-shunsuke/ghtkn-go-sdk/refs/heads/main/json-schema/ghtkn.json
-apps:
-  - name: koki-develop/write
-    client_id: Iv23liT97xzdAklQEfhn

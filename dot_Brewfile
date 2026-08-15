@@ -20,7 +20,6 @@ casks = %w[
   raycast
   session-manager-plugin
   slack
-  suzuki-shunsuke/ghtkn/ghtkn
   thebrowsercompany-dia
   todoist-app
   visual-studio-code
