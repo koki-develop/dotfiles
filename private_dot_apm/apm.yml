@@ -5,6 +5,7 @@ author: koki-develop
 
 targets:
   - claude
+  - codex
 
 dependencies:
   apm:
