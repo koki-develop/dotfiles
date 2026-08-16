@@ -124,9 +124,13 @@
       "allowLocalBinding": true
     },
     "ignoreViolations": {
-      "Bash": ["expansion-obfuscation", "potential-obfuscation"]
+      "Bash": [
+        "expansion-obfuscation",
+        "potential-obfuscation"
+      ]
     }
   },
   "tui": "fullscreen",
-  "autoMemoryEnabled": false
+  "autoMemoryEnabled": false,
+  "enableWorkflows": true
 }
