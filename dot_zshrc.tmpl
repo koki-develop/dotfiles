@@ -283,6 +283,15 @@ add-zsh-hook preexec _record_start_time
 add-zsh-hook precmd _notify_on_long_command
 
 #
+# Local settings
+#
+
+# Machine-specific settings (not managed by chezmoi, edit by hand)
+if [[ -f "${HOME}/.zshrc.local" ]]; then
+  source "${HOME}/.zshrc.local"
+fi
+
+#
 # Auto-start tmux
 #
 
