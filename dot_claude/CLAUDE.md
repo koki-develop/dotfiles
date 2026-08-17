@@ -24,7 +24,4 @@ This document defines mandatory rules and prohibited actions for Claude Code.
 ## MUST NOT (Prohibited Actions)
 
 ### Git Operations (Implementation Workflow)
-- **Do NOT commit automatically during implementation.** Even if a skill or plan instructs you to commit after each step/task, skip all intermediate commits. Only commit when the user explicitly asks (e.g., `/commit` or "commit this"). This applies to all workflows including superpowers plans, TDD cycles, and subagent-driven development.
-
-### Generated Files
-- **NEVER** commit superpowers-generated documents (`docs/superpowers/plans/**`, `docs/superpowers/specs/**`). These are ephemeral working artifacts, not project deliverables.
+- **Do NOT commit automatically during implementation.** Even if a skill or plan instructs you to commit after each step/task, skip all intermediate commits. Only commit when the user explicitly asks (e.g., `/commit` or "commit this"). This applies to all workflows including TDD cycles and subagent-driven development.
