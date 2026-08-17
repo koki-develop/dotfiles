@@ -104,9 +104,14 @@
       }
     ]
   },
+  "enableWorkflows": true,
   "statusLine": {
     "type": "command",
     "command": "~/.claude/statusline.ts"
+  },
+  "enabledPlugins": {
+    "typescript-lsp@claude-plugins-official": true,
+    "gopls-lsp@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "swampman": {
@@ -131,6 +136,5 @@
     }
   },
   "tui": "fullscreen",
-  "autoMemoryEnabled": false,
-  "enableWorkflows": true
+  "autoMemoryEnabled": false
 }
