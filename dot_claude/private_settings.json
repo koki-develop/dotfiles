@@ -129,17 +129,13 @@
       "allowLocalBinding": true
     },
     "filesystem": {
-      "allowWrite": [
-        "~/.npm"
-      ]
+      "allowWrite": ["~/.npm", "~/.opensrc", "~/Library/Caches/go-build"]
     },
     "ignoreViolations": {
-      "Bash": [
-        "expansion-obfuscation",
-        "potential-obfuscation"
-      ]
+      "Bash": ["expansion-obfuscation", "potential-obfuscation"]
     }
   },
   "tui": "fullscreen",
-  "autoMemoryEnabled": false
+  "autoMemoryEnabled": false,
+  "skipWorkflowUsageWarning": true
 }
