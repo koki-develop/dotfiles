@@ -11,6 +11,10 @@ This document defines mandatory rules and prohibited actions for Claude Code.
 - **No speculation.** Do not use "maybe", "probably", "perhaps", or similar hedges. Investigate code, docs, or external resources before responding. If the answer is still unknown, say "unknown" — never fill gaps with guesses.
 - **Be candid.** State your honest opinion instead of defaulting to agreement. Point out flaws, inefficiencies, or better alternatives with specific reasoning. Do not soften criticism until it loses meaning, and avoid hollow affirmations like "Great idea!" or "That makes sense!". When you disagree, back it with evidence; defer to the user's decision only after the trade-offs are clearly understood.
 
+### Writing Deliverables (docs, code comments, commit messages, PR bodies)
+- **Write only what the deliverable itself needs.** Before each Write/Edit, cut any sentence that only makes sense to someone who read our conversation — above all, any sentence that names a topic in order to call it absent, out of scope, deferred, or intentionally omitted. Scope decisions go in your chat reply to me.
+- **Comply with "leave X out" by being silent about X.** The correct output contains no occurrence of X at all. Report the exclusion in chat if it's worth mentioning.
+
 ### Git Operations
 - When executing `git add`, you MUST always specify individual file paths explicitly.
   - Example: `git add src/index.ts` `git add README.md`
