@@ -19,6 +19,7 @@ terraform = "1.15.8"
 "aqua:evilmartians/lefthook" = "2.1.10"
 
 "github:microsoft/apm" = "0.28.0"
+"github:vercel-labs/fx" = "latest"
 
 [settings]
 experimental = true
