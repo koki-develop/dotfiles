@@ -1,13 +1,10 @@
 ---
 name: commit
-description: |
-  Create a git commit for work done in the current session. Use this skill whenever the user invokes /commit or asks to commit their changes. This skill handles file selection (session-changed files, staged files, or explicitly specified files), commit message generation based on the repository's existing style, and outputs a summary of the commit. MUST be used for any commit operation — never commit without following this workflow.
+description: Create a git commit for the current session's work. Use whenever the user invokes /commit or asks to commit changes. MUST be used for any commit operation — never commit without following this workflow.
 allowed-tools: Bash(git add *), Bash(git commit *)
 ---
 
 # Commit
-
-Create a git commit with intelligent file selection and style-consistent messages.
 
 ## Current git state
 
@@ -20,44 +17,14 @@ Unstaged changes:
 Untracked files:
 !`git ls-files --others --exclude-standard`
 
-Recent commit messages (for style reference):
+Recent commit messages (style reference):
 !`git log --format="%s" -20`
 
-## Step 1: Determine commit targets
+## Workflow
 
-Select files using this priority:
+1. **Pick targets** — in priority order: files named in `$ARGUMENTS`; else files you changed this session; else whatever is already staged. If none apply, tell the user there's nothing to commit and stop.
+2. **Stage** — `git add` each path individually, never `.` / `-A` / `--all`. The paths listed above are already relative to cwd.
+3. **Commit** — write a message that matches the style of the recent messages above.
+4. **Report** — the message, the full SHA, and the committed files.
 
-1. **Explicit targets** — if the user specified files in `$ARGUMENTS`, use exactly those.
-2. **Session-changed files** — files you (Claude) modified during this conversation (via any tool — Edit, Write, Bash, NotebookEdit, etc.). Cross-reference your memory of which files you touched against the git state above. Include both staged and unstaged changes for those files.
-3. **Already staged files** — if you didn't modify any files this session (e.g., the user invoked /commit after staging manually), use whatever is already staged.
-
-If none of these produce any files, tell the user there's nothing to commit and stop.
-
-## Step 2: Stage the files
-
-The file lists above use `--relative`, so paths are already relative to cwd. Pass them directly to `git add` — never `cd` to the repo root.
-
-Run `git add` with each file path specified individually. Never use `git add .`, `git add --all`, or `git add -A`.
-
-The sandbox blocks `.git/` writes, so run `git add` with `dangerouslyDisableSandbox: true`.
-
-After staging, verify with `git diff --staged --name-only --relative` that all intended files are included.
-
-## Step 3: Generate the commit message
-
-Write a commit message that:
-- Follows the style and conventions visible in the recent commit messages above (tense, capitalization, length, format)
-- Summarizes what changed and why in a way that's useful to someone reading the log later
-- Uses a single line unless the change is complex enough to warrant a body
-
-## Step 4: Commit
-
-The sandbox blocks access to `~/.gnupg`, which is required for GPG-signed commits. Run `git commit` with `dangerouslyDisableSandbox: true`.
-
-## Step 5: Output the result
-
-After a successful commit, run `git log -1 --format="%H"` and report:
-
-- **Commit message** — the message you wrote
-- **SHA** — the full commit hash
-- **Files** — list of all committed files
+`git add` and `git commit` need `dangerouslyDisableSandbox: true`; the sandbox blocks `.git/` writes and `~/.gnupg`.
