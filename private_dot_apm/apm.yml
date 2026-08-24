@@ -11,6 +11,7 @@ dependencies:
   apm:
     - upstash/context7/skills/find-docs
     - vercel-labs/opensrc/skills/opensrc
+    - koki-develop/skills
   mcp: []
 includes: auto
 scripts: {}
