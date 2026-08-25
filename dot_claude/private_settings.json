@@ -72,8 +72,8 @@
       "Bash(git add .)",
       "Bash(git add -A *)",
       "Bash(git add --all *)",
-      "Bash(git push *)",
       "Bash(sudo rm *)",
+      "Bash(security *)",
       "Bash(rm -rf /)",
       "Bash(rm -rf ~)",
       "Bash(rm -rf /*)",
@@ -125,6 +125,7 @@
   "sandbox": {
     "enabled": true,
     "autoAllowBashIfSandboxed": true,
+    "excludedCommands": ["gh *"],
     "network": {
       "allowLocalBinding": true
     },
