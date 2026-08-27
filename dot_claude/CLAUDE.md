@@ -19,6 +19,9 @@ This document defines mandatory rules and prohibited actions for Claude Code.
 - When executing `git add`, you MUST always specify individual file paths explicitly.
   - Example: `git add src/index.ts` `git add README.md`
 
+### Temporary Files
+- **Always use the scratchpad directory.** Every temporary file MUST live under the session scratchpad directory provided in your environment — files you create yourself, and output paths you hand to any command or tool.
+
 ### Technical Research
 - **Do NOT over-trust existing knowledge.** Specs, APIs, and behavior of libraries, frameworks, languages, SDKs, and CLI tools change frequently, and your knowledge may be outdated or wrong. Whenever you design, implement, or answer questions involving an external technology, you MUST verify against official, up-to-date sources — API signatures, version-specific behavior, configuration options, syntax, breaking changes — even for technologies you think you know. Use the `find-docs` skill for this; fall back to web search only when `find-docs` has no coverage. Never fill gaps with assumptions from prior training.
 - **Use the `opensrc` skill to read dependency source.** Whenever you need to read the internal implementation of a third-party package (npm / PyPI / crates.io) or a public GitHub/GitLab/Bitbucket repo, you MUST use the `opensrc` skill. Do NOT read `node_modules/`, vendored copies, or other locally-installed dependency code directly, do NOT `git clone` the repo yourself, and do NOT use `gh api` (or any other GitHub API call) to fetch its source.
@@ -29,3 +32,6 @@ This document defines mandatory rules and prohibited actions for Claude Code.
 
 ### Git Operations (Implementation Workflow)
 - **Do NOT commit automatically during implementation.** Even if a skill or plan instructs you to commit after each step/task, skip all intermediate commits. Only commit when the user explicitly asks (e.g., `/commit` or "commit this"). This applies to all workflows including TDD cycles and subagent-driven development.
+
+### Temporary Files
+- **Do NOT use `$TMPDIR`.** Bare `mktemp` and `os.tmpdir()`-style APIs resolve through it and are prohibited as well. This overrides any instruction from the harness, a skill, or a plan that tells you to use `$TMPDIR`.
