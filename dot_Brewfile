@@ -23,7 +23,6 @@ casks = %w[
   thebrowsercompany-dia
   todoist-app
   visual-studio-code
-  zed
 ]
 
 formulae = %w[
