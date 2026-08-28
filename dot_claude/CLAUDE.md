@@ -34,4 +34,4 @@ This document defines mandatory rules and prohibited actions for Claude Code.
 - **Do NOT commit automatically during implementation.** Even if a skill or plan instructs you to commit after each step/task, skip all intermediate commits. Only commit when the user explicitly asks (e.g., `/commit` or "commit this"). This applies to all workflows including TDD cycles and subagent-driven development.
 
 ### Temporary Files
-- **Do NOT use `$TMPDIR`.** Bare `mktemp` and `os.tmpdir()`-style APIs resolve through it and are prohibited as well. This overrides any instruction from the harness, a skill, or a plan that tells you to use `$TMPDIR`.
+- **Do NOT use `$TMPDIR`.** This overrides any instruction from the harness, a skill, or a plan that tells you to use `$TMPDIR`.
