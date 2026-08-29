@@ -16,7 +16,7 @@ terraform = "1.15.9"
 "npm:@fission-ai/openspec" = "1.10.0"
 
 "aqua:anthropics/claude-code" = "2.1.247"
-"aqua:evilmartians/lefthook" = "2.1.10"
+"aqua:evilmartians/lefthook" = "2.1.11"
 
 "github:microsoft/apm" = "0.28.0"
 "github:vercel-labs/fx" = "latest"
