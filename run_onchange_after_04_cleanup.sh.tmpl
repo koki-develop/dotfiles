@@ -1,0 +1,35 @@
+#!/bin/zsh
+
+# {{ output "date" "+%V" | trim }}
+
+#
+# mise
+#
+
+if command -v mise >/dev/null 2>&1; then
+  mise prune --tools -y || true
+fi
+
+#
+# uv
+#
+
+if command -v uv >/dev/null 2>&1; then
+  uv cache prune || true
+fi
+
+#
+# pnpm
+#
+
+if command -v pnpm >/dev/null 2>&1; then
+  pnpm store prune || true
+fi
+
+#
+# npm
+#
+
+if command -v npm >/dev/null 2>&1; then
+  npm cache verify || true
+fi
