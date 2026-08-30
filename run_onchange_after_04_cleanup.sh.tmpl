@@ -15,7 +15,7 @@ fi
 #
 
 if command -v uv >/dev/null 2>&1; then
-  uv cache prune || true
+  uv cache prune --force || true
 fi
 
 #
