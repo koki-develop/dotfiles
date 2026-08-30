@@ -9,7 +9,8 @@
   },
   "permissions": {
     "allow": [
-      "Bash(betterleaks *)",
+      "Bash(git add *)",
+      "Bash(git fetch *)",
       "Bash(gh auth status)",
       "Bash(gh issue list *)",
       "Bash(gh issue view *)",
@@ -26,47 +27,52 @@
       "Bash(gh run view *)",
       "Bash(gh run watch *)",
       "Bash(gh search *)",
-      "Bash(git add *)",
-      "Bash(git fetch *)",
+
+      "Bash(betterleaks *)",
       "Bash(npm info *)",
       "Bash(opensrc *)",
-      "WebSearch",
-      "WebFetch"
+
+      "WebFetch",
+      "WebSearch"
     ],
     "deny": [
-      "Bash(gh auth token *)",
+      "Bash(gh release create *)",
+      "Bash(gh release delete *)",
       "Bash(gh repo archive *)",
       "Bash(gh repo create *)",
       "Bash(gh repo delete *)",
       "Bash(gh repo rename *)",
       "Bash(gh repo unarchive *)",
-      "Bash(gh release create *)",
-      "Bash(gh release delete *)",
-      "Bash(gh secret set *)",
-      "Bash(gh variable set *)",
+
+      "Bash(bun publish *)",
       "Bash(npm publish *)",
       "Bash(pnpm publish *)",
-      "Bash(bun publish *)",
-      "Bash(chezmoi destroy *)",
-      "Bash(chezmoi forget *)",
+
       "Bash(terraform apply *)",
       "Bash(terraform destroy *)",
+
       "Bash(env *)",
-      "Bash(printenv *)",
+      "Bash(gh auth token *)",
+      "Bash(gh secret set *)",
+      "Bash(gh variable set *)",
       "Bash(keeper *)",
-      "Edit(~/.zshrc)",
+      "Bash(printenv *)",
+      "Bash(security *)",
       "Read(.env*)",
       "Read(~/.ssh/**)",
       "Edit(~/.ssh/**)",
+      "Edit(~/.zshrc)",
+
+      "Bash(chezmoi destroy *)",
+      "Bash(chezmoi forget *)",
       "Bash(git add .)",
       "Bash(git add -A *)",
       "Bash(git add --all *)",
-      "Bash(sudo rm *)",
-      "Bash(security *)",
+      "Bash(rm -rf .git)",
       "Bash(rm -rf /)",
-      "Bash(rm -rf ~)",
       "Bash(rm -rf /*)",
-      "Bash(rm -rf .git)"
+      "Bash(rm -rf ~)",
+      "Bash(sudo rm *)"
     ],
     "defaultMode": "auto"
   },
