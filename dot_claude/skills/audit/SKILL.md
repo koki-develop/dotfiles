@@ -1,13 +1,14 @@
 ---
 name: audit
 description: |
-  Audit an entire project for stale comments and documentation, implementations that drift from the declared architecture, bugs, security risks, and blind spots, then report every confirmed problem with a recommended action. Use when the user invokes /audit, or asks for a full-project inspection, health check, or sweep ("プロジェクト全体を精査して", "問題を洗い出して"). Read-only, and heavy — it runs a many-agent Workflow. Prefer /code-review for a diff.
+  Audit an entire project for stale comments and documentation, implementations that drift from the declared architecture, bugs, security risks, and blind spots, then report every confirmed problem with a recommended action. Read-only, and heavy — it runs a many-agent Workflow. Prefer /code-review for a diff.
 argument-hint: "[--light|--deep] [path]"
+disable-model-invocation: true
 ---
 
 # audit
 
-Read-only. Never edit a file, never propose a command that would.
+Read-only. Never edit a file, never propose a command that would. Running a command is confined to Ground truth; every other phase reads.
 
 ## Procedure
 
@@ -58,9 +59,19 @@ Three agents in parallel, producing the standard everything downstream is judged
 
 - **Declared** — the architecture, conventions, and invariants the project claims for itself in its own prose, each cited to where it says so
 - **Actual** — the real module boundaries, dependency direction, and error-handling patterns, as the code implements them
-- **Ground truth** — every analyzer the project already configures, run in check-only mode, returning each diagnostic as a finding with none dropped or summarized. `TODO|FIXME|HACK|XXX` markers and credential-shaped literals come back separately, as leads for Inspect rather than findings
+- **Ground truth** — the project's own checks, run and read as evidence, returning each diagnostic as a finding with none dropped or summarized. `TODO|FIXME|HACK|XXX` markers and credential-shaped literals come back separately, as leads for Inspect rather than findings
 
-Never install a tool, run a build, run tests, or run a project script. Analyzer findings enter the pool pre-confirmed, bypassing Verify. Where Declared and Actual disagree, the gap is a seed finding for `drift`.
+What Ground truth may run, by flag:
+
+| Flag | Runs |
+|---|---|
+| `--light` | The analyzers the project already configures, in check-only mode |
+| (default) | Those, plus the declared type or compile check — `tsc --noEmit`, `go vet`, `cargo clippy` |
+| `--deep` | Those, plus the declared test command |
+
+Only commands the project declares for itself — in its configuration, its task runner, or its CI — and only in the form it declares them. Never install a tool. Never run a project script for anything past those checks: a script named for setup, apply, deploy, or update mutates the machine, whatever else it also does. Run each command once, one at a time, and let build artifacts be the only trace left behind; a command that would write a tracked file or reach the network is dropped instead. One that cannot run is a stated coverage limit, not a finding.
+
+Ground truth findings enter the pool pre-confirmed, bypassing Verify. Where Declared and Actual disagree, the gap is a seed finding for `drift`.
 
 ### Partition
 
@@ -108,7 +119,7 @@ Key on `path` plus overlapping line range plus lens group; one agent merges the 
 
 Independent voters per finding, each cast as trying to refute it: three votes for `critical` and `high`, two for `medium` and `low`.
 
-Every voter reads the cited lines first. If the quote does not match what is there, the finding is refuted as `misread` — terminally, on that one vote. Otherwise those lines are only the start: read the call sites, tests, configuration, and history the finding turns on. When it turns on how something external behaves, settle it against that thing's own authority at the version this project pins, never from memory.
+A voter settles a finding by reading, never by running the project against it. Every voter reads the cited lines first. If the quote does not match what is there, the finding is refuted as `misread` — terminally, on that one vote. Otherwise those lines are only the start: read the call sites, tests, configuration, and history the finding turns on. When it turns on how something external behaves, settle it against that thing's own authority at the version this project pins, never from memory.
 
 Refutation categories: `misread`, `unreachable` (guarded upstream so it cannot fire), `intentional` (evidenced by documentation or by consistent practice), `out-of-scope` (taste rather than defect), `duplicate`. Every vote cites evidence. A voter that cannot reach the authority it needs returns `unresolved` — an abstention, not a refutation, and neither is a `null` from a skipped or errored agent.
 
