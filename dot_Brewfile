@@ -13,6 +13,7 @@ casks = %w[
   docker-desktop
   gcloud-cli
   ghostty
+  go-task/tap/go-task
   hiddenbar
   karabiner-elements
   keeper-password-manager
@@ -43,7 +44,6 @@ formulae = %w[
   ghalint
   git
   git-delta
-  go-task/tap/go-task
   gping
   gpg
   gsed
