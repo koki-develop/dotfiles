@@ -68,6 +68,7 @@
       "Bash(git add .)",
       "Bash(git add -A *)",
       "Bash(git add --all *)",
+      "Bash(git stash *)",
       "Bash(rm -rf .git)",
       "Bash(rm -rf /)",
       "Bash(rm -rf /*)",
