@@ -15,7 +15,7 @@ terraform = "1.16.0"
 "npm:@codize/cli" = "0.7.0"
 "npm:@fission-ai/openspec" = "1.11.0"
 
-"aqua:anthropics/claude-code" = "2.1.259"
+"aqua:anthropics/claude-code" = "2.1.261"
 "aqua:evilmartians/lefthook" = "2.1.12"
 
 "github:microsoft/apm" = "0.28.0"
