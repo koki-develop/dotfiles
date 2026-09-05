@@ -36,6 +36,7 @@
       "WebSearch"
     ],
     "deny": [
+      "Bash(gh issue create *)",
       "Bash(gh release create *)",
       "Bash(gh release delete *)",
       "Bash(gh repo archive *)",
