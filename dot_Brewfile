@@ -15,7 +15,6 @@ casks = %w[
   ghostty
   go-task/tap/go-task
   hiddenbar
-  karabiner-elements
   keeper-password-manager
   koki-develop/tap/koto
   raycast
