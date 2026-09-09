@@ -45,11 +45,11 @@ Manual update command:
 - Development tools versioned and managed through mise.toml (Go, Node, Python, Ruby, Rust, Bun, etc.)
 - Homebrew packages defined in dot_Brewfile using Ruby DSL
 - Shell configuration in dot_zshrc.tmpl with zinit for plugin management
-- Terminal: Ghostty (dot_config/ghostty/), Alacritty (dot_config/alacritty/)
+- Terminal: Ghostty (dot_config/ghostty/)
 - Prompt: Starship (dot_config/starship.toml)
 - Shell history: Atuin (dot_config/private_atuin/)
-- Editor: Neovim (installed via Homebrew), Zed (dot_config/zed/)
-- Claude Code: dot_claude/ (settings.json, skills, agents)
+- Editor: Neovim (installed via Homebrew)
+- Claude Code: dot_claude/ (settings.json, skills)
 - Global mise config at ~/.local/share/chezmoi/mise.toml (referenced via MISE_GLOBAL_CONFIG_FILE)
 
 ### Key Dependencies
@@ -66,7 +66,6 @@ Manual update command:
 - SSH keys and sensitive data managed as private templates
 - Keeper Commander integration for secret management and credential injection
 - GPG signing enabled for Git commits
-- git-secrets configured for AWS credential detection
 - AWS configuration managed through Keeper Commander templates
 
 ### Git Conventions

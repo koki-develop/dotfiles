@@ -57,7 +57,6 @@ eval "$(mise activate zsh)"
 # Completion
 #
 
-fpath=("${HOME}/.zsh/completion" $fpath)
 autoload bashcompinit && bashcompinit
 autoload -Uz compinit
 if [[ -n ${ZDOTDIR:-$HOME}/.zcompdump(#qN.mh+24) ]]; then
@@ -76,9 +75,6 @@ done
 #
 
 if [[ $- == *i* ]]; then
-  # push-line: Temporarily shelve the current command line
-  bindkey '^S' push-line
-
   # edit-command-line: Edit command in $EDITOR
   autoload -U edit-command-line
   zle -N edit-command-line
