@@ -56,6 +56,7 @@ formulae = %w[
   node
   mise
   mysql-client
+  koki-develop/tap/blot
   koki-develop/tap/clive
   koki-develop/tap/cubby
   koki-develop/tap/docker-tags
