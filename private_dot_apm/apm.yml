@@ -12,6 +12,7 @@ dependencies:
     - upstash/context7/skills/find-docs
     - vercel-labs/opensrc/skills/opensrc
     - koki-develop/skills
+    - anthropics/claude-plugins-community/eli5
   mcp: []
 includes: auto
 scripts: {}
