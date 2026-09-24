@@ -33,3 +33,27 @@ fi
 if command -v npm >/dev/null 2>&1; then
   npm cache verify || true
 fi
+
+#
+# bun
+#
+
+if command -v bun >/dev/null 2>&1; then
+  bun pm cache rm || true
+fi
+
+#
+# go
+#
+
+if command -v go >/dev/null 2>&1; then
+  go clean -cache || true
+fi
+
+#
+# brew
+#
+
+if command -v brew >/dev/null 2>&1; then
+  brew cleanup --prune=all || true
+fi
