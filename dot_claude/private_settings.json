@@ -1,4 +1,5 @@
 {
+  "remoteControlAtStartup": true,
   "attribution": {
     "sessionUrl": false
   },
@@ -6,7 +7,8 @@
     "DISABLE_AUTOUPDATER": "1",
     "CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR": "1",
     "CLAUDE_CODE_DISABLE_TERMINAL_TITLE": "1",
-    "CLAUDE_CODE_THRIFTY_SONIC": "0"
+    "CLAUDE_CODE_THRIFTY_SONIC": "0",
+    "NODE_USE_ENV_PROXY": "1"
   },
   "permissions": {
     "allow": [
@@ -120,16 +122,7 @@
   },
   "enabledPlugins": {
     "typescript-lsp@claude-plugins-official": true,
-    "gopls-lsp@claude-plugins-official": true,
-    "swampman@swampman": true
-  },
-  "extraKnownMarketplaces": {
-    "swampman": {
-      "source": {
-        "source": "github",
-        "repo": "koki-develop/swampman"
-      }
-    }
+    "gopls-lsp@claude-plugins-official": true
   },
   "language": "Japanese",
   "sandbox": {
@@ -137,10 +130,16 @@
     "autoAllowBashIfSandboxed": true,
     "excludedCommands": ["gh *"],
     "network": {
-      "allowLocalBinding": true
+      "allowLocalBinding": true,
+      "allowedDomains": ["npm.flatt.tech", "context7.com", "*.context7.com"]
     },
     "filesystem": {
-      "allowWrite": ["~/.npm", "~/.opensrc", "~/Library/Caches/go-build"]
+      "allowWrite": [
+        "~/.npm",
+        "~/.opensrc",
+        "~/.gotrash",
+        "~/Library/Caches/go-build"
+      ]
     },
     "ignoreViolations": {
       "Bash": ["expansion-obfuscation", "potential-obfuscation"]
@@ -148,5 +147,7 @@
   },
   "tui": "fullscreen",
   "autoMemoryEnabled": false,
-  "skipWorkflowUsageWarning": true
+  "skipWorkflowUsageWarning": true,
+  "preferredNotifChannel": "ghostty",
+  "agentPushNotifEnabled": true
 }
