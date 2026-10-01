@@ -68,10 +68,8 @@ formulae = %w[
   neovim
   pinact
   pinentry-mac
-  reattach-to-user-namespace
   ripgrep
   starship
-  tmux
   usage
   uv
   watchexec
