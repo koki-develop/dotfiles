@@ -46,6 +46,7 @@ formulae = %w[
   gping
   gpg
   gsed
+  herdr
   hyperfine
   imagemagick
   openjdk
