@@ -13,6 +13,7 @@ dependencies:
     - vercel-labs/opensrc/skills/opensrc
     - koki-develop/skills
     - anthropics/claude-plugins-community/eli5
+    - herdrdev/herdr/skills/herdr
   mcp: []
 includes: auto
 scripts: {}

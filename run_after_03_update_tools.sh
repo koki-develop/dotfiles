@@ -21,6 +21,13 @@ apm update --global --yes
 mise install
 
 #
+# herdr
+#
+
+herdr integration install claude
+herdr integration install codex
+
+#
 # Zinit
 #
 
