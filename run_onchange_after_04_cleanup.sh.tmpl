@@ -57,3 +57,12 @@ fi
 if command -v brew >/dev/null 2>&1; then
   brew cleanup --prune=all || true
 fi
+
+#
+# docker
+#
+
+if command -v docker >/dev/null 2>&1 && docker info >/dev/null 2>&1; then
+  docker builder prune -a -f || true
+  docker image prune -a -f || true
+fi
