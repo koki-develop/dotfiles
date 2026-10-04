@@ -18,12 +18,16 @@ description = "break pane to new tab"
 
 [ui]
 copy_on_select = false
+prompt_new_tab_name = false
 tab_bar_right = [
   { type = "datetime", format = "%Y-%m-%d %H:%M" },
 ]
 
 [ui.toast]
 delivery = "terminal"
+
+[ui.toast.clipboard]
+enabled = false
 
 [experimental]
 reveal_hidden_cursor_for_cjk_ime = true
