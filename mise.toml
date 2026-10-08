@@ -4,7 +4,7 @@ go = "1.27.1"
 node = "24.21.0"
 python = "3.14.8"
 ruby = "4.0.7"
-rust = "1.98.1"
+rust = "1.99.0"
 terraform = "1.16.4"
 
 "npm:opensrc" = "0.7.3"
