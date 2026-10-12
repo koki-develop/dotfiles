@@ -6,7 +6,7 @@
 
 brew update
 brew bundle --global
-brew upgrade
+brew upgrade --yes
 
 #
 # APM
