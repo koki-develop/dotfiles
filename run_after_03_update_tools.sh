@@ -5,7 +5,7 @@
 #
 
 brew update
-brew bundle --global
+brew bundle --global --no-upgrade
 brew upgrade --yes
 
 #
