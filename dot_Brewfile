@@ -76,7 +76,6 @@ formulae = %w[
   wget
   xh
   yq
-  zizmor
 ]
 
 taps.each { |t| tap t }
