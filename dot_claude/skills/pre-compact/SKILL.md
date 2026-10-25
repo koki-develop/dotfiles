@@ -1,7 +1,6 @@
 ---
 name: pre-compact
 description: Writes a detailed handoff of the current session to a file so work can resume accurately after /compact. Use when the user invokes /pre-compact before compacting the conversation.
-disable-model-invocation: true
 ---
 
 # Pre-Compact

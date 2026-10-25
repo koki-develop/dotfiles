@@ -1,7 +1,6 @@
 ---
 name: post-compact
 description: Rebuilds an accurate understanding of the session's work after /compact by reading the handoff file and checking it against the current codebase and other up-to-date sources. Use when the user invokes /post-compact after compacting the conversation.
-disable-model-invocation: true
 ---
 
 # Post-Compact
