@@ -18,7 +18,7 @@ terraform = "1.16.6"
 "aqua:anthropics/claude-code" = "2.1.311"
 "aqua:evilmartians/lefthook" = "2.2.2"
 
-"github:microsoft/apm" = "0.33.0"
+"github:microsoft/apm" = "0.34.0"
 "github:vercel-labs/fx" = "latest"
 
 [settings]
