@@ -5,7 +5,7 @@ node = "24.22.1"
 python = "3.15.1"
 ruby = "4.0.8"
 rust = "1.99.1"
-terraform = "1.16.6"
+terraform = "1.17.0"
 
 "npm:opensrc" = "0.7.3"
 "npm:pinpm" = "0.4.1"
