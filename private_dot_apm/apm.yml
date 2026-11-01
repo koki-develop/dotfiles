@@ -14,6 +14,7 @@ dependencies:
     - koki-develop/skills
     - anthropics/claude-plugins-community/eli5
     - herdrdev/herdr/skills/herdr
+    - coji/natural-japanese/skills/natural-japanese
   mcp: []
 includes: auto
 scripts: {}

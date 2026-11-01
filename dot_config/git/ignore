@@ -7,3 +7,5 @@ mise.local.toml
 
 # Claude Code
 **/.claude/settings.local.json
+
+**/.claude/.cc-writes/
