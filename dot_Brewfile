@@ -22,7 +22,6 @@ casks = %w[
   slack
   thebrowsercompany-dia
   todoist-app
-  visual-studio-code
 ]
 
 formulae = %w[
@@ -30,8 +29,6 @@ formulae = %w[
   atuin
   awscli
   aws-vault
-  charmbracelet/tap/freeze
-  charmbracelet/tap/vhs
   chezmoi
   colordiff
   coreutils
@@ -40,12 +37,9 @@ formulae = %w[
   fd
   fzf
   gh
-  ghalint
   git
   git-delta
-  gping
   gpg
-  gsed
   herdr
   hyperfine
   imagemagick
