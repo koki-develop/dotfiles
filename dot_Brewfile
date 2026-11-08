@@ -74,6 +74,8 @@ formulae = %w[
   yq
 ]
 
+def trust_option(name) = name.include?("/") ? { trusted: true } : {}
+
 taps.each { |t| tap t }
-casks.each { |c| cask c }
-formulae.each { |f| brew f }
+casks.each { |c| cask c, **trust_option(c) }
+formulae.each { |f| brew f, **trust_option(f) }
