@@ -24,7 +24,9 @@ tasks:
           restic backup \
           "$HOME/.claude/projects" \
           "$HOME/.claude/file-history" \
-          "$HOME/.claude/history.jsonl"
+          "$HOME/.claude/history.jsonl" \
+          "$HOME/.claude/paste-cache" \
+          "$HOME/.claude/uploads"
         aws-vault exec claude-code-backup -- restic forget --keep-last 3 --prune
 
   restore-claude:
