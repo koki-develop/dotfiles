@@ -37,6 +37,7 @@ formulae = %w[
   fd
   fzf
   gh
+  ghq
   git
   git-delta
   gpg
