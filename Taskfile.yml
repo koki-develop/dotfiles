@@ -2,9 +2,37 @@
 
 version: "3"
 
+env:
+  RESTIC_REPOSITORY: s3:s3.ap-northeast-1.amazonaws.com/claude-code-backup-106415379964-ap-northeast-1-an
+
 tasks:
   default:
     cmds:
       - git pull --rebase origin main
       - keeper login
       - chezmoi apply -v
+
+  backup-claude:
+    desc: Back up Claude Code sessions to S3 with restic
+    cmds:
+      - |-
+        set -e
+        read -rsp "enter password for repository: " RESTIC_PASSWORD
+        echo
+        export RESTIC_PASSWORD
+        aws-vault exec claude-code-backup -- \
+          restic backup \
+          "$HOME/.claude/projects" \
+          "$HOME/.claude/file-history" \
+          "$HOME/.claude/history.jsonl"
+        aws-vault exec claude-code-backup -- restic forget --keep-last 3 --prune
+
+  restore-claude:
+    desc: Restore Claude Code sessions from the latest restic snapshot
+    prompt: Restore Claude Code sessions from the latest snapshot into ~/.claude?
+    cmds:
+      - |-
+        aws-vault exec claude-code-backup -- \
+          restic restore latest \
+          --target / \
+          --overwrite if-newer

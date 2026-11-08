@@ -62,6 +62,7 @@ formulae = %w[
   neovim
   pinact
   pinentry-mac
+  restic
   ripgrep
   starship
   usage
