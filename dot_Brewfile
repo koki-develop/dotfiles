@@ -17,6 +17,7 @@ casks = %w[
   hiddenbar
   keeper-password-manager
   koki-develop/tap/koto
+  linear
   raycast
   session-manager-plugin
   slack
