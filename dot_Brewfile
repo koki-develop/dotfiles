@@ -36,6 +36,7 @@ formulae = %w[
   direnv
   eza
   fd
+  ffmpeg
   fzf
   gh
   ghq
