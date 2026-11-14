@@ -7,7 +7,7 @@ ruby = "4.0.9"
 rust = "1.99.1"
 terraform = "1.17.1"
 
-"claude-code" = "2.1.322"
+claude-code = "2.1.323"
 
 "npm:opensrc" = "0.7.3"
 "npm:pinpm" = "0.4.1"
