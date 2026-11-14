@@ -7,6 +7,8 @@ ruby = "4.0.9"
 rust = "1.99.1"
 terraform = "1.17.1"
 
+"claude-code" = "2.1.322"
+
 "npm:opensrc" = "0.7.3"
 "npm:pinpm" = "0.4.1"
 "npm:pnpm" = "11.28.11"
@@ -15,7 +17,6 @@ terraform = "1.17.1"
 "npm:@codize/cli" = "0.7.0"
 "npm:@fission-ai/openspec" = "1.16.0"
 
-"aqua:anthropics/claude-code" = "2.1.322"
 "aqua:evilmartians/lefthook" = "2.2.2"
 
 "github:microsoft/apm" = "0.35.0"
