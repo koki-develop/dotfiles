@@ -291,7 +291,10 @@ fi
 # Auto-start herdr
 #
 
-if [[ -z "$HERDR_ENV" ]] && [[ $- == *i* ]]; then
+if [[ "$TERM_PROGRAM" == "claude-desktop" ]]; then
+  # Claude Desktop's terminal panel: plain zsh prompt
+  :
+elif [[ -z "$HERDR_ENV" ]] && [[ $- == *i* ]]; then
   herdr
 else
   # starship
