@@ -1,8 +1,4 @@
 {
-  "remoteControlAtStartup": true,
-  "attribution": {
-    "sessionUrl": false
-  },
   "env": {
     "DISABLE_AUTOUPDATER": "1",
     "CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR": "1",
@@ -10,7 +6,9 @@
     "CLAUDE_CODE_THRIFTY_SONIC": "0",
     "NODE_USE_ENV_PROXY": "1"
   },
-  "effortLevel": "high",
+  "attribution": {
+    "sessionUrl": false
+  },
   "permissions": {
     "allow": [
       "Bash(git add *)",
@@ -31,11 +29,9 @@
       "Bash(gh run view *)",
       "Bash(gh run watch *)",
       "Bash(gh search *)",
-
       "Bash(betterleaks *)",
       "Bash(npm info *)",
       "Bash(opensrc *)",
-
       "WebFetch",
       "WebSearch"
     ],
@@ -48,14 +44,11 @@
       "Bash(gh repo delete *)",
       "Bash(gh repo rename *)",
       "Bash(gh repo unarchive *)",
-
       "Bash(bun publish *)",
       "Bash(npm publish *)",
       "Bash(pnpm publish *)",
-
       "Bash(terraform apply *)",
       "Bash(terraform destroy *)",
-
       "Bash(env *)",
       "Bash(gh auth token *)",
       "Bash(gh secret set *)",
@@ -67,7 +60,6 @@
       "Read(~/.ssh/**)",
       "Edit(~/.ssh/**)",
       "Edit(~/.zshrc)",
-
       "Bash(chezmoi destroy *)",
       "Bash(chezmoi forget *)",
       "Bash(git add .)",
@@ -115,6 +107,14 @@
             "timeout": 10
           }
         ]
+      },
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "mise --cd \"$CLAUDE_PROJECT_DIR\" env -s zsh >> \"$CLAUDE_ENV_FILE\"; echo 'export PATH=\"$HOME/.local/share/mise/shims:$PATH\"' >> \"$CLAUDE_ENV_FILE\""
+          }
+        ]
       }
     ]
   },
@@ -122,6 +122,11 @@
   "statusLine": {
     "type": "command",
     "command": "~/.claude/statusline.ts"
+  },
+  "enabledPlugins": {
+    "typescript-lsp@claude-plugins-official": true,
+    "gopls-lsp@claude-plugins-official": true,
+    "tide@koki-develop": true
   },
   "extraKnownMarketplaces": {
     "koki-develop": {
@@ -131,19 +136,17 @@
       }
     }
   },
-  "enabledPlugins": {
-    "typescript-lsp@claude-plugins-official": true,
-    "gopls-lsp@claude-plugins-official": true,
-    "tide@koki-develop": true
-  },
   "language": "Japanese",
   "sandbox": {
     "enabled": true,
     "autoAllowBashIfSandboxed": true,
-    "excludedCommands": ["gh *"],
     "network": {
-      "allowLocalBinding": true,
-      "allowedDomains": ["npm.flatt.tech", "context7.com", "*.context7.com"]
+      "allowedDomains": [
+        "npm.flatt.tech",
+        "context7.com",
+        "*.context7.com"
+      ],
+      "allowLocalBinding": true
     },
     "filesystem": {
       "allowWrite": [
@@ -154,15 +157,23 @@
       ]
     },
     "ignoreViolations": {
-      "Bash": ["expansion-obfuscation", "potential-obfuscation"]
-    }
+      "Bash": [
+        "expansion-obfuscation",
+        "potential-obfuscation"
+      ]
+    },
+    "excludedCommands": [
+      "gh *"
+    ]
   },
+  "effortLevel": "high",
+  "awaySummaryEnabled": false,
   "tui": "fullscreen",
   "autoMemoryEnabled": false,
-  "autoCompactEnabled": true,
-  "idleCompaction": false,
-  "awaySummaryEnabled": false,
   "skipWorkflowUsageWarning": true,
   "preferredNotifChannel": "ghostty",
+  "autoCompactEnabled": true,
+  "idleCompaction": false,
+  "remoteControlAtStartup": true,
   "agentPushNotifEnabled": true
 }
