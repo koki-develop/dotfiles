@@ -123,9 +123,18 @@
     "type": "command",
     "command": "~/.claude/statusline.ts"
   },
+  "extraKnownMarketplaces": {
+    "koki-develop": {
+      "source": {
+        "source": "github",
+        "repo": "koki-develop/claude-plugins"
+      }
+    }
+  },
   "enabledPlugins": {
     "typescript-lsp@claude-plugins-official": true,
-    "gopls-lsp@claude-plugins-official": true
+    "gopls-lsp@claude-plugins-official": true,
+    "tide@koki-develop": true
   },
   "language": "Japanese",
   "sandbox": {
